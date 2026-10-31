@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire Auto Body Inc — New Windsor, NY | Collision Repair, Auto Body &amp; Paint</title>
+<meta name="description" content="Empire Auto Body Inc in New Windsor, New York. Collision repair, auto body repair, frame straightening, paint services, cosmetic damage repair, insurance claim assistance, part installation and vehicle detailing.">
+<style>
+:root{--color-primary:#171717;--color-secondary:#F5F0E6;--color-accent:#C6A56B;--ink:#1d1a16;--muted:#6b6156}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--color-secondary);line-height:1.6}
+a{color:inherit}
+.container{max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1440px){.container{max-width:1320px}}
+@media(max-width:768px){.container{padding-inline:28px}}
+@media(max-width:480px){.container{padding-inline:20px}}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);font-size:13px;text-align:center;padding:10px 16px;font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;background:var(--color-secondary);border-bottom:1px solid #ddd3c2;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:24px}
+.brand{font-size:24px;font-weight:700;letter-spacing:.5px;color:var(--color-primary);text-decoration:none}
+.nav-links{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+.nav-links a{text-decoration:none}
+.btn{display:inline-block;background:var(--color-accent);color:#171717;font-family:Arial,Helvetica,sans-serif;font-weight:700;text-decoration:none;padding:13px 26px;border-radius:4px}
+.btn-dark{background:var(--color-primary);color:var(--color-secondary)}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}.nav-links{display:none}}
+@media(max-width:480px){section{padding:56px 0}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.1;color:var(--color-primary);margin-bottom:16px}
+.hero p.lede{font-size:19px;color:#3d382f;margin-bottom:24px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+figure{margin:0}
+figure img{width:100%;height:auto;display:block;border-radius:8px;object-fit:cover}
+figcaption{font-size:13px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:8px}
+h2{font-size:clamp(30px,3.5vw,42px);line-height:1.15;color:var(--color-primary);margin-bottom:16px}
+.sub{font-size:17px;color:var(--muted);margin-bottom:32px;max-width:640px}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.dark h2{color:var(--color-secondary)}
+.dark .sub{color:#cfc6b8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e3dac9;border-radius:8px;overflow:hidden}
+.card img{aspect-ratio:4/3;object-fit:cover}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;margin-bottom:8px;color:var(--color-primary)}
+.card-body p{font-size:15px;color:#4a443b}
+.placeholder{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:#ece5d5;color:#6b6156;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-align:center;padding:20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:768px){.split{grid-template-columns:1fr}}
+.why{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+.why li{background:#fff;border-left:4px solid var(--color-accent);padding:24px;border-radius:4px}
+.why li strong{display:block;font-size:18px;margin-bottom:6px}
+.hours{width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif}
+.hours td{padding:12px 0;border-bottom:1px solid #e3dac9}
+.hours td:last-child{text-align:right}
+.note{font-size:14px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:16px}
+.final{text-align:center}
+.final .cta-row{justify-content:center}
+footer{background:var(--color-primary);color:var(--color-secondary);padding:48px 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+footer a{color:var(--color-accent)}
+.menu-btn{display:none;background:none;border:1px solid var(--color-primary);padding:8px 14px;font-size:15px;cursor:pointer}
+@media(max-width:768px){.menu-btn{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--color-secondary);padding:20px 28px;border-bottom:1px solid #ddd3c2}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">Empire Auto Body Inc</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a class="btn" href="tel:+18455614500">Call (845) 561-4500</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:72px">
+  <div class="container hero">
+    <div>
+      <h1>Collision repair, body work, and paint — done right in New Windsor.</h1>
+      <p class="lede">Empire Auto Body Inc is an independent auto body shop in New Windsor, New York, handling collision repair, frame straightening, paint services, and detailing — plus help with insurance claims.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+18455614500">Call the shop</a>
+        <a class="btn btn-dark" href="mailto:empireautobodyny@gmail.com">Email the shop</a>
+      </div>
+      <p class="note">34 Walnut St, New Windsor, NY 12553 &middot; Open Monday to Friday.</p>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Mechanic working on a car with the hood open inside a repair shop">
+      <figcaption>Concept imagery — illustrative stock photo of auto repair work, not this shop's own work or vehicles.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="services" class="dark">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="sub">Services as listed for Empire Auto Body Inc: collision repair, auto body repair, frame straightening, paint services, cosmetic damage repair, insurance claim assistance, part installation, and vehicle detailing.</p>
+    <div class="grid">
+      <div class="card"><div class="placeholder">Collision and body repair — photo not shown; no verified body-shop photo available, so no stock image is substituted here.</div><div class="card-body"><h3>Collision Repair</h3><p>Collision repair and auto body repair for damaged vehicles, from panel work to full body repair.</p></div></div>
+      <div class="card"><div class="placeholder">Frame straightening — photo not shown; no verified frame-work photo available, so no stock image is substituted here.</div><div class="card-body"><h3>Frame Straightening</h3><p>Frame straightening as part of structural body repair after a collision.</p></div></div>
+      <div class="card"><div class="placeholder">Paint services — photo not shown; no verified paint-booth photo available, so no stock image is substituted here.</div><div class="card-body"><h3>Paint Services</h3><p>Automotive paint services, including cosmetic damage repair and refinishing.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Insurance Claim Assistance</h3><p>Help working through an insurance claim alongside the repair, so the paperwork does not hold up the work.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Part Installation</h3><p>Part installation as listed — replacement parts fitted as part of a repair.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Worker hand-washing a car during detailing"><div class="card-body"><h3>Vehicle Detailing</h3><p>Vehicle detailing to finish a repair — a clean vehicle handed back after the body work is done.</p><p style="margin-top:8px;font-size:13px;color:#6b6156">Concept imagery — illustrative stock photo of vehicle washing and detailing work, not this shop's own work.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container split">
+    <div>
+      <h2>A New Windsor body shop, in operation for seven years</h2>
+      <p style="margin-bottom:16px">Empire Auto Body Inc is listed as in operation for seven years. It is an independent shop on Walnut Street in New Windsor, covering the full arc of a collision job: body repair, frame work, paint, parts, and a final detail.</p>
+      <p>Insurance claim assistance is part of the listed service — useful when a repair starts with a claim rather than a walk-in.</p>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Mechanics working on a car engine inside a workshop">
+      <figcaption>Concept imagery — illustrative stock photo of auto repair work, not this shop's own work or vehicles.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="gallery" class="dark">
+  <div class="container">
+    <h2>Inside the shop</h2>
+    <p class="sub">Illustrative stock photos of auto repair work. These are concept images, not photos of Empire Auto Body Inc.</p>
+    <div class="grid">
+      <div class="card"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Close-up of engine belts and pulleys"><div class="card-body"><p>Engine and drivetrain detail — illustrative stock photo.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Wall of workshop tools in a repair shop"><div class="card-body"><p>A stocked workshop wall — illustrative stock photo.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Worker pouring oil into a car engine"><div class="card-body"><p>Fluid service under the hood — illustrative stock photo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why bring your car here</h2>
+    <ul class="why">
+      <li><strong>Full collision job, one shop</strong>Body repair, frame straightening, paint, and parts fitted in the same place.</li>
+      <li><strong>Insurance claim assistance</strong>Listed help with claims, so a repair is not stalled by paperwork.</li>
+      <li><strong>Seven years in operation</strong>Listed as in operation for seven years in New Windsor.</li>
+      <li><strong>Finished with a detail</strong>Vehicle detailing is part of the listed service, so the car comes back clean.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit" class="dark">
+  <div class="container split">
+    <div>
+      <h2>Visit us</h2>
+      <p class="sub">34 Walnut St, New Windsor, NY 12553</p>
+      <p style="margin-bottom:16px"><a href="tel:+18455614500">(845) 561-4500</a> &middot; <a href="mailto:empireautobodyny@gmail.com">empireautobodyny@gmail.com</a></p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+18455614500">Call the shop</a>
+        <a class="btn btn-dark" href="mailto:empireautobodyny@gmail.com">Email the shop</a>
+      </div>
+    </div>
+    <div>
+      <h2 style="font-size:26px">Hours</h2>
+      <table class="hours">
+        <tr><td>Monday – Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 5:30 PM</td></tr>
+        <tr><td>Saturday – Sunday</td><td>Not published in the listing</td></tr>
+      </table>
+      <p class="note">Hours as listed on the shop's directory listing. Saturday and Sunday hours were not published there, so none are shown here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2>Damaged car? Start with a call.</h2>
+    <p class="sub" style="margin-inline:auto">Talk through the damage, the claim, and the repair with Empire Auto Body Inc in New Windsor.</p>
+    <div class="cta-row">
+      <a class="btn" href="tel:+18455614500">Call (845) 561-4500</a>
+      <a class="btn btn-dark" href="mailto:empireautobodyny@gmail.com">Email the shop</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Empire Auto Body Inc &middot; 34 Walnut St, New Windsor, NY 12553 &middot; <a href="tel:+18455614500">(845) 561-4500</a> &middot; <a href="mailto:empireautobodyny@gmail.com">empireautobodyny@gmail.com</a></p>
+    <p style="margin-top:12px">Website concept demo — not the official website</p>
+  </div>
+</footer>
+<script>
+document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+</script>
+</body>
+</html>
