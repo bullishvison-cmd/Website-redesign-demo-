@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Main Dance Studio — Weatherford, TX</title>
+<style>
+:root{--color-primary:#542B36;--color-secondary:#F5EFE5;--color-accent:#B77B82;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--color-primary);line-height:1.6}
+a{color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(min-width:1400px){.container{max-width:1320px}}
+@media(max-width:768px){.container{padding:0 28px}}
+@media(max-width:480px){.container{padding:0 20px}}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);text-align:center;font-size:13px;font-family:Arial,Helvetica,sans-serif;padding:10px 16px}
+header{background:var(--color-secondary);border-bottom:2px solid var(--color-primary);position:sticky;top:0;z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:16px;flex-wrap:wrap}
+.brand{font-size:22px;font-weight:700}
+.navlinks{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.navlinks a{text-decoration:none}
+.btn{display:inline-block;background:var(--color-accent);color:#fff;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:700;padding:13px 26px;border-radius:4px}
+.btn.outline{background:transparent;border:2px solid var(--color-secondary);color:var(--color-secondary)}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}}
+@media(max-width:480px){section{padding:56px 0}}
+.hero{background:var(--color-primary);color:var(--color-secondary);padding:0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:540px}
+.hero-text{padding:96px 40px 96px 0;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero-text h1{font-size:clamp(38px,5vw,60px);line-height:1.1}
+.hero-text p{font-size:18px;max-width:520px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.hero-img{overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:768px){.hero-grid{grid-template-columns:1fr}.hero-text{padding:56px 0}.hero-img{height:320px}}
+.kicker{font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--color-accent);font-weight:700}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.15;margin:16px 0 16px}
+.lead{font-size:18px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid rgba(84,43,54,.15);border-radius:8px;overflow:hidden}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;margin-bottom:8px}
+.card-body p{font-family:Arial,Helvetica,sans-serif;font-size:15px}
+.caption{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666;padding:8px 24px 0}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:768px){.split{grid-template-columns:1fr}}
+.split img{width:100%;border-radius:8px;height:420px;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+@media(max-width:768px){.gallery{grid-template-columns:1fr}}
+.gallery figure img{width:100%;height:260px;object-fit:cover;border-radius:8px;display:block}
+.gallery figcaption{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666;margin-top:8px}
+.checks{list-style:none;margin-top:32px;display:grid;gap:16px;font-family:Arial,Helvetica,sans-serif;font-size:17px}
+.checks li::before{content:"✓ ";color:var(--color-accent);font-weight:700}
+.hours{background:#fff;border:1px solid rgba(84,43,54,.15);border-radius:8px;padding:32px;font-family:Arial,Helvetica,sans-serif}
+.hours p{margin-bottom:12px}
+.cta{background:var(--color-accent);color:#fff;text-align:center}
+.cta h2{margin:16px 0}
+.cta p{max-width:600px;margin:0 auto 32px;font-family:Arial,Helvetica,sans-serif}
+footer{background:var(--color-primary);color:var(--color-secondary);padding:56px 0 32px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+footer .cols{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:32px}
+footer a{text-decoration:none}
+.small{font-size:12px;opacity:.85}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="container nav">
+<span class="brand">North Main Dance Studio</span>
+<nav class="navlinks"><a href="#services">Classes</a><a href="#story">About</a><a href="#visit">Visit</a></nav>
+<a class="btn" href="tel:+18176137784">Call (817) 613-7784</a>
+</div></header>
+
+<section class="hero"><div class="container hero-grid">
+<div class="hero-text">
+<span class="kicker">Weatherford, Texas · Women's-Only Fitness &amp; Dance</span>
+<h1>Weatherford's only women's-only fitness facility.</h1>
+<p>Right on the Weatherford square, three doors north of the courthouse, North Main offers women's fitness classes and dance classes for kids — with no contracts, month to month.</p>
+<div class="hero-cta">
+<a class="btn" href="mailto:lcarnley21@gmail.com">Email Us</a>
+<a class="btn outline" href="tel:+18176137784">Call Us</a>
+</div>
+</div>
+<div class="hero-img"><img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dance training"></div>
+</div></section>
+
+<section id="services"><div class="container">
+<span class="kicker">Classes</span>
+<h2>Fitness for women, dance for kids</h2>
+<p class="lead">One studio, two sides: a women's-only fitness programme and dance classes for children, all month to month with no contracts.</p>
+<div class="grid">
+<article class="card"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of a group fitness class"><div class="card-body"><h3>Women's Fitness Classes</h3><p>Zumba, yoga, kickboxing, boot camps, strength training, cardio and core, and adult cardio hip hop — in a women's-only facility.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the studio's own photo.</p></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of yoga practice"><div class="card-body"><h3>Yoga &amp; Personal Training</h3><p>Yoga classes and personal training for women, with trainers who adapt training to your needs.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the studio's own photo.</p></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dance movement"><div class="card-body"><h3>Dance for Kids</h3><p>Ballet, tap, and jazz for ages 2 and up, and hip hop for ages 6 and up.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the studio's own photo.</p></article>
+<article class="card"><div class="card-body"><h3>Women's-Only Boot Camp</h3><p>A women's-only boot camp on Monday, Wednesday, and Friday at 5:30 AM, about 45 minutes, taught by a certified personal trainer.</p></div></article>
+<article class="card"><div class="card-body"><h3>No Contracts</h3><p>No contracts for any classes — month to month. Call or email for specific information on each class offered.</p></div></article>
+<article class="card"><div class="card-body"><h3>On the Square</h3><p>Located right at the Weatherford square, three doors north of the courthouse.</p></div></article>
+</div>
+</div></section>
+
+<section class="dark" id="story"><div class="container split">
+<div>
+<span class="kicker">Our Story</span>
+<h2>A studio that feels like family</h2>
+<p>North Main Dance Studio sits in a storefront on North Main Street, one block from the Weatherford courthouse. It is the only women's-only fitness facility in Weatherford — a place where women train together and children learn to dance, with trainers who adjust every session to the person in front of them.</p>
+<p style="margin-top:16px">From tiny dancers to older generations, the studio's classes are built around encouragement, not intimidation.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dancers in a studio">
+</div></section>
+
+<section><div class="container">
+<span class="kicker">Inside the Studio</span>
+<h2>Movement, up close</h2>
+<div class="gallery">
+<figure><img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dance training"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of a group fitness class"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of yoga practice"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+</div>
+</div></section>
+
+<section class="dark"><div class="container">
+<span class="kicker">Why North Main</span>
+<h2>Why train here</h2>
+<ul class="checks">
+<li>The only women's-only fitness facility in Weatherford</li>
+<li>Zumba, yoga, kickboxing, boot camps, strength, and cardio classes</li>
+<li>Personal training for women</li>
+<li>Dance classes for kids: ballet, tap, jazz, and hip hop</li>
+<li>No contracts — month to month</li>
+<li>Right on the Weatherford square</li>
+</ul>
+</div></section>
+
+<section id="visit"><div class="container">
+<span class="kicker">Visit Us</span>
+<h2>Find us on the square</h2>
+<div class="split" style="margin-top:32px">
+<div class="hours">
+<p><strong>Address:</strong> 113 N Main St, Weatherford, TX 76086</p>
+<p><strong>Phone:</strong> <a href="tel:+18176137784">(817) 613-7784</a></p>
+<p><strong>Email:</strong> <a href="mailto:lcarnley21@gmail.com">lcarnley21@gmail.com</a></p>
+<p><strong>Listed hours:</strong> Monday–Friday 8:30–10:00 AM and 3:00–7:30 PM; Saturday and Sunday closed.</p>
+<p><strong>Boot camp:</strong> Monday, Wednesday, Friday at 5:30 AM (about 45 minutes).</p>
+<p>Class schedules can change — please call or email to confirm current class times.</p>
+</div>
+<div>
+<p class="lead">Questions about a class, or ready to try one? Call or email for specific information on each class offered.</p>
+<p style="margin-top:24px"><a class="btn" href="mailto:lcarnley21@gmail.com">Email North Main</a></p>
+</div>
+</div>
+</div></section>
+
+<section class="cta"><div class="container">
+<h2>Move, train, and dance — right on the square.</h2>
+<p>Women's fitness and kids' dance, with no contracts. Get in touch today.</p>
+<a class="btn" style="background:#542B36" href="tel:+18176137784">Call (817) 613-7784</a>
+</div></section>
+
+<footer><div class="container">
+<div class="cols">
+<div><strong>North Main Dance Studio</strong><br>113 N Main St, Weatherford, TX 76086<br><a href="tel:+18176137784">(817) 613-7784</a> · <a href="mailto:lcarnley21@gmail.com">lcarnley21@gmail.com</a></div>
+<div><a href="#services">Classes</a><br><a href="#story">About</a><br><a href="#visit">Visit</a></div>
+</div>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<p class="small" style="margin-top:16px">Photos on this page are illustrative stock photos and are not photos of this studio.</p>
+</div></footer>
+</body>
+</html>
