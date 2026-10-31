@@ -64,7 +64,48 @@ footer .wrap{padding-bottom:32px}
 footer a{color:var(--bg)}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
 .reveal.on{opacity:1;transform:none}
+
+/* Typography polish 2026-10-31: display/body pairing, type scale, S16 spacing. Palette untouched. */
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+h1,h2,h3{font-family:'Sora',system-ui,Arial,sans-serif!important}
+h1{font-size:clamp(40px,5vw,64px)!important;line-height:1.08!important;letter-spacing:-0.015em!important;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,40px)!important;line-height:1.15!important;letter-spacing:-0.01em!important;text-wrap:balance;margin-bottom:32px}
+h2:has(+p){margin-bottom:16px!important}
+h3{font-size:clamp(20px,2.2vw,24px)!important;line-height:1.25!important;text-wrap:balance}
+p,li{font-size:17px;line-height:1.65;text-wrap:pretty}
+.lead,.lede,.sub{font-size:19px!important;line-height:1.6!important}
+.hero .lead,.hero .lede,.hero .sub{margin-bottom:24px}
+.kicker,.eyebrow{font-size:13px!important;letter-spacing:.14em!important;text-transform:uppercase}
+.caption,.cap,figcaption,.note,.photo-note{font-size:13px!important;line-height:1.5!important}
+.hero-inner h1,.hero-inner p{text-shadow:0 1px 14px rgba(0,0,0,.45)}
+
+/* Balance polish 2026-10-31: one centred container, equal side padding, no overflow. Palette untouched. */
+.container,.wrap,.nav,.hero-inner{max-width:1200px;margin-inline:auto}
+.container,.wrap,.nav,.hero-inner{padding-inline:40px}
+@media(min-width:1440px){.container,.wrap,.nav,.hero-inner{max-width:1320px}}
+@media(max-width:1024px){.container,.wrap,.nav,.hero-inner{padding-inline:28px}}
+@media(max-width:640px){.container,.wrap,.nav,.hero-inner{padding-inline:20px}}
+@media(max-width:400px){.container,.wrap,.nav,.hero-inner{padding-inline:16px}}
+*{box-sizing:border-box}
+img{max-width:100%}
+a{overflow-wrap:anywhere}
+table{max-width:100%}
+body{overflow-x:hidden}
+
+/* Ultra pass 2026-10-31: buttery motion, hover polish, visible focus. Palette untouched (vars only, no new colours). */
+.polish-reveal{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)!important}
+.card,.g,figure{transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease}
+.card:hover,.g:hover{transform:translateY(-4px)}
+.card img{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card:hover img{transform:scale(1.03)}
+.btn,a.btn,.cta a{transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.btn:hover,a.btn:hover,.cta a:hover{transform:translateY(-1px)}
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.card,.g,figure,.card img,.btn,a.btn,.cta a{transition:none!important;transform:none!important}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
@@ -77,25 +118,25 @@ footer a{color:var(--bg)}
 <p class="lead">Barbering, hair salon services and hair braiding in Lancaster.</p>
 <div class="cta"><a href="tel:+17178244817">Call (717) 824-4817</a><a class="ghost" href="mailto:creativetouchbarbershop@yahoo.com">Email the shop</a></div>
 <p class="sub" style="margin-top:20px">617 W Orange St, Lancaster, PA 17603</p></div>
-<img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=80" alt="Barber styling a client's hair — illustrative stock photo">
+<img decoding="async" fetchpriority="high" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=80" alt="Barber styling a client's hair — illustrative stock photo">
 </div></section>
 
 <section class="dark"><div class="wrap reveal">
 <h2>Services</h2><p class="sub">As listed in public directories for this shop.</p>
-<div class="grid"><article class="card"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=80" alt="Barbering — illustrative stock photo" loading="lazy"><div class="card-body"><h3>Barbering</h3><p>Barber services, as listed for this shop.</p><p class="cap">Illustrative stock photo — not a photo of this shop.</p></div></article>
+<div class="grid"><article class="card"><img src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=1600&q=80" alt="Barbering — illustrative stock photo" loading="lazy"><div class="card-body"><h3>Barbering</h3><p>Barber services, as listed for this shop.</p><p class="cap">Illustrative stock photo — not a photo of this shop.</p></div></article>
 <article class="card"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=1200&q=80" alt="Hair salon services — illustrative stock photo" loading="lazy"><div class="card-body"><h3>Hair salon services</h3><p>Hair salon services, as listed for this shop.</p><p class="cap">Illustrative stock photo — not a photo of this shop.</p></div></article>
 <article class="card"><div class="tile" aria-hidden="true">H</div><div class="card-body"><h3>Hair braiding</h3><p>Hair braiding, as listed for this shop.</p></div></article></div></div></section>
 
 <section><div class="wrap story reveal">
 <div><p class="eyebrow">The shop</p><h2>A welcoming Lancaster barbershop</h2><p>Creative Touch Barber Shop is described in its certified directory listing as a barbering and hair salon business with a welcoming atmosphere and diverse clientele. Its listed services are barbering, hair salon services and hair braiding.</p></div>
-<img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80" alt="Barbershop interior — illustrative stock photo">
+<img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80" alt="Barbershop interior — illustrative stock photo">
 </div></section>
 
 <section><div class="wrap reveal">
 <h2>Inside the shop</h2><p class="sub">Concept imagery only — illustrative stock photos, not photos of this shop.</p>
 <div class="gallery"><figure><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80" alt="Beard work — illustrative stock photo" loading="lazy"><figcaption>Beard work — illustrative stock photo</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80" alt="Barbershop interior — illustrative stock photo" loading="lazy"><figcaption>Barbershop interior — illustrative stock photo</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80" alt="Barber tools of the trade — illustrative stock photo" loading="lazy"><figcaption>Barber tools of the trade — illustrative stock photo</figcaption></figure></div></div></section>
+<figure><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=1200&q=80" alt="Barbershop interior — illustrative stock photo" loading="lazy"><figcaption>Barbershop interior — illustrative stock photo</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80" alt="Barber tools of the trade — illustrative stock photo" loading="lazy"><figcaption>Barber tools of the trade — illustrative stock photo</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure></div></div></section>
 
 <section class="dark"><div class="wrap reveal">
 <h2>Why choose Creative Touch</h2>
