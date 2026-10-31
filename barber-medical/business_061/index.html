@@ -78,7 +78,55 @@ footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:
   .hero img,.story-grid img{height:280px}
 }
 @media(max-width:480px){section{padding:44px 0}.nav,.container{padding-left:16px;padding-right:16px}}
+
+/* Polish pass 2026-10-31: restrained reveal motion, no layout shift */
+.polish-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.polish-reveal.polish-visible{opacity:1;transform:none}
+img{max-width:100%}
+body{overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){.polish-reveal{opacity:1;transform:none;transition:none}}
+
+/* Typography polish 2026-10-31: display/body pairing, type scale, S16 spacing. Palette untouched. */
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+h1,h2,h3{font-family:'Fraunces',Georgia,'Times New Roman',serif!important}
+h1{font-size:clamp(40px,5vw,64px)!important;line-height:1.08!important;letter-spacing:-0.015em!important;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,40px)!important;line-height:1.15!important;letter-spacing:-0.01em!important;text-wrap:balance;margin-bottom:32px}
+h2:has(+p){margin-bottom:16px!important}
+h3{font-size:clamp(20px,2.2vw,24px)!important;line-height:1.25!important;text-wrap:balance}
+p,li{font-size:17px;line-height:1.65;text-wrap:pretty}
+.lead,.lede,.sub{font-size:19px!important;line-height:1.6!important}
+.hero .lead,.hero .lede,.hero .sub{margin-bottom:24px}
+.kicker,.eyebrow{font-size:13px!important;letter-spacing:.14em!important;text-transform:uppercase}
+.caption,.cap,figcaption,.note,.photo-note{font-size:13px!important;line-height:1.5!important}
+.hero-inner h1,.hero-inner p{text-shadow:0 1px 14px rgba(0,0,0,.45)}
+
+/* Balance polish 2026-10-31: one centred container, equal side padding, no overflow. Palette untouched. */
+.container,.wrap,.nav,.hero-inner{max-width:1200px;margin-inline:auto}
+.container,.wrap,.nav,.hero-inner{padding-inline:40px}
+@media(min-width:1440px){.container,.wrap,.nav,.hero-inner{max-width:1320px}}
+@media(max-width:1024px){.container,.wrap,.nav,.hero-inner{padding-inline:28px}}
+@media(max-width:640px){.container,.wrap,.nav,.hero-inner{padding-inline:20px}}
+@media(max-width:400px){.container,.wrap,.nav,.hero-inner{padding-inline:16px}}
+*{box-sizing:border-box}
+img{max-width:100%}
+a{overflow-wrap:anywhere}
+table{max-width:100%}
+body{overflow-x:hidden}
+
+/* Ultra pass 2026-10-31: buttery motion, hover polish, visible focus. Palette untouched (vars only, no new colours). */
+.polish-reveal{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)!important}
+.card,.g,figure{transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease}
+.card:hover,.g:hover{transform:translateY(-4px)}
+.card img{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card:hover img{transform:scale(1.03)}
+.btn,a.btn,.cta a{transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.btn:hover,a.btn:hover,.cta a:hover{transform:translateY(-1px)}
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.card,.g,figure,.card img,.btn,a.btn,.cta a{transition:none!important;transform:none!important}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
@@ -104,7 +152,7 @@ footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:
       </div>
     </div>
     <div>
-      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="A modern dental operatory with a dental chair">
+      <img decoding="async" fetchpriority="high" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80" alt="A modern dental operatory with a dental chair">
       <p class="cap">Illustrative photo — licensed stock, not a photo of this practice.</p>
     </div>
   </div>
@@ -117,19 +165,19 @@ footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:
     <p class="sub">The care listed here reflects the general-dentistry services noted for this practice in public directory listings.</p>
     <div class="cards">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=1200&q=80" alt="A dentist treating a patient">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=1200&q=80" alt="A dentist treating a patient">
         <div class="card-body"><h3>Routine Cleanings</h3><p>Regular cleanings to help keep teeth and gums healthy between visits.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental X-rays">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental X-rays">
         <div class="card-body"><h3>Check-ups</h3><p>Routine examinations to check the health of your teeth and gums.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient in a dental chair">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient in a dental chair">
         <div class="card-body"><h3>Fillings</h3><p>Restorative care for teeth affected by decay, as advised at your visit.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80" alt="A bright dental operatory">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80" alt="A bright dental operatory">
         <div class="card-body"><h3>Preventive Dental Care</h3><p>Everyday preventive care to help protect your smile over time.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
       </div>
     </div>
@@ -150,7 +198,7 @@ footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:
       </ul>
     </div>
     <div>
-      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist talking with a patient in a dental chair">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=1200&q=80" alt="A dentist talking with a patient in a dental chair">
       <p class="cap">Illustrative photo — licensed stock, not a photo of this practice.</p>
     </div>
   </div>
@@ -162,10 +210,10 @@ footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:
     <h2>Care in a modern dental setting</h2>
     <p class="sub">Illustrative photographs of general dental care settings. These are licensed stock photos, not photos of this practice.</p>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="A modern dental operatory">
-      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient during an exam">
-      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental images">
-    </div>
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&w=1200&q=80" alt="A modern dental operatory">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/5355727/pexels-photo-5355727.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="A dentist and patient during an exam">
+      <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/7298633/pexels-photo-7298633.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="A dentist reviewing dental images">
+    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"><img src="https://images.pexels.com/photos/6809642/pexels-photo-6809642.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Illustrative photo, not a photo of this business" loading="lazy"></div>
   </div>
 </section>
 
@@ -230,6 +278,9 @@ footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:
 </footer>
 <script>
 function toggleFaq(btn){var ans=btn.nextElementSibling;ans.style.display=(ans.style.display==='block')?'none':'block';}
+</script>
+<script>
+(function(){var els=document.querySelectorAll('section, .card, .menu-card');els.forEach(function(e){e.classList.add('polish-reveal');});if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('polish-visible');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('polish-visible');io.unobserve(en.target);}});},{threshold:0.12});els.forEach(function(e){io.observe(e);});})();
 </script>
 </body>
 </html>
