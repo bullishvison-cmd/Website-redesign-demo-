@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kabilas Resort and Funpark — Bharatpur, Chitwan | Website Concept Demo</title>
 <meta name="description" content="Website concept demo for Kabilas Resort and Funpark, a hilltop resort and funpark at Kabilas, Tandrang, Bharatpur, Chitwan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --color-primary:#172638; --color-secondary:#F7F5F0; --color-accent:#B89B65;
@@ -12,14 +15,17 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:Georgia,"Times New Roman",serif;background:var(--color-secondary);color:var(--ink);line-height:1.6}
-  h1,h2,h3{font-family:"Palatino Linotype",Palatino,Georgia,serif;line-height:1.15;color:var(--color-primary)}
+  body{font-family:Inter,Arial,Helvetica,sans-serif;font-size:17px;background:var(--color-secondary);color:var(--ink);line-height:1.65}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;color:var(--color-primary);text-wrap:balance}
+  p{text-wrap:pretty}
   a{color:var(--color-primary)}
   .container{max-width:1200px;margin-inline:auto;padding-inline:40px}
   @media(min-width:1400px){.container{max-width:1320px}}
   @media(max-width:1024px){.container{padding-inline:28px}}
-  @media(max-width:640px){.container{padding-inline:20px}}
-  @media(max-width:400px){.container{padding-inline:16px}}
+  @media(max-width:768px){.container{padding-inline:20px}}
+  @media(max-width:480px){.container{padding-inline:16px}}
+  section[id]{scroll-margin-top:84px}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
   .disclaimer{background:var(--color-primary);color:#f7f5f0;text-align:center;padding:12px 20px;font-family:Arial,Helvetica,sans-serif;font-size:14px;letter-spacing:.02em}
   .disclaimer strong{color:var(--color-accent)}
   header.site{position:sticky;top:0;background:rgba(247,245,240,.97);border-bottom:1px solid var(--line);z-index:20}
@@ -36,18 +42,18 @@
   @media(max-width:820px){.navlinks{display:none}}
   section{padding:96px 0}
   @media(max-width:1024px){section{padding:72px 0}}
-  @media(max-width:640px){section{padding:56px 0}}
-  @media(max-width:400px){section{padding:44px 0}}
+  @media(max-width:768px){section{padding:56px 0}}
+  @media(max-width:480px){section{padding:44px 0}}
   .eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-accent);font-weight:700;margin-bottom:16px}
-  .section-head{max-width:720px;margin-bottom:48px}
+  .section-head{max-width:720px;margin-bottom:32px}
   .section-head h2{font-size:clamp(30px,4vw,44px);margin-bottom:16px}
   .section-head p{color:var(--muted);font-size:18px}
   .hero{padding:0;background:var(--color-primary)}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:560px}
   .hero-copy{color:#f7f5f0;padding:96px 0;display:flex;flex-direction:column;justify-content:center}
-  .hero-copy h1{color:#fff;font-size:clamp(38px,5vw,60px);margin-bottom:16px}
-  .hero-copy p{font-size:19px;color:#d8d2c4;margin-bottom:24px;max-width:540px}
-  .hero-copy .cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+  .hero-copy h1{color:#fff;font-size:clamp(44px,5.5vw,64px);line-height:1.08;margin-bottom:16px}
+  .hero-copy p{font-size:19px;line-height:1.6;color:#d8d2c4;margin-bottom:24px;max-width:540px}
+  .hero-copy .cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
   .hero-copy .btn-outline{color:#fff;border-color:#fff}
   .hero-copy .btn-outline:hover{background:#fff;color:var(--color-primary)}
   .hero-img{position:relative;overflow:hidden;min-height:320px}
@@ -57,7 +63,12 @@
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   @media(max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.cards{grid-template-columns:1fr}}
-  .card{background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:box-shadow .25s ease,transform .25s ease}
+  .card:hover{box-shadow:0 12px 32px rgba(23,38,56,.12);transform:translateY(-2px)}
+  .btn{transition:background .25s ease,transform .25s ease}
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .js .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
   .card img{width:100%;height:220px;object-fit:cover;display:block}
   .card-body{padding:24px}
   .card-body h3{font-size:22px;margin-bottom:8px}
@@ -105,7 +116,7 @@
 </style>
 </head>
 <body>
-
+<script>document.documentElement.classList.add('js');</script>
 <div class="disclaimer"><strong>Website concept demo — not the official website</strong> &nbsp;·&nbsp; Concept preview prepared for Kabilas Resort and Funpark. Photos are illustrative stock images, not photos of this business.</div>
 
 <header class="site">
@@ -125,7 +136,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
-      <div class="hero-copy">
+      <div class="hero-copy reveal">
         <p class="eyebrow">Hilltop Resort · Bharatpur, Chitwan</p>
         <h1>A peaceful hilltop escape, with fun for the whole family.</h1>
         <p>Kabilas Resort and Funpark sits above Bharatpur at Kabilas, looking out over green hills, the city of Narayanghat and the Narayani River — a place to stay, eat, swim and play, all in one destination.</p>
@@ -135,7 +146,7 @@
         </div>
       </div>
       <figure class="hero-img">
-        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80" alt="Resort swimming pool surrounded by palm trees and loungers">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80" alt="Resort swimming pool surrounded by palm trees and loungers" fetchpriority="high" decoding="async">
         <figcaption>Illustrative photo</figcaption>
       </figure>
     </div>
@@ -144,14 +155,14 @@
   <!-- SERVICES / EXPERIENCES -->
   <section id="stays">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal">
         <p class="eyebrow">Stays &amp; Experiences</p>
         <h2>Everything in one place</h2>
         <p>Stay overnight, enjoy a meal, take a swim, or spend the day in the funpark — the resort is set up so guests rarely need to leave the hilltop.</p>
       </div>
-      <div class="cards">
+      <div class="cards reveal">
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80" alt="Comfortable hotel room with large bed and warm lighting">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1200&q=80" alt="Hotel bedroom with a garden view" loading="lazy" decoding="async">
           <div class="card-body">
             <h3>Peaceful Stays</h3>
             <p>Rooms with views over the surrounding hills, plus room service and complimentary WiFi and parking, for a quiet night above the city.</p>
@@ -159,7 +170,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Restaurant table set for dinner">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Restaurant table set for dinner">
           <div class="card-body">
             <h3>Restaurant &amp; Bar</h3>
             <p>On-site dining and a bar, with food, drink and lodging all available on the premises — the classic self-contained resort setup.</p>
@@ -167,7 +178,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80" alt="Resort swimming pool with clear water">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80" alt="Resort swimming pool with clear water">
           <div class="card-body">
             <h3>Swimming Pools</h3>
             <p>Swimming is one of the resort's main attractions, alongside the funpark — a refreshing break with hill views around you.</p>
@@ -175,7 +186,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Green hills and mountains under a clear sky">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Green hills and mountains under a clear sky">
           <div class="card-body">
             <h3>Hilltop Views &amp; Nature</h3>
             <p>Look out over green hills, Narayanghat city, Parsa, Tadi and the Narayani River — the view is the reason many guests come up the hill.</p>
@@ -183,15 +194,15 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=80" alt="Bright restaurant interior with tables">
+          <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=1200&q=80" alt="Children playing outdoors with a colourful parachute" loading="lazy" decoding="async">
           <div class="card-body">
             <h3>Funpark for Families</h3>
             <p>The funpark adds rides and play attractions for children and adults, making the resort a day out as well as a place to stay.</p>
-            <p class="cap">Illustrative photo — restaurant interior shown; funpark photos not available in this concept</p>
+            <p class="cap">Illustrative photo — children playing outdoors</p>
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80" alt="Calm lake surrounded by green hills at sunrise">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80" alt="Calm lake surrounded by green hills at sunrise">
           <div class="card-body">
             <h3>Nearby: Devghat Dham</h3>
             <p>A well-known sacred site near the resort area — an easy addition to a stay for visitors exploring the Bharatpur region.</p>
@@ -204,9 +215,9 @@
 
   <!-- STORY -->
   <section id="story" style="background:#efe9dc">
-    <div class="container story">
+    <div class="container story reveal">
       <div>
-        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80" alt="Resort pool area with sun loungers">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80" alt="Resort pool area with sun loungers">
         <p class="small" style="margin-top:10px">Illustrative photo</p>
       </div>
       <div>
@@ -232,13 +243,13 @@
         <h2>The hilltop, the water, the table</h2>
         <p>Illustrative images showing the kind of stay Kabilas offers. These are stock photos, not photos of this business.</p>
       </div>
-      <div class="gallery">
-        <figure><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80" alt="Resort pool"><figcaption>Illustrative photo</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80" alt="Swimming pool"><figcaption>Illustrative photo</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Dining"><figcaption>Illustrative photo</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Hills"><figcaption>Illustrative photo</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80" alt="Lake and hills"><figcaption>Illustrative photo</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80" alt="Guest room"><figcaption>Illustrative photo</figcaption></figure>
+      <div class="gallery reveal">
+        <figure><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80" alt="Resort pool at dusk" loading="lazy" decoding="async"><figcaption>Illustrative photo — pool</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80" alt="Resort pool at night" loading="lazy" decoding="async"><figcaption>Illustrative photo — pool at night</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80" alt="Pool terrace with loungers" loading="lazy" decoding="async"><figcaption>Illustrative photo — pool terrace</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=1200&q=80" alt="Warm guest bedroom" loading="lazy" decoding="async"><figcaption>Illustrative photo — guest room</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1200&q=80" alt="Outdoor loungers with a hill view" loading="lazy" decoding="async"><figcaption>Illustrative photo — terrace view</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1533777324565-a040eb52facd?w=1200&q=80" alt="Restaurant table spread" loading="lazy" decoding="async"><figcaption>Illustrative photo — dining</figcaption></figure>
       </div>
     </div>
   </section>
@@ -251,7 +262,7 @@
         <h2>Stay, eat, swim and play — without leaving the hill</h2>
         <p>Most resorts ask you to choose between rest and activity. Kabilas puts both on the same hilltop.</p>
       </div>
-      <div class="why-grid">
+      <div class="why-grid reveal">
         <div class="why"><h3>One destination, whole day covered</h3><p>Stays, dining, swimming and the funpark are all on site, so families do not need to plan transport between activities.</p></div>
         <div class="why"><h3>Views you cannot get in the city</h3><p>The hilltop position looks over green hills, Narayanghat and the Narayani River — the setting is part of the stay.</p></div>
         <div class="why"><h3>Easy to reach, easy to park</h3><p>Near Jugedi on the Narayanghat–Muglin Highway route, with free parking for guests arriving by car.</p></div>
@@ -267,7 +278,7 @@
         <p class="eyebrow">Location &amp; Contact</p>
         <h2>Find us at Kabilas, above Bharatpur</h2>
       </div>
-      <div class="visit">
+      <div class="visit reveal">
         <div class="visit-box">
           <p class="label">Address</p>
           <p>Kabilas-2, Tandrang, Bharatpur, Chitwan, Nepal 44205</p>
@@ -326,6 +337,9 @@
 </footer>
 
 <div class="disclaimer"><strong>Website concept demo — not the official website</strong> &nbsp;·&nbsp; Concept preview prepared for Kabilas Resort and Funpark.</div>
-
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
 </body>
 </html>
