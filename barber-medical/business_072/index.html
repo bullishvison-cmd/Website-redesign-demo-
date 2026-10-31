@@ -57,7 +57,55 @@ h2{font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.15;margin-bottom:16px}
 footer{background:var(--color-primary);color:#fff;padding:48px 0 0;text-align:center;font-family:Arial,Helvetica,sans-serif}
 footer a{color:var(--color-accent)}
 .caption{font-size:.8rem;color:#888;font-family:Arial,Helvetica,sans-serif;margin-top:8px}
+
+/* Polish pass 2026-10-31: restrained reveal motion, no layout shift */
+.polish-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.polish-reveal.polish-visible{opacity:1;transform:none}
+img{max-width:100%}
+body{overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){.polish-reveal{opacity:1;transform:none;transition:none}}
+
+/* Typography polish 2026-10-31: display/body pairing, type scale, S16 spacing. Palette untouched. */
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+h1,h2,h3{font-family:'Sora',system-ui,Arial,sans-serif!important}
+h1{font-size:clamp(40px,5vw,64px)!important;line-height:1.08!important;letter-spacing:-0.015em!important;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,40px)!important;line-height:1.15!important;letter-spacing:-0.01em!important;text-wrap:balance;margin-bottom:32px}
+h2:has(+p){margin-bottom:16px!important}
+h3{font-size:clamp(20px,2.2vw,24px)!important;line-height:1.25!important;text-wrap:balance}
+p,li{font-size:17px;line-height:1.65;text-wrap:pretty}
+.lead,.lede,.sub{font-size:19px!important;line-height:1.6!important}
+.hero .lead,.hero .lede,.hero .sub{margin-bottom:24px}
+.kicker,.eyebrow{font-size:13px!important;letter-spacing:.14em!important;text-transform:uppercase}
+.caption,.cap,figcaption,.note,.photo-note{font-size:13px!important;line-height:1.5!important}
+.hero-inner h1,.hero-inner p{text-shadow:0 1px 14px rgba(0,0,0,.45)}
+
+/* Balance polish 2026-10-31: one centred container, equal side padding, no overflow. Palette untouched. */
+.container,.wrap,.nav,.hero-inner{max-width:1200px;margin-inline:auto}
+.container,.wrap,.nav,.hero-inner{padding-inline:40px}
+@media(min-width:1440px){.container,.wrap,.nav,.hero-inner{max-width:1320px}}
+@media(max-width:1024px){.container,.wrap,.nav,.hero-inner{padding-inline:28px}}
+@media(max-width:640px){.container,.wrap,.nav,.hero-inner{padding-inline:20px}}
+@media(max-width:400px){.container,.wrap,.nav,.hero-inner{padding-inline:16px}}
+*{box-sizing:border-box}
+img{max-width:100%}
+a{overflow-wrap:anywhere}
+table{max-width:100%}
+body{overflow-x:hidden}
+
+/* Ultra pass 2026-10-31: buttery motion, hover polish, visible focus. Palette untouched (vars only, no new colours). */
+.polish-reveal{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)!important}
+.card,.g,figure{transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease}
+.card:hover,.g:hover{transform:translateY(-4px)}
+.card img{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card:hover img{transform:scale(1.03)}
+.btn,a.btn,.cta a{transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.btn:hover,a.btn:hover,.cta a:hover{transform:translateY(-1px)}
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.card,.g,figure,.card img,.btn,a.btn,.cta a{transition:none!important;transform:none!important}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
@@ -73,7 +121,7 @@ footer a{color:var(--color-accent)}
 <a class="btn" href="tel:+12604442809">Call (260) 444-2809</a>
 <a class="btn alt" href="mailto:gary.washingtondc@gmail.com">Email Us</a>
 </div>
-<div><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Guided exercise and movement session">
+<div><img decoding="async" fetchpriority="high" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80" alt="Guided exercise and movement session">
 <p class="caption">Concept imagery — illustrative stock photo, not a photo of this practice.</p></div>
 </div></section>
 
@@ -81,15 +129,15 @@ footer a{color:var(--color-accent)}
 <h2>Services</h2>
 <p class="sub">Services as listed or categorised for this practice. Call the office to confirm what is offered at your visit.</p>
 <div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" alt="Hands-on manual therapy session"><div class="card-body"><h3>Chiropractic Adjustments</h3><p>Chiropractic adjustments, as described by patients of this practice.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80" alt="Clinician consulting with a patient"><div class="card-body"><h3>DOT Physicals</h3><p>DOT physicals, as listed for this practice.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Guided exercise session"><div class="card-body"><h3>Physical Therapy</h3><p>Physical therapy, as categorised for this practice.</p></div></div>
+<div class="card"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" alt="Hands-on manual therapy session"><div class="card-body"><h3>Chiropractic Adjustments</h3><p>Chiropractic adjustments, as described by patients of this practice.</p></div></div>
+<div class="card"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80" alt="Clinician consulting with a patient"><div class="card-body"><h3>DOT Physicals</h3><p>DOT physicals, as listed for this practice.</p></div></div>
+<div class="card"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Guided exercise session"><div class="card-body"><h3>Physical Therapy</h3><p>Physical therapy, as categorised for this practice.</p></div></div>
 </div>
 <p class="caption">All photos are illustrative stock photos, not photos of this practice.</p>
 </div></section>
 
 <section id="about" class="dark"><div class="container story">
-<div><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80" alt="Exercise and training space">
+<div><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80" alt="Exercise and training space">
 <p class="caption" style="color:#bbb">Concept imagery — illustrative stock photo, not a photo of this practice.</p></div>
 <div>
 <h2>About the practice</h2>
@@ -98,6 +146,7 @@ footer a{color:var(--color-accent)}
 </div>
 </div></section>
 
+<section><div class="container"><h2>Inside the practice</h2><div class="gallery"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this practice" loading="lazy"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this practice" loading="lazy"><img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this practice" loading="lazy"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this practice" loading="lazy"></div><p class="caption">Concept imagery — illustrative stock photos, not photos of this practice.</p></div></section>
 <section><div class="container">
 <h2>Why choose us</h2>
 <ul class="why">
@@ -127,11 +176,15 @@ footer a{color:var(--color-accent)}
 <a class="btn alt" href="mailto:gary.washingtondc@gmail.com">Email Us</a>
 </div></section>
 
+<section class="polish-visit"><div class="container"><h2>Planning your visit</h2><p>Opening hours, availability and services can change, so please call or email using the contact details on this page before you travel. If you have a question about a particular service or appointment, mention it when you get in touch and the business can confirm directly.</p><p style="margin-top:12px">Photos on this page are licensed stock photos, illustrative only — not photos of this business.</p></div></section>
 <footer><div class="container">
 <p>Washington Chiropractic — 527 Airport North Office Park, Fort Wayne, IN 46825</p>
 <p><a href="tel:+12604442809">(260) 444-2809</a> &nbsp;|&nbsp; <a href="mailto:gary.washingtondc@gmail.com">gary.washingtondc@gmail.com</a></p>
 </div>
 <div class="disclaimer" style="margin-top:32px">Website concept demo — not the official website</div>
 </footer>
+<script>
+(function(){var els=document.querySelectorAll('section, .card, .menu-card');els.forEach(function(e){e.classList.add('polish-reveal');});if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('polish-visible');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('polish-visible');io.unobserve(en.target);}});},{threshold:0.12});els.forEach(function(e){io.observe(e);});})();
+</script>
 </body>
 </html>
