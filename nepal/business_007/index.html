@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shamatha Spa and Salon — Boudha, Kathmandu</title>
+<meta name="description" content="Concept demo for Shamatha Spa and Salon, Boudha, Kathmandu — massage, facial, manicure and hair care opposite Boudhanath Stupa.">
+<style>
+:root{--color-primary:#171717;--color-secondary:#F5F0E6;--color-accent:#C6A56B;--ink:#1d1d1d;--muted:#5c554a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);text-align:center;font-size:13px;letter-spacing:.04em;padding:10px 16px;font-family:Arial,Helvetica,sans-serif}
+header{background:var(--color-secondary);border-bottom:1px solid #ddd2bd;position:sticky;top:0;z-index:10}
+.nav{max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.brand small{display:block;font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.navlinks{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--color-accent)}
+.menu-btn{display:none;background:var(--color-primary);color:#fff;border:0;padding:10px 16px;font-size:14px;cursor:pointer}
+.container{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px}
+@media(min-width:1400px){.container,.nav{max-width:1320px}}
+section{padding:96px 0}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.1;font-weight:400}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;font-weight:400;margin-bottom:16px}
+h3{font-size:20px;font-weight:400;margin:14px 0 8px}
+.lead{font-size:18px;color:#3a352c;max-width:640px}
+.eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8a744a;margin-bottom:16px}
+.hero{background:var(--color-primary);color:var(--color-secondary)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero img,.story img,.gallery img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px}
+.hero-img{height:480px}
+.btn{display:inline-block;background:var(--color-accent);color:#171717;text-decoration:none;padding:14px 28px;font-family:Arial,Helvetica,sans-serif;font-size:15px;margin-top:24px;border-radius:2px}
+.btn.ghost{background:transparent;color:var(--color-secondary);border:1px solid var(--color-secondary);margin-left:12px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
+.card{background:#fff;border:1px solid #e3d9c4;border-radius:4px;overflow:hidden}
+.card img{height:210px;object-fit:cover;width:100%;display:block}
+.card-body{padding:24px}
+.card-body p{font-size:15px;color:#4a4438}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-img{height:420px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.gallery-grid img{height:280px}
+.caption{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:var(--muted);margin-top:10px}
+.why{background:var(--color-primary);color:var(--color-secondary)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:32px}
+.why-grid h3{color:var(--color-accent)}
+.why-grid p{color:#d8d0c0;font-size:15px}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.loc-grid p{margin-bottom:12px}
+.cta{background:var(--color-accent);color:#171717;text-align:center}
+.cta h2{color:#171717}
+.cta p{max-width:560px;margin:0 auto}
+footer{background:var(--color-primary);color:#cfc7b6;padding:48px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.foot-grid{max-width:1200px;margin:0 auto;padding:0 40px 32px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+form{max-width:520px;margin:32px auto 0;text-align:left}
+label{display:block;font-size:13px;margin:14px 0 6px}
+input,textarea{width:100%;padding:12px;border:1px solid #ccc;font-size:15px;font-family:Arial,Helvetica,sans-serif}
+button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:15px;cursor:pointer;margin-top:16px}
+.note{font-size:12px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:16px}
+@media(max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.hero-grid,.story-grid,.loc-grid{grid-template-columns:1fr}.hero-img,.story-img{height:360px}}
+@media(max-width:768px){section{padding:56px 0}.container,.nav{padding-left:20px;padding-right:20px}.navlinks{display:none;flex-direction:column;gap:16px}.navlinks.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--color-secondary);padding:20px;border-bottom:1px solid #ddd2bd}.menu-btn{display:block}.cards,.gallery-grid,.why-grid{grid-template-columns:1fr}.btn.ghost{margin-left:0;margin-top:12px}}
+@media(max-width:480px){section{padding:44px 0}.container,.nav{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header>
+  <div class="nav">
+    <div class="brand">Shamatha<small>Spa and Salon · Boudha</small></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+    <nav class="navlinks" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#story">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-top:72px">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Boudha · Kathmandu</p>
+      <h1>A calm place to unwind, opposite Boudhanath Stupa</h1>
+      <p class="lead" style="color:#d8d0c0;margin-top:24px">Shamatha Spa and Salon offers massage, facial, manicure and hair care in Boudha, Kathmandu — a day of pampering and relaxation after a long week.</p>
+      <a class="btn" href="tel:+97714581354">Call 01-4581354</a>
+      <a class="btn ghost" href="mailto:shamathaspasalon@gmail.com">Email Us</a>
+    </div>
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1600&q=80" alt="Illustrative stock image of a spa massage treatment"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <p class="eyebrow">Services</p>
+    <h2>Massage, beauty and hair care in one place</h2>
+    <p class="lead">The salon's team includes beauticians, hair specialists and massage therapists, working with modern equipment.</p>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80" alt="Illustrative stock image of an oil massage">
+        <div class="card-body"><h3>Massage</h3><p>Relaxing massage treatments from experienced massage therapists, in a calm setting near the stupa.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Illustrative stock image of a facial treatment">
+        <div class="card-body"><h3>Facial</h3><p>Facial care from skilled beauticians, for a refreshed, rejuvenated feeling.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80" alt="Illustrative stock image of a manicure">
+        <div class="card-body"><h3>Manicure</h3><p>Nail care and manicure services as part of a full pampering visit.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80" alt="Illustrative stock image of hair styling">
+        <div class="card-body"><h3>Hair Care</h3><p>Hair services from the salon's hair specialists, alongside its spa and beauty treatments.</p></div>
+      </article>
+    </div>
+    <p class="note">Photographs on this page are licensed stock images shown for illustration only. They are not photographs of this business.</p>
+  </div>
+</section>
+
+<section id="story" style="background:#efe8d8">
+  <div class="container story-grid">
+    <div class="story-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=80" alt="Illustrative stock image of spa towels, lotion and a candle"></div>
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Beside one of Kathmandu's most visited landmarks</h2>
+      <p>Shamatha Spa and Salon is located opposite the world-renowned heritage site of Boudhanath Stupa, in Boudha, Kathmandu. Visitors can pair a walk around the stupa with a massage, facial or manicure, or a hair appointment — all under one roof.</p>
+      <p style="margin-top:16px">The salon describes its approach as world-class quality service using advanced, innovative technology and modern equipment, delivered by highly skilled and experienced beauticians, hair specialists and massage therapists.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <p class="eyebrow">Gallery</p>
+    <h2>A quiet, welcoming space</h2>
+    <div class="gallery-grid">
+      <div><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80" alt="Illustrative stock image of a massage treatment"><p class="caption">Illustrative image — massage</p></div>
+      <div><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Illustrative stock image of a salon interior"><p class="caption">Illustrative image — salon interior</p></div>
+      <div><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Illustrative stock image of a facial treatment"><p class="caption">Illustrative image — facial</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <p class="eyebrow">Why visit</p>
+    <h2>Three good reasons to stop by</h2>
+    <div class="why-grid">
+      <div><h3>Right by the stupa</h3><p>Opposite Boudhanath Stupa in Boudha — easy to reach on a visit to one of Kathmandu's best-known heritage sites.</p></div>
+      <div><h3>Spa and salon together</h3><p>Massage, facial, manicure and hair care in a single visit, from beauticians, hair specialists and massage therapists.</p></div>
+      <div><h3>Modern equipment</h3><p>The salon highlights its modern equipment and advanced, innovative technology in its service description.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="container loc-grid">
+    <div>
+      <p class="eyebrow">Visit us</p>
+      <h2>Find us in Boudha</h2>
+      <p><strong>Address:</strong> Boudha, Kathmandu 44600, Nepal — opposite Boudhanath Stupa.</p>
+      <p><strong>Hours (as listed):</strong> Open daily, 9:00 AM – 7:00 PM.</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Shamatha+Spa+and+Salon+Boudha+Kathmandu" target="_blank" rel="noopener">Find Shamatha Spa and Salon on Google Maps</a></p>
+    </div>
+    <div id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Book by phone or email</h2>
+      <p><strong>Phone:</strong> <a href="tel:+97714581354">01-4581354</a> · <a href="tel:+9779801042006">980-1042006</a> · <a href="tel:+9779860333088">9860333088</a></p>
+      <p><strong>Email:</strong> <a href="mailto:shamathaspasalon@gmail.com">shamathaspasalon@gmail.com</a></p>
+      <p>Please call or email to ask about treatments and availability.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="book">
+  <div class="container">
+    <h2>Ready for a day of pampering?</h2>
+    <p>Call or email Shamatha Spa and Salon in Boudha to plan your visit.</p>
+    <form id="enquiryForm">
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="Your name">
+      <label for="msg">What would you like to book?</label>
+      <textarea id="msg" rows="3" placeholder="For example: a massage and a facial"></textarea>
+      <button class="send" type="submit">Send enquiry by email</button>
+      <p class="note">This opens your email app addressed to the salon. Nothing is sent from this page itself.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div><strong>Shamatha Spa and Salon</strong><br>Boudha, Kathmandu 44600, Nepal</div>
+    <div>Phone: 01-4581354 · 980-1042006 · 9860333088<br>Email: shamathaspasalon@gmail.com</div>
+    <div>Photographs are licensed stock images for illustration only,<br>not photographs of this business.</div>
+  </div>
+  <div class="disclaimer">Website concept demo — not the official website</div>
+</footer>
+
+<script>
+document.getElementById('menuBtn').addEventListener('click', function () {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var msg = document.getElementById('msg').value.trim();
+  var subject = encodeURIComponent('Enquiry from the website concept demo');
+  var body = encodeURIComponent((name ? 'Name: ' + name + '\n' : '') + 'Message: ' + msg);
+  window.location.href = 'mailto:shamathaspasalon@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+</body>
+</html>
