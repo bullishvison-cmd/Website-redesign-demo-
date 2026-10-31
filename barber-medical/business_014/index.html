@@ -55,7 +55,55 @@ p.lead{font-size:clamp(17px,2vw,20px);margin-bottom:24px}
 .final .btn{margin-top:16px}
 footer{background:var(--primary);color:var(--bg);padding:32px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-align:center}
 .caption{font-size:13px;font-family:Arial,Helvetica,sans-serif;opacity:.8;margin-top:8px}
+
+/* Polish pass 2026-10-31: restrained reveal motion, no layout shift */
+.polish-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.polish-reveal.polish-visible{opacity:1;transform:none}
+img{max-width:100%}
+body{overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){.polish-reveal{opacity:1;transform:none;transition:none}}
+
+/* Typography polish 2026-10-31: display/body pairing, type scale, S16 spacing. Palette untouched. */
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+h1,h2,h3{font-family:'Fraunces',Georgia,'Times New Roman',serif!important}
+h1{font-size:clamp(40px,5vw,64px)!important;line-height:1.08!important;letter-spacing:-0.015em!important;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,40px)!important;line-height:1.15!important;letter-spacing:-0.01em!important;text-wrap:balance;margin-bottom:32px}
+h2:has(+p){margin-bottom:16px!important}
+h3{font-size:clamp(20px,2.2vw,24px)!important;line-height:1.25!important;text-wrap:balance}
+p,li{font-size:17px;line-height:1.65;text-wrap:pretty}
+.lead,.lede,.sub{font-size:19px!important;line-height:1.6!important}
+.hero .lead,.hero .lede,.hero .sub{margin-bottom:24px}
+.kicker,.eyebrow{font-size:13px!important;letter-spacing:.14em!important;text-transform:uppercase}
+.caption,.cap,figcaption,.note,.photo-note{font-size:13px!important;line-height:1.5!important}
+.hero-inner h1,.hero-inner p{text-shadow:0 1px 14px rgba(0,0,0,.45)}
+
+/* Balance polish 2026-10-31: one centred container, equal side padding, no overflow. Palette untouched. */
+.container,.wrap,.nav,.hero-inner{max-width:1200px;margin-inline:auto}
+.container,.wrap,.nav,.hero-inner{padding-inline:40px}
+@media(min-width:1440px){.container,.wrap,.nav,.hero-inner{max-width:1320px}}
+@media(max-width:1024px){.container,.wrap,.nav,.hero-inner{padding-inline:28px}}
+@media(max-width:640px){.container,.wrap,.nav,.hero-inner{padding-inline:20px}}
+@media(max-width:400px){.container,.wrap,.nav,.hero-inner{padding-inline:16px}}
+*{box-sizing:border-box}
+img{max-width:100%}
+a{overflow-wrap:anywhere}
+table{max-width:100%}
+body{overflow-x:hidden}
+
+/* Ultra pass 2026-10-31: buttery motion, hover polish, visible focus. Palette untouched (vars only, no new colours). */
+.polish-reveal{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)!important}
+.card,.g,figure{transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease}
+.card:hover,.g:hover{transform:translateY(-4px)}
+.card img{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card:hover img{transform:scale(1.03)}
+.btn,a.btn,.cta a{transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.btn:hover,a.btn:hover,.cta a:hover{transform:translateY(-1px)}
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.card,.g,figure,.card img,.btn,a.btn,.cta a{transition:none!important;transform:none!important}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="disclaimer">Website concept demo — not the official website</div>
@@ -66,11 +114,11 @@ footer{background:var(--primary);color:var(--bg);padding:32px 0;font-family:Aria
 <h1>An old-school barbershop in Uvalde with classic and contemporary styles.</h1>
 <p class="lead">Plaza Barber Shop — 114 W North St, Uvalde, TX 78801</p>
 <div class="cta-row"><a class="btn" href="tel:+18304075080">Call (830) 407-5080</a><a class="btn" href="mailto:uvaldeplazabarbershop@gmail.com">Email uvaldeplazabarbershop@gmail.com</a></div>
-</div><div><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=1200&auto=format&fit=crop" alt="Barbershop interior, illustrative stock photo"><p class="caption">Concept imagery: licensed stock photo, illustrative only — not a photo of this shop.</p></div></div></section>
-<section><div class="container"><h2>Services</h2><div class="cards"><div class="card"><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?q=80&w=1200&auto=format&fit=crop" alt="Classic Cuts, illustrative stock photo"><div class="pad"><h3>Classic Cuts</h3><p>Old-school barbershop cuts.</p><p class="caption">Concept imagery, illustrative only.</p></div></div><div class="card"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Contemporary Styles, illustrative stock photo"><div class="pad"><h3>Contemporary Styles</h3><p>Classic and contemporary styles for men.</p><p class="caption">Concept imagery, illustrative only.</p></div></div><div class="card"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop" alt="Men&#x27;s Haircuts, illustrative stock photo"><div class="pad"><h3>Men&#x27;s Haircuts</h3><p>Men&#x27;s haircuts in a traditional shop setting.</p><p class="caption">Concept imagery, illustrative only.</p></div></div></div>
+</div><div><img decoding="async" fetchpriority="high" src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=1600&auto=format&fit=crop" alt="Barbershop interior, illustrative stock photo"><p class="caption">Concept imagery: licensed stock photo, illustrative only — not a photo of this shop.</p></div></div></section>
+<section><div class="container"><h2>Services</h2><div class="cards"><div class="card"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?q=80&w=1200&auto=format&fit=crop" alt="Classic Cuts, illustrative stock photo"><div class="pad"><h3>Classic Cuts</h3><p>Old-school barbershop cuts.</p><p class="caption">Concept imagery, illustrative only.</p></div></div><div class="card"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Contemporary Styles, illustrative stock photo"><div class="pad"><h3>Contemporary Styles</h3><p>Classic and contemporary styles for men.</p><p class="caption">Concept imagery, illustrative only.</p></div></div><div class="card"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop" alt="Men&#x27;s Haircuts, illustrative stock photo"><div class="pad"><h3>Men&#x27;s Haircuts</h3><p>Men&#x27;s haircuts in a traditional shop setting.</p><p class="caption">Concept imagery, illustrative only.</p></div></div></div>
 <p class="note">Services shown reflect the shop's listed trade in public directory listings. Please call the shop to confirm the full service menu.</p></div></section>
 <section><div class="container"><h2>About the Shop</h2><p class="lead">Plaza Barber Shop is an old-school barbershop in Uvalde, Texas, offering classic and contemporary styles and men&#x27;s haircuts.</p></div></section>
-<section><div class="container"><h2>Inside the Shop</h2><div class="gallery"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"></div>
+<section><div class="container"><h2>Inside the Shop</h2><div class="gallery"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"></div>
 <p class="caption">Concept imagery: licensed stock photos, illustrative only — not photos of this shop.</p></div></section>
 <section><div class="container"><h2>Why Visit</h2><ul class="why"><li>Old-school barbershop</li><li>Classic and contemporary styles</li><li>Men&#x27;s haircuts</li></ul></div></section>
 <section><div class="container visit"><div><h2>Find Us</h2>
@@ -82,7 +130,11 @@ footer{background:var(--primary);color:var(--bg);padding:32px 0;font-family:Aria
 <section class="final"><div class="container"><h2>Ready for a Fresh Cut?</h2>
 <p>Call or email Plaza Barber Shop to book your visit.</p>
 <div class="cta-row" style="justify-content:center"><a class="btn" href="tel:+18304075080">Call (830) 407-5080</a><a class="btn" href="mailto:uvaldeplazabarbershop@gmail.com">Email Us</a></div></div></section>
+<section class="polish-visit"><div class="container"><h2>Planning your visit</h2><p>Opening hours, availability and services can change, so please call or email using the contact details on this page before you travel. If you have a question about a particular service or appointment, mention it when you get in touch and the business can confirm directly.</p><p style="margin-top:12px">Photos on this page are licensed stock photos, illustrative only — not photos of this business.</p></div></section>
 <footer><div class="container"><p>Website concept demo — not the official website</p>
 <p>Concept demo built for Plaza Barber Shop, 114 W North St, Uvalde, TX 78801. Photos are licensed stock imagery, illustrative only.</p></div></footer>
+<script>
+(function(){var els=document.querySelectorAll('section, .card, .menu-card');els.forEach(function(e){e.classList.add('polish-reveal');});if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('polish-visible');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('polish-visible');io.unobserve(en.target);}});},{threshold:0.12});els.forEach(function(e){io.observe(e);});})();
+</script>
 </body>
 </html>
