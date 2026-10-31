@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SEC Cleaning — Cleaning Services | Dunlap, Tennessee</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#542B36;--color-secondary:#F5EFE5;--color-accent:#B77B82;}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--color-secondary);color:#222;line-height:1.6}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:40px}@media(max-width:1024px){.wrap{padding-inline:28px}}@media(max-width:640px){.wrap{padding-inline:20px}}@media(max-width:400px){.wrap{padding-inline:16px}}
@@ -16,17 +16,43 @@ section{padding:96px 0}@media(max-width:1024px){section{padding:72px 0}}@media(m
 .card{background:#fff;border-radius:12px;padding:24px;border-top:5px solid var(--color-accent)}.card h3{margin-top:0}
 .dark{background:var(--color-primary);color:#fff}.note{background:#fff;border-left:5px solid var(--color-accent);padding:20px 24px;border-radius:0 12px 12px 0}
 .small{font-size:14px;color:#555}.dark .small{color:#ddd}footer{background:var(--color-primary);color:#fff;padding:40px 0 24px}footer a{color:#fff}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Sora',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap,.container{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box;padding-inline:40px!important}
+@media(min-width:1440px){.wrap,.container{max-width:1320px!important}}@media(max-width:1024px){.wrap,.container{padding-inline:28px!important}}@media(max-width:640px){.wrap,.container{padding-inline:20px!important}body{font-size:16px}}@media(max-width:400px){.wrap,.container{padding-inline:16px!important}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style></head><body>
 <div class="disclaimer">Website concept demo — not the official website</div>
 <header><div class="wrap"><strong>SEC Cleaning</strong><nav><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav></div></header>
 <main>
 <section><div class="wrap hero"><div><h1>SEC Cleaning</h1><p>Solo, personalized residential cleaning for Sequatchie Valley and surrounding areas.</p><p><a class="btn" href="tel:4237189316">Call (423) 718-9316</a><a class="btn" href="mailto:seccleaning@gmail.com">Email us</a></p><p class="small">Dunlap, Tennessee 37327</p></div><div><img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?q=80&w=1600&auto=format&fit=crop" alt="Gloved hands spraying and wiping a surface"><p class="small">Illustrative stock photo, not a photo of this business's own work.</p></div></div></section>
-<section id="services"><div class="wrap"><h2>Services</h2><p>Services below are only those listed in the source directory listing for this business.</p><div class="grid"><div class='card'><h3>Basic Residential Cleaning</h3><p>As listed for this business.</p></div><div class='card'><h3>Deep Residential Cleaning</h3><p>As listed for this business.</p></div><div class='card'><h3>Detailed Home Cleaning</h3><p>As listed for this business.</p></div><div class='card'><h3>Customized Cleaning Solutions</h3><p>As listed for this business.</p></div></div></div></section>
+<section id="services"><div class="wrap"><h2>Services</h2><p>Services below are only those listed in the source directory listing for this business.</p><div class="grid"><div class='card'><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Person cleaning window shutters with a sponge (illustrative stock photo)" loading="lazy"><h3>Basic Residential Cleaning</h3><p>As listed for this business.</p></div><div class='card'><h3>Deep Residential Cleaning</h3><p>As listed for this business.</p></div><div class='card'><h3>Detailed Home Cleaning</h3><p>As listed for this business.</p></div><div class='card'><h3>Customized Cleaning Solutions</h3><p>As listed for this business.</p></div></div></div></section>
 <section id="about" class="dark"><div class="wrap"><h2>About SEC Cleaning</h2><p>SEC Cleaning is a solo residential cleaning business based in Dunlap, Tennessee, founded by a mom of two. Its directory listing describes basic and deep residential cleaning and customized cleaning solutions, serving Dunlap, Sequatchie Valley, Signal Mountain and surrounding areas in Sequatchie County.</p></div></section>
 <section id="gallery"><div class="wrap"><h2>Gallery</h2><p>Illustrative stock photos showing the kind of work described above. These are not photos of this business's own work.</p><div class="grid"><div><img src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop' alt='A clean, bright living room'><p class='small'>A clean, bright living room. Illustrative stock photo.</p></div><div><img src='https://images.unsplash.com/photo-1602028915047-37269d1a73f7?q=80&w=1600&auto=format&fit=crop' alt='A clean, modern kitchen'><p class='small'>A clean, modern kitchen. Illustrative stock photo.</p></div><div><img src='https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1600&auto=format&fit=crop' alt='Cleaning spray bottles and a brush'><p class='small'>Cleaning spray bottles and a brush. Illustrative stock photo.</p></div></div></div></section>
 <section class="dark"><div class="wrap"><h2>Why choose SEC Cleaning</h2><ul><li>Solo operator, personalized service</li><li>Basic and deep residential cleaning</li><li>Customized cleaning plans</li><li>Local business serving Sequatchie Valley</li></ul></div></section>
 <section id="contact"><div class="wrap"><h2>Location and hours</h2><p><strong>Address:</strong> Dunlap, Tennessee 37327</p><p><strong>Phone:</strong> <a href="tel:4237189316">(423) 718-9316</a></p><p><strong>Email:</strong> <a href="mailto:seccleaning@gmail.com">seccleaning@gmail.com</a></p><div class="note"><p>The listing says: “Hours: Contact Business for Scheduling &amp; Availability.” Contact the business directly to schedule.</p></div><p class="small">To get in touch, please call or email directly using the details above. This demo page does not take bookings.</p></div></section>
-<section><div class="wrap"><h2>Get in touch</h2><p>Questions about services or availability? Contact SEC Cleaning directly.</p><p><a class="btn" href="tel:4237189316">Call (423) 718-9316</a><a class="btn" href="mailto:seccleaning@gmail.com">Email seccleaning@gmail.com</a></p></div></section>
+<section><div class="wrap"><h2>Planning your visit</h2><p>A few practical notes before you get in touch.</p><ul><li>Call or email first to confirm availability and opening times.</li><li>Mention the service you need so the business can advise on next steps.</li><li>This concept page does not take bookings — contact goes directly to the business.</li></ul><p><a class="btn" href="tel:4237189316">Call (423) 718-9316</a><a class="btn" href="mailto:seccleaning@gmail.com">Email us</a></p></div></section><section><div class="wrap"><h2>Get in touch</h2><p>Questions about services or availability? Contact SEC Cleaning directly.</p><p><a class="btn" href="tel:4237189316">Call (423) 718-9316</a><a class="btn" href="mailto:seccleaning@gmail.com">Email seccleaning@gmail.com</a></p></div></section>
 </main>
 <footer><div class="wrap"><p>Website concept demo — not the official website</p><p>SEC Cleaning — Cleaning Services — Dunlap, Tennessee 37327</p><p><a href="tel:4237189316">(423) 718-9316</a> · <a href="mailto:seccleaning@gmail.com">seccleaning@gmail.com</a></p></div></footer>
 </body></html>
