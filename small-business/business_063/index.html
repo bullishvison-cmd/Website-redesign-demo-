@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movers Unlimited, Inc. | Website Concept Demo</title>
+<style>
+:root{--color-primary:#171717;--color-secondary:#F5F0E6;--color-accent:#C6A56B}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--color-primary);line-height:1.6}
+a{color:var(--color-accent)}h1,h2,h3{line-height:1.15;margin:0 0 16px}
+.container{max-width:1200px;margin:0 auto;padding-inline:40px}
+@media(min-width:1440px){.container{max-width:1320px}}
+@media(max-width:768px){.container{padding-inline:28px}}
+@media(max-width:480px){.container{padding-inline:20px}}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);text-align:center;padding:12px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+header{background:var(--color-secondary);border-bottom:2px solid var(--color-accent);position:sticky;top:0}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0}
+.brand{font-size:22px;font-weight:700;text-decoration:none;color:var(--color-primary)}
+.navlinks{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+.navlinks a{text-decoration:none;color:var(--color-primary);font-weight:600}
+.callbtn{background:var(--color-accent);color:#fff;text-decoration:none;padding:12px 20px;border-radius:8px;font-family:Arial,Helvetica,sans-serif;font-weight:700}
+#menuBtn{display:none;background:var(--color-primary);color:var(--color-secondary);border:0;padding:10px 14px;border-radius:8px}
+@media(max-width:768px){.navlinks{display:none}.navlinks.open{display:flex;flex-direction:column;position:absolute;right:28px;top:74px;background:var(--color-secondary);padding:20px;border:2px solid var(--color-accent);border-radius:12px}#menuBtn{display:block}}
+.hero{position:relative;color:#fff}.hero img{width:100%;height:520px;object-fit:cover;display:block}
+.hero .shade{position:absolute;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center}
+.hero h1{font-size:clamp(34px,5vw,58px);max-width:760px}.hero p{font-size:19px;max-width:640px}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}.hero img{height:380px}}
+@media(max-width:480px){section{padding:56px 0}}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #ddd;border-top:6px solid var(--color-accent);border-radius:12px;padding:24px}
+.g{margin:0}.g img{width:100%;height:260px;object-fit:cover;border-radius:12px;display:block}
+.g figcaption{font-size:14px;font-family:Arial,Helvetica,sans-serif;margin-top:8px}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.note{font-size:15px;font-family:Arial,Helvetica,sans-serif;background:#fff;border-left:6px solid var(--color-accent);padding:16px 20px;border-radius:8px;color:#222}
+.cta{text-align:center}.cta a{display:inline-block;background:var(--color-accent);color:#fff;text-decoration:none;padding:16px 28px;border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-weight:700;margin:6px}
+footer{background:var(--color-primary);color:var(--color-secondary);padding:44px 0;text-align:center;font-family:Arial,Helvetica,sans-serif}
+footer a{color:var(--color-secondary)}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="container nav">
+<a class="brand" href="#">Movers Unlimited, Inc.</a>
+<button id="menuBtn" aria-label="Menu">Menu</button>
+<ul class="navlinks" id="navlinks">
+<li><a href="#services">Services</a></li><li><a href="#story">Our Story</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+<a class="callbtn" href="tel:6024611939">Call (602) 461-1939</a>
+</div></header>
+<main>
+<section class="hero"><img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg?auto=compress&w=1260&h=750&dpr=1" alt="Mover unloading cardboard boxes from a van. Illustrative stock photo."><div class="shade"><div class="container"><h1>Movers Unlimited, Inc.</h1><p>Residential and commercial moving services, locally and internationally, from Phoenix, Arizona.</p><p><a class="callbtn" href="tel:6024611939">Call (602) 461-1939</a> <a class="callbtn" href="mailto:moversunlimitedinc@gmail.com">Email Us</a></p></div></div></section>
+<section id="services"><div class="container"><h2>Services</h2><p>Services below are only those listed for this business in public listings.</p><div class="grid">
+      <article class="card"><h3>Residential Moving</h3><p>Residential moving services, locally and internationally, as listed.</p></article>
+      <article class="card"><h3>Commercial Moving</h3><p>Commercial moving services, as listed.</p></article>
+      <article class="card"><h3>Office Moves</h3><p>Office moves, as listed among the business categories.</p></article>
+      <article class="card"><h3>Packing Service</h3><p>Packing service, as listed among the business categories.</p></article>
+      <article class="card"><h3>International Moves</h3><p>International moving, as listed among the business categories.</p></article>
+</div></div></section>
+<section id="story" class="dark"><div class="container"><h2>Our Story</h2><p>Movers Unlimited, Inc. is a Phoenix, Arizona moving company. Its BBB profile lists the business as started on 2017-03-08, with services described as residential and commercial moving services locally and internationally.</p><h2 style="margin-top:48px">Why Choose Us</h2><ul>
+      <li>Residential and commercial moving from one Phoenix company.</li>
+      <li>Local and international moving, as listed.</li>
+      <li>Packing service and office moves also listed.</li>
+      <li>Contact is by phone or email — no booking form is shown on this concept demo.</li>
+</ul></div></section>
+<section id="gallery"><div class="container"><h2>Gallery</h2><p>Illustrative stock photos only — these are not photos of this business, its staff, or its work.</p><div class="grid">
+      <figure class="g"><img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg?auto=compress&w=1260&h=750&dpr=1" alt="Boxes being unloaded from a van. Illustrative stock photo." loading="lazy"><figcaption>Boxes being unloaded from a van. Illustrative stock photo.</figcaption></figure>
+      <figure class="g"><img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=1200&q=80&auto=format&fit=crop" alt="Labelled moving boxes, packed and ready. Illustrative stock photo." loading="lazy"><figcaption>Labelled moving boxes, packed and ready. Illustrative stock photo.</figcaption></figure>
+      <figure class="g"><img src="https://images.unsplash.com/photo-1461988625982-7e46a099bf4f?w=1200&q=80&auto=format&fit=crop" alt="Packed and organised moving boxes. Illustrative stock photo." loading="lazy"><figcaption>Packed and organised moving boxes. Illustrative stock photo.</figcaption></figure>
+</div></div></section>
+<section id="contact"><div class="container"><h2>Visit or Contact Us</h2><p><strong>Address:</strong> 3442 W Wilshire Dr Ste 8, Phoenix, AZ 85009-1453</p><p><strong>Phone:</strong> <a href="tel:6024611939">(602) 461-1939</a></p><p><strong>Email:</strong> <a href="mailto:moversunlimitedinc@gmail.com">moversunlimitedinc@gmail.com</a></p><p><strong>Hours:</strong> Hours not verified — please call to confirm.</p><p class="note">Note on hours: one directory listing (ShowMeLocal) states “Mon–Sun 7:00am–7:00pm”. That listing is unconfirmed, so it is not presented here as verified hours.</p><p><a href="https://www.google.com/maps/search/?api=1&query=Movers%20Unlimited%2C%20Inc.%203442%20W%20Wilshire%20Dr%20Ste%208%2C%20Phoenix%2C%20AZ%2085009-1453">Find us on Google Maps</a></p><p>This concept demo has no booking form and no online booking: please call or email to arrange anything.</p></div></section>
+<section class="cta dark"><div class="container"><h2>Ready to talk about your move or your keys?</h2><p>Call or email — we will be glad to help.</p><p><a href="tel:6024611939">Call (602) 461-1939</a><a href="mailto:moversunlimitedinc@gmail.com">Email moversunlimitedinc@gmail.com</a></p></div></section>
+</main>
+<footer><div class="container"><p>Website concept demo — not the official website</p><p>Movers Unlimited, Inc. · 3442 W Wilshire Dr Ste 8, Phoenix, AZ 85009-1453 · <a href="tel:6024611939">(602) 461-1939</a> · <a href="mailto:moversunlimitedinc@gmail.com">moversunlimitedinc@gmail.com</a></p><p>Concept imagery only. Services and facts on this page come from public listings.</p></div></footer>
+<script>document.getElementById('menuBtn').addEventListener('click',function(){document.getElementById('navlinks').classList.toggle('open');});</script>
+</body>
+</html>
