@@ -5,76 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spice Garden Restaurant — Thamel, Kathmandu</title>
 <meta name="description" content="Concept demo for Spice Garden Restaurant, Bhagwati Marg, Thamel, Kathmandu. Indian, Thai and Continental cuisine, fine dining and open terrace garden seating.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;--ink:#1f2421;--muted:#5c665f}
-*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;color:var(--ink);background:#fff;line-height:1.6}
+:root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;--ink:#1f2421;--muted:#5c665f;--line:#e5ddd0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;font-size:17px;color:var(--ink);background:#fff;line-height:1.65}
 a{color:var(--color-primary)}img{max-width:100%;display:block}
-.disclaimer{background:var(--color-primary);color:#fff;text-align:center;padding:12px 20px;font-size:14px;font-family:Arial,sans-serif}
-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5ddd0;z-index:10}
-.nav{max-width:1200px;margin:0 auto;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-.brand{font-size:26px;font-weight:700;color:var(--color-primary);text-decoration:none}
-.navlinks{display:flex;gap:32px;font-family:Arial,sans-serif;font-size:15px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;text-wrap:balance}
+p{text-wrap:pretty}
+.disclaimer{background:var(--color-primary);color:#fff;text-align:center;padding:12px 20px;font-size:14px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
+.nav{max-width:1200px;margin-inline:auto;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.brand{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:600;color:var(--color-primary);text-decoration:none}
+.navlinks{display:flex;gap:32px;font-size:15px}
 .navlinks a{text-decoration:none;color:var(--ink)}
-.btn{display:inline-block;background:var(--color-accent);color:#fff!important;padding:12px 22px;border-radius:999px;text-decoration:none;font-family:Arial,sans-serif;font-weight:700}
-.container{max-width:1200px;margin:0 auto;padding-inline:40px}
+.btn{display:inline-block;background:var(--color-accent);color:#fff!important;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:700;transition:background .25s ease,transform .25s ease}
+.btn:hover{background:var(--color-primary);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--color-primary)!important;border:2px solid var(--color-primary)}
+.container{max-width:1200px;margin-inline:auto;padding-inline:40px}
 section{padding:96px 0}
-h1{font-size:clamp(38px,5vw,64px);line-height:1.1;margin:0 0 16px;color:var(--color-primary)}
-h2{font-size:clamp(28px,3.5vw,42px);line-height:1.2;color:var(--color-primary);margin:0 0 16px}
-.sub{font-size:19px;color:var(--muted);max-width:640px}
+section[id]{scroll-margin-top:84px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--color-accent);font-weight:700;margin:0 0 16px}
+h1{font-size:clamp(44px,5.5vw,68px);line-height:1.08;margin:0;color:var(--color-primary)}
+h2{font-size:clamp(30px,3.6vw,44px);line-height:1.15;color:var(--color-primary);margin:0}
+h3{font-size:22px;line-height:1.25;margin:0 0 8px;color:var(--color-primary)}
+.sub{font-size:19px;line-height:1.6;color:var(--muted);max-width:640px;margin:16px 0 0}
+.cta-row{margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.hero img,.gallery img{border-radius:16px;object-fit:cover;width:100%}
+.hero img,.gallery img,.seat img{border-radius:16px;object-fit:cover;width:100%}
 .hero img{aspect-ratio:4/3}
-.caption{font-size:13px;color:var(--muted);font-family:Arial,sans-serif;margin-top:8px}
+.caption{font-size:13px;line-height:1.5;color:var(--muted);margin-top:8px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
-.card{border:1px solid #e5ddd0;border-radius:16px;padding:24px;background:#fff}
-.card h3{margin:0 0 8px;color:var(--color-primary)}
-.card p{margin:0;color:var(--muted)}
-.placeholder{height:150px;border-radius:12px;background:var(--color-secondary);display:flex;align-items:center;justify-content:center;color:var(--color-primary);font-size:40px;margin-bottom:16px}
+.card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff;transition:box-shadow .25s ease,transform .25s ease}
+.card:hover{box-shadow:0 12px 32px rgba(24,61,50,.12);transform:translateY(-2px)}
+.card p{margin:0;color:var(--muted);font-size:16px;line-height:1.6}
+.card img{border-radius:12px;aspect-ratio:4/3;object-fit:cover;margin-bottom:16px;width:100%}
+.dish-tile{aspect-ratio:4/3;border-radius:12px;background:var(--color-secondary);display:flex;align-items:center;justify-content:center;margin-bottom:16px;border:1px solid var(--line)}
+.dish-tile span{font-family:Fraunces,Georgia,serif;font-size:64px;color:var(--color-primary)}
 .dark{background:var(--color-primary);color:#fff}
 .dark h2,.dark h3{color:#fff}.dark p,.dark .sub{color:#e8e2d4}
 .story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story img{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.seats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.seat{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.seat img{aspect-ratio:16/10;border-radius:0}
+.seat-body{padding:24px}
+.seat-body p{color:var(--muted);margin:0;font-size:16px;line-height:1.6}
+.bar-note{margin-top:24px;font-size:16px;color:var(--muted)}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
 .gallery img{aspect-ratio:4/3}
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
 .why div{background:#fff;border-radius:16px;padding:24px;color:var(--ink)}
-.why h3{color:var(--color-primary);margin-top:0}
+.why h3{margin-top:0;color:var(--color-primary)}
+.why p{color:var(--muted);margin:0;font-size:16px;line-height:1.6}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact p{overflow-wrap:anywhere}
 input,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;margin-bottom:12px;font:inherit}
-footer{background:var(--color-primary);color:#fff;text-align:center;padding:40px 20px;font-family:Arial,sans-serif}
-@media(max-width:768px){.container,.nav{padding-inline:20px}section{padding:56px 0}.hero,.story,.contact{grid-template-columns:1fr}.cards,.gallery,.why{grid-template-columns:1fr}.navlinks{display:none}}
-@media(max-width:480px){.container,.nav{padding-inline:16px}section{padding:44px 0}}
+footer{background:var(--color-primary);color:#fff;text-align:center;padding:40px 20px}
+footer p{overflow-wrap:anywhere}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(max-width:1024px){.container,.nav{padding-inline:28px}}
+@media(max-width:900px){.cards,.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.container,.nav{padding-inline:20px}section{padding:56px 0}.hero,.story,.contact,.seats{grid-template-columns:1fr}.why{grid-template-columns:1fr}.navlinks{display:none}}
+@media(max-width:600px){.cards,.gallery{grid-template-columns:1fr}}
+@media(max-width:480px){.container,.nav{padding-inline:16px}section{padding:44px 0}.brand{font-size:22px}.btn{padding:11px 18px}}
 @media(min-width:1440px){.container,.nav{max-width:1320px}}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.card{transition:none}}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 <div class="disclaimer">Website concept demo — not the official website</div>
-<header><div class="nav"><a class="brand" href="#">Spice Garden</a><nav class="navlinks"><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Visit Us</a></nav><a class="btn" href="#visit">Reserve a Table</a></div></header>
+<header><div class="nav"><a class="brand" href="#">Spice Garden</a><nav class="navlinks"><a href="#menu">Menu</a><a href="#seating">Two Ways to Sit</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Visit Us</a></nav><a class="btn" href="#visit">Reserve a Table</a></div></header>
 <main>
-<section style="padding-top:72px"><div class="container hero"><div><h1>Flavours of India, taste of Thai — in the heart of Thamel.</h1><p class="sub">Spice Garden Restaurant and Bar in Thamel, Kathmandu, serves Indian, Thai and Continental cuisine — with fine dining seating and an open terrace garden restaurant with a bar.</p><p style="margin-top:24px"><a class="btn" href="#menu">Explore the Menu</a></p></div><div><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=80" alt="Illustrative photo of a warm restaurant dining room"><p class="caption">Illustrative photo only — not a photo of this restaurant.</p></div></div></section>
+<section style="padding-top:72px"><div class="container hero"><div class="reveal"><p class="eyebrow">Thamel &middot; Kathmandu</p><h1>Flavours of India, taste of Thai — in the heart of Thamel.</h1><p class="sub">Spice Garden Restaurant and Bar in Thamel, Kathmandu, serves Indian, Thai and Continental cuisine — with fine dining seating and an open terrace garden restaurant with a bar.</p><div class="cta-row"><a class="btn" href="#menu">Explore the Menu</a><a class="btn ghost" href="#visit">Plan Your Visit</a></div></div><div class="reveal"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600&q=80" fetchpriority="high" alt="Illustrative photo of a warm restaurant dining room" loading="eager" decoding="async"><p class="caption">Illustrative photo only — not a photo of this restaurant.</p></div></div></section>
 
-<section id="menu"><div class="container"><h2>What to try</h2><p class="sub">Dishes named in the restaurant's own listings and visitor descriptions. Menu images are shown as placeholders so no dish is pictured incorrectly.</p><div class="cards">
-<div class="card"><div class="placeholder">🍛</div><h3>Chicken Tikka Masala</h3><p>A visitor favourite, served with naan — one of the Indian dishes the restaurant is known for.</p></div>
-<div class="card"><div class="placeholder">🫓</div><h3>Palak Paneer with Butter Naan</h3><p>Spinach and paneer curry paired with butter naan, highlighted by visitors to the restaurant.</p></div>
-<div class="card"><div class="placeholder">🍚</div><h3>Fried Rice</h3><p>A well-liked rice dish from the restaurant's wider Indian, Thai and Continental menu.</p></div>
-<div class="card"><div class="placeholder">🍗</div><h3>Tandoori Chicken</h3><p>From the tandoor — a classic Indian main, served in the fine dining room or on the terrace.</p></div>
-<div class="card"><div class="placeholder">🥣</div><h3>Chicken Soup</h3><p>A warming starter named by visitors alongside the restaurant's curries and rice dishes.</p></div>
-<div class="card"><div class="placeholder">🥛</div><h3>Plain Lassi</h3><p>A simple, refreshing accompaniment to a spicy meal.</p></div>
+<section id="menu"><div class="container"><p class="eyebrow reveal">Menu</p><h2 class="reveal">What to try</h2><p class="sub reveal">Dishes named in the restaurant's own listings and visitor descriptions. Where a dish is shown without a photograph, a designed tile is used instead — so no dish is pictured incorrectly.</p><div class="cards">
+<div class="card reveal"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=80" alt="Illustrative photo of a chicken curry served with naan" loading="lazy" decoding="async"><h3>Chicken Tikka Masala</h3><p>A visitor favourite, served with naan — one of the Indian dishes the restaurant is known for.</p></div>
+<div class="card reveal"><div class="dish-tile"><span>P</span></div><h3>Palak Paneer with Butter Naan</h3><p>Spinach and paneer curry paired with butter naan, highlighted by visitors to the restaurant.</p></div>
+<div class="card reveal"><img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=1200&q=80" alt="Illustrative photo of a fried rice dish" loading="lazy" decoding="async"><h3>Fried Rice</h3><p>A well-liked rice dish from the restaurant's wider Indian, Thai and Continental menu.</p></div>
+<div class="card reveal"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=1200&q=80" alt="Illustrative photo of char-grilled marinated chicken skewers" loading="lazy" decoding="async"><h3>Tandoori Chicken</h3><p>From the tandoor — a classic Indian main, served in the fine dining room or on the terrace.</p></div>
+<div class="card reveal"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=1200&q=80" alt="Illustrative photo of a chicken noodle soup bowl" loading="lazy" decoding="async"><h3>Chicken Soup</h3><p>A warming starter named by visitors alongside the restaurant's curries and rice dishes.</p></div>
+<div class="card reveal"><div class="dish-tile"><span>L</span></div><h3>Plain Lassi</h3><p>A simple, refreshing accompaniment to a spicy meal.</p></div>
 </div></div></section>
 
-<section id="story" class="dark"><div class="container story"><div><h2>A terrace garden above Thamel</h2><p>Since March 2016, Spice Garden has worked together with Krua Thai Nepal, adding authentic Thai and Continental cuisine alongside its Indian menu — with the same management and team of cooks. Guests can choose fine dining seating or the open terrace garden restaurant, with a small bar at the corner and live music.</p></div><div><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Illustrative photo of a fine dining table setting"><p class="caption">Illustrative photo only — not a photo of this restaurant.</p></div></div></section>
+<section id="seating" style="background:#faf6ec"><div class="container"><p class="eyebrow reveal">Two ways to sit</p><h2 class="reveal">Fine dining room, or the terrace garden</h2><p class="sub reveal">The same Indian, Thai and Continental menu, served two ways — choose the room that suits the evening.</p><div class="seats">
+<div class="seat reveal"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1200&q=80" alt="Illustrative photo of a restaurant dining room with tables" loading="lazy" decoding="async"><div class="seat-body"><h3>Fine Dining Room</h3><p>Quieter indoor seating for a relaxed meal, served by the same management and team of cooks.</p></div></div>
+<div class="seat reveal"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=80" alt="Illustrative photo of relaxed, plant-filled restaurant seating" loading="lazy" decoding="async"><div class="seat-body"><h3>Terrace Garden Restaurant</h3><p>Open terrace garden seating above Thamel — the restaurant's rooftop garden setting on the 1st floor.</p></div></div>
+</div><p class="bar-note reveal">A small bar sits at the corner of the terrace, and live music is part of the evening — please call ahead for a terrace table.</p></div></section>
 
-<section id="gallery"><div class="container"><h2>Gallery</h2><p class="sub">Illustrative photos showing the kind of dining experience on offer — not photos of this restaurant.</p><div class="gallery">
-<div><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=80" alt="Illustrative photo of a curry dish"><p class="caption">Illustrative photo — curry dish.</p></div>
-<div><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1200&q=80" alt="Illustrative photo of a rice dish"><p class="caption">Illustrative photo — rice dish.</p></div>
-<div><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80" alt="Illustrative photo of a restaurant dining room"><p class="caption">Illustrative photo — dining room.</p></div>
+<section id="story" class="dark"><div class="container story"><div class="reveal"><p class="eyebrow">Our Story</p><h2>A terrace garden above Thamel</h2><p>Since March 2016, Spice Garden has worked together with Krua Thai Nepal, adding authentic Thai and Continental cuisine alongside its Indian menu — with the same management and team of cooks. Guests can choose fine dining seating or the open terrace garden restaurant, with a small bar at the corner and live music.</p></div><div class="reveal"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Illustrative photo of a fine dining table setting" loading="lazy" decoding="async"><p class="caption">Illustrative photo only — not a photo of this restaurant.</p></div></div></section>
+
+<section id="gallery"><div class="container"><p class="eyebrow reveal">Gallery</p><h2 class="reveal">Gallery</h2><p class="sub reveal">Illustrative photos showing the kind of dining experience on offer — not photos of this restaurant.</p><div class="gallery">
+<div class="reveal"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=80" alt="Illustrative photo of a curry dish" loading="lazy" decoding="async"><p class="caption">Illustrative photo — curry dish.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1200&q=80" alt="Illustrative photo of a rice dish" loading="lazy" decoding="async"><p class="caption">Illustrative photo — rice dish.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=1200&q=80" alt="Illustrative photo of a Thai curry bowl" loading="lazy" decoding="async"><p class="caption">Illustrative photo — Thai curry.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=80" alt="Illustrative photo of samosas with chutney" loading="lazy" decoding="async"><p class="caption">Illustrative photo — samosas.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=80" alt="Illustrative photo of a noodle dish" loading="lazy" decoding="async"><p class="caption">Illustrative photo — noodle dish.</p></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=1200&q=80" alt="Illustrative photo of an Indian thali with naan" loading="lazy" decoding="async"><p class="caption">Illustrative photo — Indian thali.</p></div>
 </div></div></section>
 
-<section class="dark"><div class="container"><h2>Why choose Spice Garden</h2><div class="why"><div><h3>Two cuisines, one table</h3><p>Indian dishes and Thai dishes served together, so a group can order across both menus.</p></div><div><h3>Terrace or fine dining</h3><p>Open terrace garden seating with a bar, or a quieter fine dining room — your choice.</p></div><div><h3>Right in Thamel</h3><p>On Bhagwati Marg in Thamel, beside Hotel Vaishali — easy to find on a walk through the district.</p></div></div></div></section>
+<section class="dark"><div class="container"><p class="eyebrow reveal">Why choose us</p><h2 class="reveal">Why choose Spice Garden</h2><div class="why"><div class="reveal"><h3>Two cuisines, one table</h3><p>Indian dishes and Thai dishes served together, so a group can order across both menus.</p></div><div class="reveal"><h3>Terrace or fine dining</h3><p>Open terrace garden seating with a bar, or a quieter fine dining room — your choice.</p></div><div class="reveal"><h3>Right in Thamel</h3><p>On Bhagwati Marg in Thamel, beside Hotel Vaishali — easy to find on a walk through the district.</p></div></div></div></section>
 
-<section id="visit"><div class="container contact"><div><h2>Visit us</h2><p><strong>Address:</strong><br>Bhagwati Marg, Thamel, Kathmandu, Nepal<br>Beside Hotel Vaishali, 1st floor with rooftop garden</p><p><strong>Hours:</strong><br>Daily, 7:00 AM – 11:00 PM</p><p><strong>Phone:</strong> <a href="tel:+97714701291">+977 1-4701291</a><br><strong>Email:</strong> <a href="mailto:spicegardenthamel@gmail.com">spicegardenthamel@gmail.com</a></p><p>Reservations are welcome — please call ahead for a terrace table.</p></div><div><h2>Send an enquiry</h2><form onsubmit="event.preventDefault();document.getElementById('sent').textContent='Thank you — this concept form does not send. Please email or call the restaurant directly.';"><input type="text" placeholder="Your name" required><input type="email" placeholder="Your email" required><textarea rows="4" placeholder="Your message — for example, a table for this evening" required></textarea><button class="btn" type="submit" style="border:0;cursor:pointer">Send Enquiry</button><p id="sent" style="font-family:Arial,sans-serif"></p></form></div></div></section>
+<section id="visit"><div class="container contact"><div class="reveal"><p class="eyebrow">Visit us</p><h2>Visit us</h2><p style="margin-top:32px"><strong>Address:</strong><br>Bhagwati Marg, Thamel, Kathmandu, Nepal<br>Beside Hotel Vaishali, 1st floor with rooftop garden</p><p><strong>Hours:</strong><br>Daily, 7:00 AM – 11:00 PM</p><p><strong>Phone:</strong> <a href="tel:+97714701291">+977 1-4701291</a><br><strong>Email:</strong> <a href="mailto:spicegardenthamel@gmail.com">spicegardenthamel@gmail.com</a></p><p>Reservations are welcome — please call ahead for a terrace table.</p></div><div class="reveal"><p class="eyebrow">Enquiry</p><h2>Send an enquiry</h2><form style="margin-top:32px" onsubmit="event.preventDefault();document.getElementById('sent').textContent='Thank you — this concept form does not send. Please email or call the restaurant directly.';"><input type="text" placeholder="Your name" required><input type="email" placeholder="Your email" required><textarea rows="4" placeholder="Your message — for example, a table for this evening" required></textarea><button class="btn" type="submit" style="border:0;cursor:pointer">Send Enquiry</button><p id="sent"></p></form></div></div></section>
 
-<section style="text-align:center"><div class="container"><h2>Indian and Thai flavours, one terrace above Thamel.</h2><p><a class="btn" href="mailto:spicegardenthamel@gmail.com">Email the Restaurant</a></p></div></section>
+<section style="text-align:center"><div class="container reveal"><h2>Indian and Thai flavours, one terrace above Thamel.</h2><p style="margin-top:24px"><a class="btn" href="mailto:spicegardenthamel@gmail.com">Email the Restaurant</a></p></div></section>
 </main>
 <footer><p>Spice Garden Restaurant — Bhagwati Marg, Thamel, Kathmandu</p><p>Website concept demo — not the official website</p><p style="font-size:13px">Photos on this page are licensed stock photos used for illustration only and are not photos of this restaurant.</p></footer>
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
 </body>
 </html>
