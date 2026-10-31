@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Lourdes Dimatera, DMD — General Dentistry in Sanger, CA | Website Concept Demo</title>
+<meta name="description" content="Website concept demo for Maria Lourdes Dimatera, DMD, general dentistry at 801 N St, Sanger, CA 93657.">
+<style>
+:root{--color-primary:#173B4A;--color-secondary:#F4F2EB;--color-accent:#75A9A3;--ink:#1d2b31;--muted:#5a6b70;--line:#ddd8c9;--white:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--color-secondary);line-height:1.6}
+a{color:inherit}
+.disclaimer{background:var(--color-primary);color:#f4f2eb;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.04em;padding:10px 20px}
+header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:22px;font-weight:700;color:var(--color-primary);letter-spacing:.01em}
+.brand small{display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent)}
+.navlinks{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--color-accent)}
+.btn{display:inline-block;background:var(--color-accent);color:#173B4A;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;padding:13px 26px;border-radius:6px}
+.btn:hover{filter:brightness(1.07)}
+.btn-outline{background:transparent;border:2px solid var(--color-accent);color:var(--color-primary)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(min-width:1400px){.container,.nav{max-width:1320px}}
+section{padding:96px 0}
+.hero{background:var(--color-primary);color:#f4f2eb}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.08;margin-bottom:16px}
+.hero p.lead{font-size:19px;color:#d5ddd8;margin-bottom:24px}
+.hero .cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.hero img{width:100%;height:420px;object-fit:cover;border-radius:12px;display:block}
+.cap{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9aa5a8;margin-top:10px}
+.kicker{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px}
+h2{font-size:clamp(30px,3.6vw,44px);line-height:1.15;color:var(--color-primary);margin-bottom:16px}
+.sub{font-size:18px;color:var(--muted);margin-bottom:32px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;color:var(--color-primary);margin-bottom:10px}
+.card-body p{color:var(--muted);font-size:16px}
+.story{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-grid img{width:100%;height:380px;object-fit:cover;border-radius:12px}
+.story-grid ul{list-style:none;margin-top:24px}
+.story-grid li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid var(--line);font-size:17px}
+.story-grid li:before{content:"✓";position:absolute;left:0;color:var(--color-accent);font-weight:700}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gallery-grid img{width:100%;height:260px;object-fit:cover;border-radius:12px;display:block}
+.why{background:var(--color-primary);color:#f4f2eb}
+.why h2{color:#f4f2eb}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-item{border:1px solid #33505e;border-radius:12px;padding:24px}
+.why-item h3{color:var(--color-accent);margin-bottom:10px;font-size:20px}
+.why-item p{color:#d5ddd8}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+table{width:100%;border-collapse:collapse;font-size:17px}
+td{padding:12px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:700;color:var(--color-primary)}
+.contact-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:32px}
+.contact-card p{margin-bottom:12px;font-size:17px}
+.contact-card a{color:var(--color-primary);font-weight:700}
+.cta{background:var(--color-primary);color:#f4f2eb;text-align:center}
+.cta h2{color:#f4f2eb}
+.cta p{color:#d5ddd8;margin-bottom:24px;font-size:18px}
+footer{background:#0f2833;color:#c9cfc8;padding:48px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.faq{margin-top:32px}
+.faq button{width:100%;text-align:left;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:18px 22px;font-size:17px;font-family:Georgia,serif;cursor:pointer;margin-bottom:12px}
+.faq .ans{display:none;padding:0 22px 18px;color:var(--muted)}
+@media(max-width:768px){
+  section{padding:56px 0}
+  .nav,.container{padding-left:20px;padding-right:20px}
+  .navlinks{display:none}
+  .hero-grid,.story-grid,.hours-grid{grid-template-columns:1fr}
+  .cards,.gallery-grid,.why-grid{grid-template-columns:1fr}
+  .hero img,.story-grid img{height:280px}
+}
+@media(max-width:480px){section{padding:44px 0}.nav,.container{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header>
+  <div class="nav">
+    <div class="brand">Maria Lourdes Dimatera, DMD<small>General Dentistry · Sanger, CA</small></div>
+    <nav class="navlinks">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit Us</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="tel:+15598761777">Call (559) 876-1777</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">General Dentistry in Sanger, California</div>
+      <h1>General dental care in the heart of Sanger.</h1>
+      <p class="lead">Dr. Maria Lourdes Dimatera provides general dentistry in Sanger — welcoming new patients, with care listed for children and adults, and Spanish and Tagalog spoken.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+15598761777">Call (559) 876-1777</a>
+        <a class="btn btn-outline" style="color:#f4f2eb;border-color:#75A9A3" href="mailto:drdimatera@yahoo.com">Email the Office</a>
+      </div>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80" alt="A bright dental operatory with dental chairs">
+      <p class="cap">Illustrative photo — licensed stock, not a photo of this practice.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="kicker">Services</div>
+    <h2>Dental care listed for this practice</h2>
+    <p class="sub">The services below are those noted for this practice in public directory listings. Please call the office to confirm what care is offered at your visit.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient in a dental chair">
+        <div class="card-body"><h3>General Dentistry</h3><p>Everyday dental care for adults and families in Sanger.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=1200&q=80" alt="A dentist treating a patient">
+        <div class="card-body"><h3>Emergency Dentistry</h3><p>Urgent dental care, as noted in directory listings for this practice.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="A modern dental operatory">
+        <div class="card-body"><h3>Pediatric Dentistry</h3><p>Dental care for children, as noted in directory listings for this practice.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental images">
+        <div class="card-body"><h3>Cosmetic Dentistry</h3><p>Cosmetic dental care, as noted in directory listings for this practice.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+    </div>
+    <p style="color:var(--muted);margin-top:24px">Directory listings for this practice also note sedation dentistry, sports dentistry, and neuromuscular dentistry. Confirm availability with the office directly.</p>
+  </div>
+</section>
+
+<section class="story" id="about">
+  <div class="container story-grid">
+    <div>
+      <div class="kicker">About the Practice</div>
+      <h2>A Sanger practice serving local families</h2>
+      <p>Dr. Maria Lourdes Dimatera is a general dentist practising on N Street in Sanger, California. The practice is listed as accepting new patients through Delta Dental Premier and Delta Dental PPO, and directory sources note an active California licence.</p>
+      <ul>
+        <li>General dentistry in Sanger, CA</li>
+        <li>English, Spanish, and Tagalog spoken, as listed</li>
+        <li>Accessible location with public transit access, as listed</li>
+        <li>Accepting new patients — Delta Dental Premier and PPO</li>
+      </ul>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist talking with a patient in a dental chair">
+      <p class="cap">Illustrative photo — licensed stock, not a photo of this practice.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">Inside the Office</div>
+    <h2>Care in a modern dental setting</h2>
+    <p class="sub">Illustrative photographs of general dental care settings. These are licensed stock photos, not photos of this practice.</p>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80" alt="A bright dental operatory">
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient during an exam">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental images">
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="kicker">Why Choose Us</div>
+    <h2>Local care, in your language</h2>
+    <div class="why-grid">
+      <div class="why-item"><h3>One Sanger location</h3><p>A single local practice on N Street, serving Sanger and nearby Fresno County communities.</p></div>
+      <div class="why-item"><h3>Care for children and adults</h3><p>General, pediatric, emergency, and cosmetic care noted in directory listings.</p></div>
+      <div class="why-item"><h3>New patients welcome</h3><p>Listed as accepting new patients through Delta Dental Premier and PPO.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="container hours-grid">
+    <div>
+      <div class="kicker">Location &amp; Hours</div>
+      <h2>Visit us in Sanger</h2>
+      <table>
+        <tr><td>Monday</td><td>8:00 AM – 4:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>8:00 AM – 5:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:00 AM – 4:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+      </table>
+      <p style="color:var(--muted);margin-top:16px">Hours shown are the days listed in the verified business listing. Hours for Wednesday, Saturday, and Sunday were not listed in the sources used for this concept — please call to confirm before visiting.</p>
+    </div>
+    <div class="contact-card" id="contact">
+      <h3 style="color:var(--color-primary);font-size:22px;margin-bottom:16px">Contact</h3>
+      <p><strong>Address:</strong><br>801 N St, Sanger, CA 93657</p>
+      <p><strong>Phone:</strong> <a href="tel:+15598761777">(559) 876-1777</a></p>
+      <p><strong>Email:</strong> <a href="mailto:drdimatera@yahoo.com">drdimatera@yahoo.com</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Maria%20Lourdes%20Dimatera%20DMD%20801%20N%20St%2C%20Sanger%2C%20CA%2093657" target="_blank" rel="noopener">Get directions on Google Maps</a></p>
+      <p style="color:var(--muted);font-size:15px">To book an appointment, please call or email the office directly. This concept page does not take bookings.</p>
+    </div>
+  </div>
+  <div class="container faq">
+    <button type="button" onclick="toggleFaq(this)">Are you accepting new patients?</button>
+    <div class="ans"><p>The practice is listed as accepting new patients through Delta Dental Premier and Delta Dental PPO. Call the office to confirm.</p></div>
+    <button type="button" onclick="toggleFaq(this)">What languages are spoken?</button>
+    <div class="ans"><p>English, Spanish, and Tagalog are listed for this practice in its directory entry.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to visit Dr. Dimatera in Sanger?</h2>
+    <p>Call or email the office to ask about appointments and general dental care.</p>
+    <a class="btn" href="tel:+15598761777">Call (559) 876-1777</a>
+  </div>
+</section>
+
+<div class="disclaimer">Website concept demo — not the official website</div>
+<footer>
+  <div class="container">
+    <div><strong>Maria Lourdes Dimatera, DMD</strong><br>801 N St, Sanger, CA 93657<br>(559) 876-1777</div>
+    <div>Concept demo built from public directory listings. Photos are licensed stock and illustrative only.<br>Please call or email the practice to confirm hours, services, and appointments.</div>
+  </div>
+</footer>
+<script>
+function toggleFaq(btn){var ans=btn.nextElementSibling;ans.style.display=(ans.style.display==='block')?'none':'block';}
+</script>
+</body>
+</html>
