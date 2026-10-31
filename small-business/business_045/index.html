@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>North Main Dance Studio — Weatherford, TX</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#542B36;--color-secondary:#F5EFE5;--color-accent:#B77B82;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--color-primary);line-height:1.6}
@@ -64,6 +64,32 @@ footer{background:var(--color-primary);color:var(--color-secondary);padding:56px
 footer .cols{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:32px}
 footer a{text-decoration:none}
 .small{font-size:12px;opacity:.85}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Sora',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap,.container{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box;padding-inline:40px!important}
+@media(min-width:1440px){.wrap,.container{max-width:1320px!important}}@media(max-width:1024px){.wrap,.container{padding-inline:28px!important}}@media(max-width:640px){.wrap,.container{padding-inline:20px!important}body{font-size:16px}}@media(max-width:400px){.wrap,.container{padding-inline:16px!important}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -95,7 +121,7 @@ footer a{text-decoration:none}
 <article class="card"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of a group fitness class"><div class="card-body"><h3>Women's Fitness Classes</h3><p>Zumba, yoga, kickboxing, boot camps, strength training, cardio and core, and adult cardio hip hop — in a women's-only facility.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the studio's own photo.</p></article>
 <article class="card"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of yoga practice"><div class="card-body"><h3>Yoga &amp; Personal Training</h3><p>Yoga classes and personal training for women, with trainers who adapt training to your needs.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the studio's own photo.</p></article>
 <article class="card"><img src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dance movement"><div class="card-body"><h3>Dance for Kids</h3><p>Ballet, tap, and jazz for ages 2 and up, and hip hop for ages 6 and up.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the studio's own photo.</p></article>
-<article class="card"><div class="card-body"><h3>Women's-Only Boot Camp</h3><p>A women's-only boot camp on Monday, Wednesday, and Friday at 5:30 AM, about 45 minutes, taught by a certified personal trainer.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="One-on-one fitness training (illustrative stock photo)" loading="lazy"><div class="card-body"><h3>Women's-Only Boot Camp</h3><p>A women's-only boot camp on Monday, Wednesday, and Friday at 5:30 AM, about 45 minutes, taught by a certified personal trainer.</p></div></article>
 <article class="card"><div class="card-body"><h3>No Contracts</h3><p>No contracts for any classes — month to month. Call or email for specific information on each class offered.</p></div></article>
 <article class="card"><div class="card-body"><h3>On the Square</h3><p>Located right at the Weatherford square, three doors north of the courthouse.</p></div></article>
 </div>
@@ -115,9 +141,9 @@ footer a{text-decoration:none}
 <span class="kicker">Inside the Studio</span>
 <h2>Movement, up close</h2>
 <div class="gallery">
-<figure><img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dance training"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of a group fitness class"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of yoga practice"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Gym training floor (illustrative stock photo)"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Dumbbell training (illustrative stock photo)"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Boxing training (illustrative stock photo)"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Gym training floor (illustrative stock photo)" loading="lazy"><figcaption>Gym training floor — illustrative stock photo.</figcaption></figure>
 </div>
 </div></section>
 
