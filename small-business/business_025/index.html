@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lillie Anne's — Website Concept Demo</title>
+<style>
+:root{--primary:#172638;--bg:#F7F5F0;--accent:#B89B65;}
+*{box-sizing:border-box} body{margin:0;font-family:Georgia,serif;background:var(--bg);color:#172638;line-height:1.6}
+a{color:var(--accent)} .wrap{max-width:1200px;margin:0 auto;padding:0 40px} @media(min-width:1440px){.wrap{max-width:1320px}}
+@media(max-width:768px){.wrap{padding:0 20px}} @media(max-width:480px){.wrap{padding:0 16px}}
+.disclaimer{background:#172638;color:var(--bg);text-align:center;padding:12px 16px;font-size:14px}
+header{padding:28px 0;border-bottom:3px solid var(--accent)} header .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+nav a{margin-right:24px;text-decoration:none;font-weight:bold} nav a:last-child{margin-right:0}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:96px 0}
+@media(max-width:768px){.hero{grid-template-columns:1fr;padding:56px 0}} @media(max-width:480px){.hero{padding:44px 0}}
+.hero img,.gallery img{width:100%;height:auto;border-radius:12px;object-fit:cover}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 16px} h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2}
+section{padding:96px 0} @media(max-width:768px){section{padding:56px 0}} @media(max-width:480px){section{padding:44px 0}}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px} @media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:480px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--accent);border-radius:12px;padding:24px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px} @media(max-width:768px){.gallery{grid-template-columns:1fr}} figure{margin:0} figcaption{font-size:13px;margin-top:8px}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:14px 26px;border-radius:8px;font-weight:bold;margin-right:12px}
+.cta{background:#172638;color:var(--bg);text-align:center} .cta .btn{background:var(--accent)}
+.note{background:#fff;border-left:4px solid var(--accent);padding:20px 24px} footer{padding:32px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="wrap"><strong>Lillie Anne's</strong>
+<nav><a href="#shop">What we offer</a><a href="#visit">Visit us</a><a href="tel:3348533000">Call</a><a href="mailto:lillieannesshop@gmail.com">Email</a></nav></div></header>
+<main>
+<section class="hero wrap"><div><h1>Lillie Anne's</h1><p>A charming downtown Elba boutique for baby gifts, pillows and more.</p>
+<p><a class="btn" href="tel:3348533000">Call (334) 853-3000</a><a class="btn" href="mailto:lillieannesshop@gmail.com">Email us</a></p></div>
+<div><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&q=80" alt="Boutique clothing rail (illustrative stock photo)"><p><small>Boutique clothing rail (illustrative stock photo) — illustrative stock photo, not the shop’s own photo.</small></p></div></section>
+<section id="shop"><div class="wrap"><h2>What we offer</h2><div class="grid"><article class="card"><h3>Baby gifts</h3><p>A great selection of baby gifts, per the shop's posts.</p></article><article class="card"><h3>Decorative pillows</h3><p>A new selection of pillows, per the shop's posts.</p></article><article class="card"><h3>Boutique finds and Sorrelli jewelry</h3><p>A downtown boutique and authorized Sorrelli retailer.</p></article></div></div></section>
+<section><div class="wrap"><h2>About the shop</h2><p>Lillie Anne's is a boutique on Claxton Avenue in downtown Elba, Alabama, described by the Main Street Elba guide as one of the town's charming boutiques. Its posts highlight baby gifts and a new selection of pillows.</p></div></section>
+<section><div class="wrap"><h2>Inside the shop</h2><div class="gallery"><figure><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80" alt="Boutique tops on hangers (illustrative stock photo)" loading="lazy"><figcaption>Boutique tops on hangers (illustrative stock photo) — illustrative stock photo, not the shop’s own photo.</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=1200&q=80" alt="Wrapped gift box (illustrative stock photo)" loading="lazy"><figcaption>Wrapped gift box (illustrative stock photo) — illustrative stock photo, not the shop’s own photo.</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Boutique interior (illustrative stock photo)" loading="lazy"><figcaption>Boutique interior (illustrative stock photo) — illustrative stock photo, not the shop’s own photo.</figcaption></figure></div>
+<p><small>All photos on this page are licensed stock photos used for illustration only. They are not photos of this business.</small></p></div></section>
+<section><div class="wrap"><h2>Why visit</h2><ul><li>Downtown Elba boutique</li><li>Baby gifts and decorative pillows</li><li>Sorrelli jewelry retailer</li></ul></div></section>
+<section id="visit"><div class="wrap"><h2>Visit us</h2><p><strong>211 Claxton Avenue, Elba, AL 36323</strong><br>Phone: <a href="tel:3348533000">(334) 853-3000</a><br>Email: <a href="mailto:lillieannesshop@gmail.com">lillieannesshop@gmail.com</a></p>
+<div class="note"><p>Listed hours: Tuesday, Thursday and Friday 10:00 to 5:30, and Saturday 10:00 to 2:00. Note: listings differ on Monday — one listing also shows Monday 10:00 to 5:30 while another omits Monday. Please call to confirm Monday opening.</p></div>
+<p><small>This concept page is not a booking page. Please call or email the shop directly to ask about availability.</small></p></div></section>
+<section class="cta"><div class="wrap"><h2>Come and browse</h2>
+<p><a class="btn" href="tel:3348533000">Call (334) 853-3000</a><a class="btn" href="mailto:lillieannesshop@gmail.com">Email us</a></p></div></section>
+</main>
+<footer><p>Website concept demo — not the official website</p><p><small>Lillie Anne's — 211 Claxton Avenue, Elba, AL 36323</small></p></footer>
+</body>
+</html>
