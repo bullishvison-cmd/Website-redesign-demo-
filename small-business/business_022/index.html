@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ClayPlay2 — Website Concept Demo</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--primary:#78866B;--bg:#F2EBDD;--accent:#B86F50;}
 *{box-sizing:border-box} body{margin:0;font-family:Georgia,serif;background:var(--bg);color:#78866B;line-height:1.6}
 a{color:var(--accent)} .wrap{max-width:1200px;margin:0 auto;padding:0 40px} @media(min-width:1440px){.wrap{max-width:1320px}}
@@ -23,6 +23,32 @@ section{padding:96px 0} @media(max-width:768px){section{padding:56px 0}} @media(
 .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:14px 26px;border-radius:8px;font-weight:bold;margin-right:12px}
 .cta{background:#78866B;color:var(--bg);text-align:center} .cta .btn{background:var(--accent)}
 .note{background:#fff;border-left:4px solid var(--accent);padding:20px 24px} footer{padding:32px 0;text-align:center}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Fraunces',Georgia,'Times New Roman',serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap,.container{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box;padding-inline:40px!important}
+@media(min-width:1440px){.wrap,.container{max-width:1320px!important}}@media(max-width:1024px){.wrap,.container{padding-inline:28px!important}}@media(max-width:640px){.wrap,.container{padding-inline:20px!important}body{font-size:16px}}@media(max-width:400px){.wrap,.container{padding-inline:16px!important}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -41,7 +67,7 @@ section{padding:96px 0} @media(max-width:768px){section{padding:56px 0}} @media(
 <section id="visit"><div class="wrap"><h2>Visit us</h2><p><strong>609 Kings Highway, Saugerties, NY 12477</strong><br>Phone: <a href="tel:8455144477">(845) 514-4477</a><br>Email: <a href="mailto:brmmmrider@gmail.com">brmmmrider@gmail.com</a></p>
 <div class="note"><p>No opening hours are published in the listings checked for this shop. Please call or email to arrange a visit.</p></div>
 <p><small>This concept page is not a booking page. Please call or email the shop directly to ask about availability.</small></p></div></section>
-<section class="cta"><div class="wrap"><h2>Come and browse</h2>
+<section><div class="wrap"><h2>Planning your visit</h2><p>A few practical notes before you get in touch.</p><ul><li>Call or email first to confirm availability and opening times.</li><li>Mention the service you need so the business can advise on next steps.</li><li>This concept page does not take bookings — contact goes directly to the business.</li></ul><p><a class="btn" href="tel:8455144477">Call (845) 514-4477</a><a class="btn" href="mailto:brmmmrider@gmail.com">Email us</a></p></div></section><section class="cta"><div class="wrap"><h2>Come and browse</h2>
 <p><a class="btn" href="tel:8455144477">Call (845) 514-4477</a><a class="btn" href="mailto:brmmmrider@gmail.com">Email us</a></p></div></section>
 </main>
 <footer><p>Website concept demo — not the official website</p><p><small>ClayPlay2 — 609 Kings Highway, Saugerties, NY 12477</small></p></footer>
