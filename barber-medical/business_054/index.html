@@ -53,13 +53,66 @@ td{padding:12px 16px;border-bottom:1px solid var(--line)}
 footer{background:var(--primary);color:#e7e5e4;padding:48px 24px;text-align:center;font-family:system-ui,sans-serif}
 footer a{color:var(--accent)}footer .note{color:#d6d3d1}
 @media(max-width:768px){.story,.visit,.gal{grid-template-columns:1fr}.hero{min-height:480px}}
+
+/* Polish pass 2026-10-31: restrained reveal motion, no layout shift */
+.polish-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.polish-reveal.polish-visible{opacity:1;transform:none}
+img{max-width:100%}
+body{overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){.polish-reveal{opacity:1;transform:none;transition:none}}
+
+/* Typography polish 2026-10-31: display/body pairing, type scale, S16 spacing. Palette untouched. */
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+h1,h2,h3{font-family:'Sora',system-ui,Arial,sans-serif!important}
+h1{font-size:clamp(40px,5vw,64px)!important;line-height:1.08!important;letter-spacing:-0.015em!important;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,40px)!important;line-height:1.15!important;letter-spacing:-0.01em!important;text-wrap:balance;margin-bottom:32px}
+h2:has(+p){margin-bottom:16px!important}
+h3{font-size:clamp(20px,2.2vw,24px)!important;line-height:1.25!important;text-wrap:balance}
+p,li{font-size:17px;line-height:1.65;text-wrap:pretty}
+.lead,.lede,.sub{font-size:19px!important;line-height:1.6!important}
+.hero .lead,.hero .lede,.hero .sub{margin-bottom:24px}
+.kicker,.eyebrow{font-size:13px!important;letter-spacing:.14em!important;text-transform:uppercase}
+.caption,.cap,figcaption,.note,.photo-note{font-size:13px!important;line-height:1.5!important}
+.hero-inner h1,.hero-inner p{text-shadow:0 1px 14px rgba(0,0,0,.45)}
+
+/* Balance polish 2026-10-31: one centred container, equal side padding, no overflow. Palette untouched. */
+.container,.wrap,.nav,.hero-inner{max-width:1200px;margin-inline:auto}
+.container,.wrap,.nav,.hero-inner{padding-inline:40px}
+@media(min-width:1440px){.container,.wrap,.nav,.hero-inner{max-width:1320px}}
+@media(max-width:1024px){.container,.wrap,.nav,.hero-inner{padding-inline:28px}}
+@media(max-width:640px){.container,.wrap,.nav,.hero-inner{padding-inline:20px}}
+@media(max-width:400px){.container,.wrap,.nav,.hero-inner{padding-inline:16px}}
+*{box-sizing:border-box}
+img{max-width:100%}
+a{overflow-wrap:anywhere}
+table{max-width:100%}
+body{overflow-x:hidden}
+
+footer{padding-inline:40px}
+@media(max-width:1024px){footer{padding-inline:28px}}
+@media(max-width:640px){footer{padding-inline:20px}}
+@media(max-width:400px){footer{padding-inline:16px}}
+
+/* Ultra pass 2026-10-31: buttery motion, hover polish, visible focus. Palette untouched (vars only, no new colours). */
+.polish-reveal{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)!important}
+.card,.g,figure{transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease}
+.card:hover,.g:hover{transform:translateY(-4px)}
+.card img{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card:hover img{transform:scale(1.03)}
+.btn,a.btn,.cta a{transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+.btn:hover,a.btn:hover,.cta a:hover{transform:translateY(-1px)}
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.card,.g,figure,.card img,.btn,a.btn,.cta a{transition:none!important;transform:none!important}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <p class="disclaimer">Website concept demo — not the official website</p>
 <nav><a class="brand" href="#top">Golden-Fingers Barber Shop 2</a><span class="links"><a href="#services">Services</a><a href="#story">About</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></span><a class="btn" href="tel:+16026688925">Call Now</a></nav>
 <header class="hero" id="top">
-<img class="hero-img" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1600&q=80" alt="Barber at work, illustrative stock photo" fetchpriority="high">
+<img decoding="async" class="hero-img" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1600&q=80" alt="Barber at work, illustrative stock photo" fetchpriority="high">
 <div class="hero-shade"></div>
 <div class="hero-inner"><p class="eyebrow">Barber Shop</p><h1>Golden-Fingers Barber Shop 2</h1><p class="lead">Haircuts, fades and hot lather shaves in Glendale.</p><div class="cta-row"><a class="btn" href="tel:+16026688925">Call (602) 668-8925</a><a class="btn btn-ghost" style="color:#fff !important;border-color:#fff" href="https://www.google.com/maps/search/?api=1&query=Golden-Fingers%20Barber%20Shop%202%206750%20W%20Deer%20Valley%20Rd%2C%20Glendale%2C%20AZ%2085310">Get Directions</a></div></div>
 <p class="photo-note on-dark">Photos shown are illustrative stock images, not photos of this business.</p>
@@ -68,11 +121,15 @@ footer a{color:var(--accent)}footer .note{color:#d6d3d1}
 <section><div class="strip"><div><b>Where</b><span>6750 W Deer Valley Rd c105, Glendale, AZ 85310</span></div><div><b>Call</b><span>(602) 668-8925</span></div><div><b>Email</b><span>citation.goldenfinger@gmail.com</span></div></div></section>
 <section id="services"><p class="eyebrow">Services</p><h2>Barber services</h2><p class="photo-note">Services as listed for the shop in public directories.</p><ul class="cards"><li><b>Haircuts</b><span>Cuts for men and boys.</span></li><li><b>Fades</b><span>Fade cuts.</span></li><li><b>Hot lather shaves</b><span>Traditional hot lather shaving.</span></li><li><b>Beard trimming</b><span>Beard shaping and trimming.</span></li><li><b>Eyebrow threading</b><span>Eyebrow threading service.</span></li></ul></section>
 <section id="story"><div class="story"><div><p class="eyebrow">About the shop</p><h2>A Glendale barber shop</h2><p>Golden-Fingers Barber Shop 2 is a barber shop on West Deer Valley Road in Glendale, offering haircuts, fades, hot lather shaves, beard trimming and eyebrow threading.</p></div><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1600&q=80" alt="Barbershop interior, illustrative stock photo" loading="lazy"></div><p class="photo-note">Photos shown are illustrative stock images, not photos of this business.</p></section>
-<section id="gallery"><p class="eyebrow">Gallery</p><h2>Inside the craft</h2><p class="photo-note">Photos shown are illustrative stock images, not photos of this business.</p><div class="gal"><figure><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80" alt="Haircut, illustrative stock photo" loading="lazy"><figcaption>Haircut</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1600&q=80" alt="Shape-up, illustrative stock photo" loading="lazy"><figcaption>Shape-up</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1600&q=80" alt="The barber chair, illustrative stock photo" loading="lazy"><figcaption>The barber chair</figcaption></figure></div></section>
+<section id="gallery"><p class="eyebrow">Gallery</p><h2>Inside the craft</h2><p class="photo-note">Photos shown are illustrative stock images, not photos of this business.</p><div class="gal"><figure><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80" alt="Haircut, illustrative stock photo" loading="lazy"><figcaption>Haircut</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1600&q=80" alt="Shape-up, illustrative stock photo" loading="lazy"><figcaption>Shape-up</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1600&q=80" alt="The barber chair, illustrative stock photo" loading="lazy"><figcaption>The barber chair</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop" alt="Illustrative photo, not a photo of this business" loading="lazy"><figcaption>Illustrative stock image, not a photo of this business.</figcaption></figure></div></section>
 <section><p class="eyebrow">Why visit</p><h2>Good reasons to stop by</h2><ul class="cards"><li><b>Fades and shaves</b><span>Fades and hot lather shaves listed among services.</span></li><li><b>Beard and brow care</b><span>Beard trimming and eyebrow threading offered.</span></li><li><b>Glendale location</b><span>On West Deer Valley Road in Glendale.</span></li></ul></section>
 <section id="visit"><p class="eyebrow">Visit</p><h2>Visit us</h2><div class="visit"><div><p><strong>Address:</strong> 6750 W Deer Valley Rd c105, Glendale, AZ 85310</p><p><strong>Phone:</strong> (602) 668-8925</p><p><strong>Email:</strong> citation.goldenfinger@gmail.com</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Golden-Fingers%20Barber%20Shop%202%206750%20W%20Deer%20Valley%20Rd%2C%20Glendale%2C%20AZ%2085310">Get Directions</a> <a class="btn btn-ghost" href="tel:+16026688925">Call Now</a> <a class="btn btn-ghost" href="mailto:citation.goldenfinger@gmail.com">Email Us</a></p></div><div><h3>Hours</h3><table><tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr><tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr><tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr><tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr><tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr><tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr><tr><td>Sunday</td><td>9:00 AM – 3:00 PM</td></tr></table><p class="photo-note">Hours are as listed in public sources. Call ahead to confirm before you visit.</p></div></div></section>
 <section><div class="final"><h2>Ready for a fresh cut?</h2><p>Call or email the shop to ask about availability.</p><div class="cta-row" style="justify-content:center"><a class="btn" href="tel:+16026688925">Call (602) 668-8925</a><a class="btn btn-ghost" style="color:#fff !important;border-color:#fff" href="mailto:citation.goldenfinger@gmail.com">Email Us</a></div></div></section>
 </main>
+<section class="polish-visit"><div class="wrap"><h2>Planning your visit</h2><p>Opening hours, availability and services can change, so please call or email using the contact details on this page before you travel. If you have a question about a particular service or appointment, mention it when you get in touch and the business can confirm directly.</p><p style="margin-top:12px">Photos on this page are licensed stock photos, illustrative only — not photos of this business.</p></div></section>
 <footer><p class="disclaimer">Website concept demo — not the official website</p><p>Golden-Fingers Barber Shop 2 &middot; 6750 W Deer Valley Rd c105, Glendale, AZ 85310 &middot; (602) 668-8925 &middot; citation.goldenfinger@gmail.com</p><p class="note">This is an independent website concept prepared as a design sample. It is not the business's official website, and no orders or bookings can be placed here. Photos shown are illustrative stock images, not photos of this business.</p></footer>
+<script>
+(function(){var els=document.querySelectorAll('section, .card, .menu-card');els.forEach(function(e){e.classList.add('polish-reveal');});if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('polish-visible');});return;}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('polish-visible');io.unobserve(en.target);}});},{threshold:0.12});els.forEach(function(e){io.observe(e);});})();
+</script>
 </body>
 </html>
