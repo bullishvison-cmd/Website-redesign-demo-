@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knapps Barber Shop — Tifton, GA | Haircuts, Fades, Beard Trims &amp; Hot Towel Shaves</title>
+<meta name="description" content="Knapps Barber Shop in Tifton, Georgia. Haircuts, fades, line ups, beard trimming and hot towel shaves for men, women and kids.">
+<style>
+:root{--color-primary:#171717;--color-secondary:#F5F0E6;--color-accent:#C6A56B;--ink:#1d1a16;--muted:#6b6156}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--color-secondary);line-height:1.6}
+a{color:inherit}
+.container{max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1440px){.container{max-width:1320px}}
+@media(max-width:768px){.container{padding-inline:28px}}
+@media(max-width:480px){.container{padding-inline:20px}}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);font-size:13px;text-align:center;padding:10px 16px;font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;background:var(--color-secondary);border-bottom:1px solid #ddd3c2;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:24px}
+.brand{font-size:24px;font-weight:700;letter-spacing:.5px;color:var(--color-primary);text-decoration:none}
+.nav-links{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+.nav-links a{text-decoration:none}
+.btn{display:inline-block;background:var(--color-accent);color:#171717;font-family:Arial,Helvetica,sans-serif;font-weight:700;text-decoration:none;padding:13px 26px;border-radius:4px}
+.btn-dark{background:var(--color-primary);color:var(--color-secondary)}
+.btn-outline{background:transparent;border:2px solid var(--color-accent);color:var(--color-secondary)}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}.nav-links{display:none}}
+@media(max-width:480px){section{padding:56px 0}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.1;color:var(--color-primary);margin-bottom:16px}
+.hero p.lede{font-size:19px;color:#3d382f;margin-bottom:24px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+figure{margin:0}
+figure img{width:100%;height:auto;display:block;border-radius:8px;object-fit:cover}
+figcaption{font-size:13px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:8px}
+h2{font-size:clamp(30px,3.5vw,42px);line-height:1.15;color:var(--color-primary);margin-bottom:16px}
+.sub{font-size:17px;color:var(--muted);margin-bottom:32px;max-width:640px}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.dark h2{color:var(--color-secondary)}
+.dark .sub{color:#cfc6b8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e3dac9;border-radius:8px;overflow:hidden}
+.card img{aspect-ratio:4/3;object-fit:cover}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;margin-bottom:8px;color:var(--color-primary)}
+.card-body p{font-size:15px;color:#4a443b}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:768px){.split{grid-template-columns:1fr}}
+.why{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+.why li{background:#fff;border-left:4px solid var(--color-accent);padding:24px;border-radius:4px}
+.why li strong{display:block;font-size:18px;margin-bottom:6px}
+.hours{width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif}
+.hours td{padding:12px 0;border-bottom:1px solid #e3dac9}
+.hours td:last-child{text-align:right}
+.note{font-size:14px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:16px}
+.final{text-align:center}
+.final .cta-row{justify-content:center}
+footer{background:var(--color-primary);color:var(--color-secondary);padding:48px 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+footer a{color:var(--color-accent)}
+.menu-btn{display:none;background:none;border:1px solid var(--color-primary);padding:8px 14px;font-size:15px;cursor:pointer}
+@media(max-width:768px){.menu-btn{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--color-secondary);padding:20px 28px;border-bottom:1px solid #ddd3c2}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">Knapps Barber Shop</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a class="btn" href="tel:+12293267315">Call (229) 326-7315</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:72px">
+  <div class="container hero">
+    <div>
+      <h1>Sharp cuts, clean lines, and a proper hot towel shave in Tifton.</h1>
+      <p class="lede">Knapps Barber Shop is a Tifton barbershop cutting hair for men, women, and kids — from fades and line ups to beard trimming and hot towel shaves.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+12293267315">Call the shop</a>
+        <a class="btn btn-dark" href="mailto:corvin229barbershop@gmail.com">Email the shop</a>
+      </div>
+      <p class="note">2118 Central Ave South, Tifton, GA 31794 &middot; Open Monday to Saturday.</p>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Barber cutting a client's hair in a barbershop">
+      <figcaption>Concept imagery — illustrative stock photo, not a photo of this shop.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="services" class="dark">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="sub">Services as listed for Knapps Barber Shop: haircuts, fades, line ups, beard trimming, hot towel shaves, hair dying, facial treatments, and blow drying — for men, women, and kids.</p>
+    <div class="grid">
+      <div class="card"><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber using clippers on a client's neckline"><div class="card-body"><h3>Haircuts &amp; Fades</h3><p>Clipper work, fades, and line ups, cut to suit the client.</p><p style="margin-top:8px;font-size:13px;color:#6b6156">Concept imagery — illustrative stock photo.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber trimming a client's beard with scissors"><div class="card-body"><h3>Beard Trimming</h3><p>Beard shaping and trimming, finished clean at the neckline.</p><p style="margin-top:8px;font-size:13px;color:#6b6156">Concept imagery — illustrative stock photo.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber giving a client a sharp line-up with a razor"><div class="card-body"><h3>Line Ups &amp; Hot Towel Shaves</h3><p>Crisp line ups and traditional hot towel shaves, plus hair dying, facial treatments, and blow drying as listed.</p><p style="margin-top:8px;font-size:13px;color:#6b6156">Concept imagery — illustrative stock photo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container split">
+    <div>
+      <h2>A Tifton shop built around the chair</h2>
+      <p style="margin-bottom:16px">Knapps Barber Shop is a sole proprietorship in Tifton, Georgia, run by barber Corvin Jones. The shop serves men, women, and kids, and its listed services run from everyday haircuts and fades to hot towel shaves and facial treatments.</p>
+      <p>Walk in during opening hours, or call ahead — the shop is open Monday to Friday and Saturday mornings.</p>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber clippers, scissors, comb and grooming products laid out">
+      <figcaption>Concept imagery — illustrative stock photo, not a photo of this shop.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="gallery" class="dark">
+  <div class="container">
+    <h2>Inside the shop</h2>
+    <p class="sub">Concept imagery only — illustrative stock photos showing the kind of barbershop experience Knapps offers. These are not photos of this shop.</p>
+    <div class="grid">
+      <figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barbershop interior with chairs and mirrors"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Classic leather barber chair"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber finishing a client's haircut in a barbershop"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why choose Knapps</h2>
+    <ul class="why">
+      <li><strong>For the whole family</strong>Men, women, and kids are all listed as welcome in the chair.</li>
+      <li><strong>Classic and modern cuts</strong>From traditional cuts to fades, line ups, and beard work.</li>
+      <li><strong>Hot towel shaves</strong>The traditional finish, listed among the shop's services.</li>
+      <li><strong>Saturday mornings</strong>Open Saturday 7:00 AM to 1:00 PM for a weekend cut.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit" class="dark">
+  <div class="container split">
+    <div>
+      <h2>Visit us</h2>
+      <p class="sub">2118 Central Ave South, Tifton, GA 31794</p>
+      <p style="margin-bottom:12px"><a href="tel:+12293267315">Phone: (229) 326-7315</a></p>
+      <p style="margin-bottom:12px"><a href="mailto:corvin229barbershop@gmail.com">Email: corvin229barbershop@gmail.com</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=2118+Central+Ave+South+Tifton+GA+31794" target="_blank" rel="noopener">Get directions on Google Maps</a></p>
+      <p class="note" style="color:#cfc6b8">Please note: some older listings show a different phone number, (229) 391-9554. The number shown above is the one on the shop's current directory profile.</p>
+    </div>
+    <div>
+      <h2 style="font-size:26px">Opening hours</h2>
+      <table class="hours">
+        <tr><td>Monday – Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+        <tr><td>Saturday</td><td>7:00 AM – 1:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note" style="color:#cfc6b8">Hours as listed on the shop's directory profile. Call ahead to confirm before you visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2>Ready for a fresh cut?</h2>
+    <p class="sub" style="margin-inline:auto">Call or email Knapps Barber Shop in Tifton to book your chair.</p>
+    <div class="cta-row">
+      <a class="btn" href="tel:+12293267315">Call (229) 326-7315</a>
+      <a class="btn btn-dark" href="mailto:corvin229barbershop@gmail.com">Email the shop</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Knapps Barber Shop</strong> — 2118 Central Ave South, Tifton, GA 31794 &middot; <a href="tel:+12293267315">(229) 326-7315</a> &middot; <a href="mailto:corvin229barbershop@gmail.com">corvin229barbershop@gmail.com</a></p>
+    <p style="margin-top:16px;color:#cfc6b8">Website concept demo — not the official website. Photos are illustrative stock images, not photos of this business.</p>
+  </div>
+</footer>
+<script>
+document.getElementById('menuBtn').addEventListener('click', function () {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+</body>
+</html>
