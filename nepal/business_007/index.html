@@ -5,27 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shamatha Spa and Salon — Boudha, Kathmandu</title>
 <meta name="description" content="Concept demo for Shamatha Spa and Salon, Boudha, Kathmandu — massage, facial, manicure and hair care opposite Boudhanath Stupa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--color-primary:#171717;--color-secondary:#F5F0E6;--color-accent:#C6A56B;--ink:#1d1d1d;--muted:#5c554a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--ink);line-height:1.6}
+body{font-family:Inter,Arial,Helvetica,sans-serif;font-size:17px;background:var(--color-secondary);color:var(--ink);line-height:1.65}
 a{color:inherit}
 .disclaimer{background:var(--color-primary);color:var(--color-secondary);text-align:center;font-size:13px;letter-spacing:.04em;padding:10px 16px;font-family:Arial,Helvetica,sans-serif}
 header{background:var(--color-secondary);border-bottom:1px solid #ddd2bd;position:sticky;top:0;z-index:10}
 .nav{max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.brand{font-family:Fraunces,Georgia,serif;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
 .brand small{display:block;font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
 .navlinks{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
 .navlinks a{text-decoration:none}
 .navlinks a:hover{color:var(--color-accent)}
 .menu-btn{display:none;background:var(--color-primary);color:#fff;border:0;padding:10px 16px;font-size:14px;cursor:pointer}
 .container{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px}
+@media(max-width:1024px){.container,.nav{padding-left:28px;padding-right:28px}}
 @media(min-width:1400px){.container,.nav{max-width:1320px}}
 section{padding:96px 0}
-h1{font-size:clamp(38px,5vw,64px);line-height:1.1;font-weight:400}
-h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;font-weight:400;margin-bottom:16px}
-h3{font-size:20px;font-weight:400;margin:14px 0 8px}
-.lead{font-size:18px;color:#3a352c;max-width:640px}
+section[id]{scroll-margin-top:84px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+h1{font-family:Fraunces,Georgia,serif;font-size:clamp(44px,5.5vw,68px);line-height:1.08;font-weight:600;text-wrap:balance}
+h2{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,3.6vw,44px);line-height:1.15;font-weight:600;margin-bottom:16px;text-wrap:balance}
+h3{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.25;font-weight:600;margin:14px 0 8px}
+.lead{font-size:19px;line-height:1.6;color:#3a352c;max-width:640px}
 .eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8a744a;margin-bottom:16px}
 .hero{background:var(--color-primary);color:var(--color-secondary)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
@@ -34,7 +40,12 @@ h3{font-size:20px;font-weight:400;margin:14px 0 8px}
 .btn{display:inline-block;background:var(--color-accent);color:#171717;text-decoration:none;padding:14px 28px;font-family:Arial,Helvetica,sans-serif;font-size:15px;margin-top:24px;border-radius:2px}
 .btn.ghost{background:transparent;color:var(--color-secondary);border:1px solid var(--color-secondary);margin-left:12px}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
-.card{background:#fff;border:1px solid #e3d9c4;border-radius:4px;overflow:hidden}
+.card{background:#fff;border:1px solid #e3d9c4;border-radius:4px;overflow:hidden;transition:box-shadow .25s ease,transform .25s ease}
+.card:hover{box-shadow:0 12px 32px rgba(23,23,23,.12);transform:translateY(-2px)}
+.btn{transition:background .25s ease,transform .25s ease}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
 .card img{height:210px;object-fit:cover;width:100%;display:block}
 .card-body{padding:24px}
 .card-body p{font-size:15px;color:#4a4438}
@@ -53,7 +64,8 @@ h3{font-size:20px;font-weight:400;margin:14px 0 8px}
 .cta h2{color:#171717}
 .cta p{max-width:560px;margin:0 auto}
 footer{background:var(--color-primary);color:#cfc7b6;padding:48px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:14px}
-.foot-grid{max-width:1200px;margin:0 auto;padding:0 40px 32px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot-grid{padding:0 0 32px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot-grid div{overflow-wrap:anywhere}
 form{max-width:520px;margin:32px auto 0;text-align:left}
 label{display:block;font-size:13px;margin:14px 0 6px}
 input,textarea{width:100%;padding:12px;border:1px solid #ccc;font-size:15px;font-family:Arial,Helvetica,sans-serif}
@@ -65,6 +77,7 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 <div class="disclaimer">Website concept demo — not the official website</div>
 <header>
   <div class="nav">
@@ -89,7 +102,7 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
       <a class="btn" href="tel:+97714581354">Call 01-4581354</a>
       <a class="btn ghost" href="mailto:shamathaspasalon@gmail.com">Email Us</a>
     </div>
-    <div class="hero-img"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1600&q=80" alt="Illustrative stock image of a spa massage treatment"></div>
+    <div class="hero-img"><img fetchpriority="high" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1600&q=80" alt="Illustrative stock image of a spa massage treatment" loading="eager" decoding="async"></div>
   </div>
 </section>
 
@@ -98,21 +111,21 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
     <p class="eyebrow">Services</p>
     <h2>Massage, beauty and hair care in one place</h2>
     <p class="lead">The salon's team includes beauticians, hair specialists and massage therapists, working with modern equipment.</p>
-    <div class="cards">
+    <div class="cards reveal">
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80" alt="Illustrative stock image of an oil massage">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80" alt="Illustrative stock image of an oil massage">
         <div class="card-body"><h3>Massage</h3><p>Relaxing massage treatments from experienced massage therapists, in a calm setting near the stupa.</p></div>
       </article>
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Illustrative stock image of a facial treatment">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Illustrative stock image of a facial treatment">
         <div class="card-body"><h3>Facial</h3><p>Facial care from skilled beauticians, for a refreshed, rejuvenated feeling.</p></div>
       </article>
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80" alt="Illustrative stock image of a manicure">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80" alt="Illustrative stock image of a manicure">
         <div class="card-body"><h3>Manicure</h3><p>Nail care and manicure services as part of a full pampering visit.</p></div>
       </article>
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80" alt="Illustrative stock image of hair styling">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80" alt="Illustrative stock image of hair styling">
         <div class="card-body"><h3>Hair Care</h3><p>Hair services from the salon's hair specialists, alongside its spa and beauty treatments.</p></div>
       </article>
     </div>
@@ -121,8 +134,8 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
 </section>
 
 <section id="story" style="background:#efe8d8">
-  <div class="container story-grid">
-    <div class="story-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=80" alt="Illustrative stock image of spa towels, lotion and a candle"></div>
+  <div class="container story-grid reveal">
+    <div class="story-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=80" alt="Illustrative stock image of spa towels, lotion and a candle"></div>
     <div>
       <p class="eyebrow">About</p>
       <h2>Beside one of Kathmandu's most visited landmarks</h2>
@@ -136,10 +149,13 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
   <div class="container">
     <p class="eyebrow">Gallery</p>
     <h2>A quiet, welcoming space</h2>
-    <div class="gallery-grid">
-      <div><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80" alt="Illustrative stock image of a massage treatment"><p class="caption">Illustrative image — massage</p></div>
-      <div><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Illustrative stock image of a salon interior"><p class="caption">Illustrative image — salon interior</p></div>
-      <div><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80" alt="Illustrative stock image of a facial treatment"><p class="caption">Illustrative image — facial</p></div>
+    <div class="gallery-grid reveal">
+      <div><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&q=80" alt="Illustrative stock image of massage oil being poured" loading="lazy" decoding="async"><p class="caption">Illustrative image — massage oil</p></div>
+      <div><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80" alt="Illustrative stock image of a salon interior with styling chairs" loading="lazy" decoding="async"><p class="caption">Illustrative image — salon interior</p></div>
+      <div><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80" alt="Illustrative stock image of hair being blow-dried in a salon" loading="lazy" decoding="async"><p class="caption">Illustrative image — hair styling</p></div>
+      <div><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80" alt="Illustrative stock image of nails being painted" loading="lazy" decoding="async"><p class="caption">Illustrative image — manicure</p></div>
+      <div><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=80" alt="Illustrative stock image of a facial mask treatment" loading="lazy" decoding="async"><p class="caption">Illustrative image — facial</p></div>
+      <div><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Illustrative stock image of a salon interior" loading="lazy" decoding="async"><p class="caption">Illustrative image — salon</p></div>
     </div>
   </div>
 </section>
@@ -148,7 +164,7 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
   <div class="container">
     <p class="eyebrow">Why visit</p>
     <h2>Three good reasons to stop by</h2>
-    <div class="why-grid">
+    <div class="why-grid reveal">
       <div><h3>Right by the stupa</h3><p>Opposite Boudhanath Stupa in Boudha — easy to reach on a visit to one of Kathmandu's best-known heritage sites.</p></div>
       <div><h3>Spa and salon together</h3><p>Massage, facial, manicure and hair care in a single visit, from beauticians, hair specialists and massage therapists.</p></div>
       <div><h3>Modern equipment</h3><p>The salon highlights its modern equipment and advanced, innovative technology in its service description.</p></div>
@@ -157,7 +173,7 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
 </section>
 
 <section id="visit">
-  <div class="container loc-grid">
+  <div class="container loc-grid reveal">
     <div>
       <p class="eyebrow">Visit us</p>
       <h2>Find us in Boudha</h2>
@@ -191,15 +207,17 @@ button.send{background:#171717;color:#fff;border:0;padding:14px 28px;font-size:1
 </section>
 
 <footer>
-  <div class="foot-grid">
+  <div class="container"><div class="foot-grid">
     <div><strong>Shamatha Spa and Salon</strong><br>Boudha, Kathmandu 44600, Nepal</div>
     <div>Phone: 01-4581354 · 980-1042006 · 9860333088<br>Email: shamathaspasalon@gmail.com</div>
     <div>Photographs are licensed stock images for illustration only,<br>not photographs of this business.</div>
-  </div>
+  </div></div>
   <div class="disclaimer">Website concept demo — not the official website</div>
 </footer>
 
 <script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 document.getElementById('menuBtn').addEventListener('click', function () {
   document.getElementById('navLinks').classList.toggle('open');
 });
