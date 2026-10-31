@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Briner's Handyman Services — Paris, Kentucky</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#191919;--color-secondary:#E9D8B9;--color-accent:#C56A35;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:var(--color-secondary);color:var(--color-primary);line-height:1.6}
@@ -55,6 +55,32 @@ ul.ticks li::before{content:"— ";color:var(--color-accent);font-weight:bold}
 .dark .caption{color:#ccc}
 footer{padding:32px 40px;text-align:center;font-family:Arial,sans-serif}
 .gal img{height:240px;border-radius:12px}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Sora',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box}
+section{padding-inline:40px}.hero-text{padding-inline:40px}@media(min-width:1440px){.wrap{max-width:1320px!important}}@media(max-width:1024px){section{padding-inline:28px}.hero-text{padding-inline:28px}.nav{padding-inline:28px}}@media(max-width:640px){section{padding-inline:20px}.hero-text{padding-inline:20px}.nav{padding-inline:20px}}@media(max-width:400px){section{padding-inline:16px}.hero-text{padding-inline:16px}.nav{padding-inline:16px}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -77,7 +103,7 @@ footer{padding:32px 40px;text-align:center;font-family:Arial,sans-serif}
 </section>
 
 <section id="services"><div class="wrap"><h2>Services</h2><p class="sub">Services listed on the business directory profile.</p>
-<div class="grid"><div class="card"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: repair tools"><div class="card-body"><h3>Ceiling fan installation</h3><p>Ceiling fan installations, as listed on the business profile.</p><p class="caption">Illustrative stock photo.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Window repairs</h3><p>Window repairs, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Kitchen and bathroom remodeling</h3><p>Kitchen and bathroom remodeling services, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Flooring</h3><p>Flooring work in vinyl, hardwood, tile, or carpet, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Roofing installation and repair</h3><p>Roofing installations, repairs, and replacements in asphalt, metal, and clay, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Plumbing and electrical work</h3><p>Plumbing and electrical work, including moving sinks, toilets, and dishwashers, as listed on the business profile.</p></div></div></div></div></section>
+<div class="grid"><div class="card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Home exterior with a cared-for lawn (illustrative stock photo)"><div class="card-body"><h3>Ceiling fan installation</h3><p>Ceiling fan installations, as listed on the business profile.</p><p class="caption">Illustrative stock photo.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Window repairs</h3><p>Window repairs, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Kitchen and bathroom remodeling</h3><p>Kitchen and bathroom remodeling services, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Flooring</h3><p>Flooring work in vinyl, hardwood, tile, or carpet, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Roofing installation and repair</h3><p>Roofing installations, repairs, and replacements in asphalt, metal, and clay, as listed on the business profile.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Plumbing and electrical work</h3><p>Plumbing and electrical work, including moving sinks, toilets, and dishwashers, as listed on the business profile.</p></div></div></div></div></section>
 
 <section id="story" class="dark"><div class="wrap"><div class="story">
 <div><h2>About Briner's Handyman Services</h2><p style="font-size:18px">Briner's Handyman Services describes itself as a veteran-owned company that has provided construction services for over 12 years, with quick and efficient turn times so customers can get back to living in their newly renovated home. The business also states it can build a new home from the ground up.</p></div>
@@ -85,7 +111,7 @@ footer{padding:32px 40px;text-align:center;font-family:Arial,sans-serif}
 </div></div></section>
 
 <section id="gallery"><div class="wrap"><h2>Gallery</h2><p class="sub">Illustrative photos showing the kind of work and setting described on this page — not photos of this business or its completed jobs.</p>
-<div class="grid gal"><div><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: repair tools"><p class="caption">Illustrative stock photo.</p></div><div><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a tradesperson at work with timber"><p class="caption">Illustrative stock photo.</p></div><div><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a home exterior"><p class="caption">Illustrative stock photo.</p></div></div></div></section>
+<div class="grid gal"><div><img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Screwdriver bit set (illustrative stock photo)"><p class="caption">Illustrative stock photo.</p></div><div><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Hand tools on a workbench (illustrative stock photo)"><p class="caption">Illustrative stock photo.</p></div><div><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a home exterior"><p class="caption">Illustrative stock photo.</p></div></div></div></section>
 
 <section id="why"><div class="wrap"><h2>Why choose Briner's Handyman Services</h2><ul class="ticks"><li>Veteran-owned remodeling and handyman company</li><li>Over 12 years of construction services, as stated on the listing</li><li>Kitchen and bathroom remodeling, flooring, roofing, plumbing, and electrical work</li><li>Free estimates, as stated on the business profile</li></ul></div></section>
 
