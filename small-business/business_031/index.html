@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outerglow Salon &amp; Spa — Conway, South Carolina | Website concept demo</title>
+<style>
+:root{--primary:#38271F;--secondary:#F3E8D5;--accent:#B77B48}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;color:#222;background:var(--secondary);line-height:1.6}
+.disclaimer{background:var(--primary);color:var(--secondary);text-align:center;padding:10px 20px;font-size:14px;font-family:Arial,Helvetica,sans-serif}
+header{background:var(--secondary);border-bottom:1px solid var(--accent);padding:20px 0;position:sticky;top:0;z-index:10}
+.wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px}
+@media(min-width:1400px){.wrap{max-width:1320px}}
+@media(max-width:768px){.wrap{padding-left:28px;padding-right:28px}}
+@media(max-width:480px){.wrap{padding-left:20px;padding-right:20px}}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{font-size:26px;font-weight:bold;color:var(--primary);letter-spacing:.5px}
+.nav a{font-family:Arial,Helvetica,sans-serif;color:var(--primary);text-decoration:none;font-weight:bold;margin-left:16px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:96px;padding-bottom:96px}
+.hero img,.story img,.gal-main img{width:100%;height:auto;border-radius:12px;object-fit:cover;display:block}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.1;color:var(--primary);margin-bottom:16px}
+.hero p{font-size:19px;margin-bottom:24px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:bold;margin-right:12px;margin-bottom:12px}
+.btn.outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+section{padding-top:96px;padding-bottom:96px}
+section.alt{background:#fff}
+h2{font-size:clamp(28px,4vw,40px);color:var(--primary);margin-bottom:16px;line-height:1.15}
+.sub{font-size:18px;margin-bottom:32px;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr;padding-top:56px;padding-bottom:56px}section{padding-top:56px;padding-bottom:56px}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}section{padding-top:44px;padding-bottom:44px}}
+.card{background:var(--secondary);border:1px solid #ddd;border-radius:12px;padding:24px}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:16px}
+.card h3{color:var(--primary);font-size:21px;margin-bottom:8px}
+.card p{font-family:Arial,Helvetica,sans-serif;font-size:16px}
+.placeholder{background:var(--primary);color:var(--secondary);border-radius:8px;padding:32px 16px;text-align:center;font-family:Arial,Helvetica,sans-serif;margin-bottom:16px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:800px){.story{grid-template-columns:1fr}}
+.gal-thumbs{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
+.gal-thumbs img{width:110px;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;border:3px solid transparent}
+.gal-thumbs img.active{border-color:var(--accent)}
+.gal-cap{font-family:Arial,Helvetica,sans-serif;font-size:15px;margin-top:12px;color:#555}
+ul.why{font-size:18px;padding-left:24px}
+ul.why li{margin-bottom:12px}
+.hours{font-family:Arial,Helvetica,sans-serif;font-size:16px;background:#fff;border:1px solid #ddd;border-radius:12px;padding:24px}
+.hours h3{font-family:Georgia,serif;color:var(--primary);margin-bottom:12px}
+.note{background:#fff8e6;border-left:4px solid var(--accent);padding:16px 20px;font-family:Arial,Helvetica,sans-serif;font-size:15px;margin-top:24px}
+.cta{background:var(--primary);color:var(--secondary);text-align:center}
+.cta h2{color:var(--secondary)}
+.cta p{font-size:19px;margin-bottom:24px}
+footer{background:#111;color:#ddd;text-align:center;padding:32px 20px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="wrap nav"><div class="brand">Outerglow Salon &amp; Spa</div><nav><a href="#services">Services</a><a href="#visit">Visit</a><a href="tel:+18433494247">Call</a><a href="mailto:Outerglowsalonandspa@gmail.com">Email</a></nav></div></header>
+<main>
+<section class="wrap hero"><div><h1>Outerglow Salon &amp; Spa</h1><p>A women-owned salon and spa in Conway, offering hair, skin and spa services in one place.</p><a class="btn" href="tel:+18433494247">Call (843) 349-4247</a><a class="btn outline" href="mailto:Outerglowsalonandspa@gmail.com">Email the salon</a></div><div><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop" alt="Salon interior with styling chairs (illustrative stock photo)"><p class="gal-cap">Illustrative stock photo — not a photo of this business.</p></div></section>
+<section class="alt" id="services"><div class="wrap"><h2>Services</h2><p class="sub">Services as listed in public directories. No prices are shown on this concept page.</p><div class="cards">
+<article class="card"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop" alt="Stylist blow-drying a client&#x27;s hair (illustrative stock photo)"><h3>Haircuts and styling</h3><p>Haircuts and styling, including curly hair and kids&#x27; hair, as listed.</p></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1200&q=80&auto=format&fit=crop" alt="Blow-dry styling in progress (illustrative stock photo)"><h3>Colour and highlights</h3><p>Colouring, highlights and balayage, including vivid colours, as listed.</p></article>
+<article class="card"><div class="placeholder">Service listing only<br>no photo used</div><h3>Extensions and perms</h3><p>Hair extensions and perms, as listed.</p></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop" alt="Facial mask being applied (illustrative stock photo)"><h3>Facials and skin care</h3><p>Facials, microdermabrasion and skin care, as listed.</p></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80&auto=format&fit=crop" alt="Massage oil treatment (illustrative stock photo)"><h3>Massage</h3><p>Massage and skin care services, as listed.</p></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&q=80&auto=format&fit=crop" alt="Makeup being applied (illustrative stock photo)"><h3>Spray tans and makeup</h3><p>Spray tans and airbrush makeup, as listed.</p></article>
+<article class="card"><div class="placeholder">Service listing only<br>no photo used</div><h3>Eyebrow waxing</h3><p>Eyebrow waxing, as listed.</p></article>
+</div></div></section>
+<section><div class="wrap story"><div><h2>About the salon</h2><p>Outerglow Salon &amp; Spa is listed as a women-owned salon and spa in Conway, South Carolina. Public listings describe a full hair, skin and spa offer, from cuts and colour to facials and massage. Its public web presence in the sources checked is social media only; no branded business website was found.</p></div><div><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop" alt="Stylist blow-drying a client&#x27;s hair (illustrative stock photo)"><p class="gal-cap">Illustrative stock photo — not a photo of this business.</p></div></div></section>
+<section class="alt"><div class="wrap"><h2>Gallery</h2><p class="sub">Concept imagery only. All photos below are licensed stock photos, labelled illustrative, and are not photos of this business.</p><div class="gal-main"><img id="galMain" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop" alt="Salon interior with styling chairs (illustrative stock photo)"></div><p class="gal-cap" id="galCap">Salon interior with styling chairs (illustrative stock photo)</p><div class="gal-thumbs">
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop" data-full="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop" alt="Salon interior with styling chairs (illustrative stock photo)" class="active">
+<img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop" data-full="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop" alt="Stylist blow-drying a client&#x27;s hair (illustrative stock photo)">
+<img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop" data-full="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop" alt="Facial mask being applied (illustrative stock photo)">
+</div></div></section>
+<section><div class="wrap"><h2>Why visit</h2><ul class="why">
+<li>Women-owned salon and spa, as listed.</li>
+<li>Hair, skin and spa services under one roof, as listed.</li>
+<li>Services for adults and children, including kids&#x27; hair, as listed.</li>
+</ul></div></section>
+<section class="alt" id="visit"><div class="wrap"><h2>Visit us</h2><p class="sub">1350 US-501 Bus #5, Conway, SC 29526, USA</p><div class="hours"><h3>Contact</h3><p>Phone: <a href="tel:+18433494247">(843) 349-4247</a><br>Email: <a href="mailto:Outerglowsalonandspa@gmail.com">Outerglowsalonandspa@gmail.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Outerglow%20Salon%20%26%20Spa%201350%20US-501%20Bus%20%235%2C%20Conway%2C%20SC%2029526%2C%20USA" target="_blank" rel="noopener">Find us on Google Maps</a></p><h3>Hours — sources disagree, shown verbatim</h3>
+<p><strong>location.com / BestProsInTown:</strong> Tue 10:00 AM–8:00 PM; Wed–Fri 10:00 AM–6:00 PM; Sat 10:00 AM–4:00 PM; Mon and Sun Closed.</p>
+<p><strong>Birdeye (older pages):</strong> Tue–Fri 10:00 AM–6:00 PM; Sat 10:00 AM–2:00 PM.</p>
+<p>Please call to confirm current hours before visiting.</p></div><div class="note">Hours conflict note: the two sets above come from different directory listings and have not been silently resolved. The demo shows both.</div></div></section>
+<section class="cta"><div class="wrap"><h2>Ready for your appointment?</h2><p>Call or email — this concept page does not take bookings itself.</p><a class="btn" href="tel:+18433494247">Call (843) 349-4247</a><a class="btn outline" style="color:#fff;border-color:#fff" href="mailto:Outerglowsalonandspa@gmail.com">Send an email</a></div></section>
+</main>
+<footer><p>Website concept demo — not the official website</p><p>Outerglow Salon &amp; Spa · 1350 US-501 Bus #5, Conway, SC 29526, USA</p><p>Concept imagery: licensed stock photos, labelled illustrative, not photos of this business.</p></footer>
+
+<script>
+var thumbs=document.querySelectorAll('.gal-thumbs img');
+var main=document.getElementById('galMain');
+var cap=document.getElementById('galCap');
+for(var i=0;i<thumbs.length;i++){
+  thumbs[i].addEventListener('click',function(){
+    main.src=this.getAttribute('data-full');
+    main.alt=this.alt;
+    cap.textContent=this.alt;
+    for(var j=0;j<thumbs.length;j++){thumbs[j].classList.remove('active');}
+    this.classList.add('active');
+  });
+}
+</script>
+
+</body>
+</html>
