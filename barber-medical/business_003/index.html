@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocala's V.I.P. Barber Shop — Ocala, FL | Fades, Tapers &amp; Beard Trimming</title>
+<meta name="description" content="Ocala's V.I.P. Barber Shop in Ocala, Florida. A neighborhood grooming spot for sharp haircuts, clean lineups, fades, tapers, beard trimming and razor detailing.">
+<style>
+:root{--color-primary:#191919;--color-secondary:#E9D8B9;--color-accent:#C56A35;--ink:#241d12;--muted:#6f6250}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--color-secondary);line-height:1.6}
+a{color:inherit}
+.container{max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1440px){.container{max-width:1320px}}
+@media(max-width:768px){.container{padding-inline:28px}}
+@media(max-width:480px){.container{padding-inline:20px}}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);font-size:13px;text-align:center;padding:10px 16px;font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;background:var(--color-secondary);border-bottom:1px solid #d3c2a0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:24px}
+.brand{font-size:24px;font-weight:700;letter-spacing:.5px;color:var(--color-primary);text-decoration:none}
+.nav-links{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+.nav-links a{text-decoration:none}
+.btn{display:inline-block;background:var(--color-accent);color:#fff;font-family:Arial,Helvetica,sans-serif;font-weight:700;text-decoration:none;padding:13px 26px;border-radius:4px}
+.btn-dark{background:var(--color-primary);color:var(--color-secondary)}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}.nav-links{display:none}}
+@media(max-width:480px){section{padding:56px 0}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.1;color:var(--color-primary);margin-bottom:16px}
+.hero p.lede{font-size:19px;color:#443a28;margin-bottom:24px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+figure{margin:0}
+figure img{width:100%;height:auto;display:block;border-radius:8px;object-fit:cover}
+figcaption{font-size:13px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:8px}
+h2{font-size:clamp(30px,3.5vw,42px);line-height:1.15;color:var(--color-primary);margin-bottom:16px}
+.sub{font-size:17px;color:var(--muted);margin-bottom:32px;max-width:640px}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.dark h2{color:var(--color-secondary)}
+.dark .sub{color:#cfc3ab}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e0d2b4;border-radius:8px;overflow:hidden}
+.card img{aspect-ratio:4/3;object-fit:cover}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;margin-bottom:8px;color:var(--color-primary)}
+.card-body p{font-size:15px;color:#4a4132}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:768px){.split{grid-template-columns:1fr}}
+.why{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+.why li{background:#fff;border-left:4px solid var(--color-accent);padding:24px;border-radius:4px}
+.why li strong{display:block;font-size:18px;margin-bottom:6px}
+.hours{width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif}
+.hours td{padding:12px 0;border-bottom:1px solid #e0d2b4}
+.hours td:last-child{text-align:right}
+.note{font-size:14px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;margin-top:16px}
+.final{text-align:center}
+.final .cta-row{justify-content:center}
+footer{background:var(--color-primary);color:var(--color-secondary);padding:48px 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+footer a{color:var(--color-accent)}
+.menu-btn{display:none;background:none;border:1px solid var(--color-primary);padding:8px 14px;font-size:15px;cursor:pointer}
+@media(max-width:768px){.menu-btn{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--color-secondary);padding:20px 28px;border-bottom:1px solid #d3c2a0}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">Ocala's V.I.P. Barber Shop</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a class="btn" href="tel:+13522293530">Call (352) 229-3530</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:72px">
+  <div class="container hero">
+    <div>
+      <h1>Sharp haircuts, clean lineups, personalized service.</h1>
+      <p class="lede">Ocala's V.I.P. Barber Shop is a neighborhood grooming spot in Ocala, Florida, focused on sharp haircuts, clean lineups, and service tailored to each client.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+13522293530">Call the shop</a>
+        <a class="btn btn-dark" href="mailto:ocalasvipbarbershop@gmail.com">Email the shop</a>
+      </div>
+      <p class="note">4551 SE Maricamp Rd, Ocala, FL 34480 &middot; Open Monday to Friday.</p>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Barber giving a client a sharp line-up with a razor">
+      <figcaption>Concept imagery — illustrative stock photo, not a photo of this shop.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="services" class="dark">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="sub">Services as listed for Ocala's V.I.P. Barber Shop: fades, tapers, crew cuts, beard trimming, edge work, and razor detailing.</p>
+    <div class="grid">
+      <div class="card"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber cutting a client's hair"><div class="card-body"><h3>Fades &amp; Tapers</h3><p>Clean fades and tapers, blended to a sharp finish.</p><p style="margin-top:8px;font-size:13px;color:#6f6250">Concept imagery — illustrative stock photo.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber styling a client's textured haircut with a line-up"><div class="card-body"><h3>Crew Cuts &amp; Edge Work</h3><p>Classic crew cuts with precise edge work and clean lines.</p><p style="margin-top:8px;font-size:13px;color:#6f6250">Concept imagery — illustrative stock photo.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber trimming a client's beard with scissors"><div class="card-body"><h3>Beard Trimming &amp; Razor Detailing</h3><p>Beard trimming finished with razor detailing for a polished look.</p><p style="margin-top:8px;font-size:13px;color:#6f6250">Concept imagery — illustrative stock photo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container split">
+    <div>
+      <h2>A neighborhood shop with a personal touch</h2>
+      <p style="margin-bottom:16px">Ocala's V.I.P. Barber Shop describes itself as a neighborhood grooming spot delivering sharp haircuts, clean lineups, and personalized service. The focus is on the cut itself — and on the client in the chair.</p>
+      <p>The shop is open weekdays, Monday to Friday, on SE Maricamp Rd in Ocala.</p>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber clippers, scissors, comb and grooming products laid out">
+      <figcaption>Concept imagery — illustrative stock photo, not a photo of this shop.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="gallery" class="dark">
+  <div class="container">
+    <h2>Inside the shop</h2>
+    <p class="sub">Concept imagery only — illustrative stock photos showing the kind of barbershop experience Ocala's V.I.P. offers. These are not photos of this shop.</p>
+    <div class="grid">
+      <figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barbershop interior with chairs and mirrors"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Classic leather barber chair"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Barber using clippers on a client's neckline"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why choose V.I.P.</h2>
+    <ul class="why">
+      <li><strong>Sharp haircuts</strong>The shop's focus is sharp, clean cuts — fades, tapers, and crew cuts.</li>
+      <li><strong>Clean lineups</strong>Edge work and razor detailing for a crisp finish.</li>
+      <li><strong>Personalized service</strong>Service tailored to each client, not a rushed chair.</li>
+      <li><strong>Neighborhood spot</strong>A local grooming spot on SE Maricamp Rd in Ocala.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit" class="dark">
+  <div class="container split">
+    <div>
+      <h2>Visit us</h2>
+      <p class="sub">4551 SE Maricamp Rd, Ocala, FL 34480</p>
+      <p style="margin-bottom:12px"><a href="tel:+13522293530">Phone: (352) 229-3530</a></p>
+      <p style="margin-bottom:12px"><a href="mailto:ocalasvipbarbershop@gmail.com">Email: ocalasvipbarbershop@gmail.com</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=4551+SE+Maricamp+Rd+Ocala+FL+34480" target="_blank" rel="noopener">Get directions on Google Maps</a></p>
+    </div>
+    <div>
+      <h2 style="font-size:26px">Opening hours</h2>
+      <table class="hours">
+        <tr><td>Monday – Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Saturday</td><td>Closed</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note" style="color:#cfc3ab">Hours as listed on the shop's directory profiles. Call ahead to confirm before you visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2>Ready for a fresh cut?</h2>
+    <p class="sub" style="margin-inline:auto">Call or email Ocala's V.I.P. Barber Shop to book your chair.</p>
+    <div class="cta-row">
+      <a class="btn" href="tel:+13522293530">Call (352) 229-3530</a>
+      <a class="btn btn-dark" href="mailto:ocalasvipbarbershop@gmail.com">Email the shop</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Ocala's V.I.P. Barber Shop</strong> — 4551 SE Maricamp Rd, Ocala, FL 34480 &middot; <a href="tel:+13522293530">(352) 229-3530</a> &middot; <a href="mailto:ocalasvipbarbershop@gmail.com">ocalasvipbarbershop@gmail.com</a></p>
+    <p style="margin-top:16px;color:#cfc3ab">Website concept demo — not the official website. Photos are illustrative stock images, not photos of this business.</p>
+  </div>
+</footer>
+<script>
+document.getElementById('menuBtn').addEventListener('click', function () {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+</body>
+</html>
