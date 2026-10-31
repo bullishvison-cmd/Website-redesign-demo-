@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northeast Laundry — Website Concept Demo</title>
+<style>
+:root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:#222;line-height:1.6}
+a{color:var(--color-primary)}
+.disclaimer{background:var(--color-accent);color:#fff;text-align:center;padding:10px 20px;font-size:14px;font-weight:700}
+header{background:var(--color-primary);color:var(--color-secondary);padding:20px 0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px}
+@media(min-width:1440px){.wrap{max-width:1320px}}
+@media(max-width:768px){.wrap{padding-left:28px;padding-right:28px}}
+@media(max-width:480px){.wrap{padding-left:20px;padding-right:20px}}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{font-size:26px;font-weight:700;letter-spacing:.5px}
+.navlinks{display:flex;gap:32px;flex-wrap:wrap}
+.navlinks a{color:var(--color-secondary);text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:15px}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}}
+@media(max-width:480px){section{padding:56px 0}}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.1;margin-bottom:16px}
+h2{font-size:clamp(26px,3.5vw,38px);line-height:1.15;margin-bottom:16px;color:var(--color-primary)}
+.sub{font-size:18px;margin-bottom:24px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:768px){.hero-grid{grid-template-columns:1fr}}
+.hero-grid img{width:100%;border-radius:12px;display:block;object-fit:cover;aspect-ratio:4/3}
+.btnrow{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:14px 26px;border-radius:8px;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:700}
+.btn-solid{background:var(--color-accent);color:#fff}
+.btn-outline{border:2px solid var(--color-primary);color:var(--color-primary)}
+.cap{font-size:13px;color:#555;margin-top:10px;font-family:Arial,Helvetica,sans-serif}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e2ddd2;border-radius:12px;padding:24px}
+.card h3{font-size:20px;margin-bottom:8px;color:var(--color-primary)}
+.card p{font-family:Arial,Helvetica,sans-serif;font-size:15px}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.dark h2{color:var(--color-secondary)}
+.story-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px}
+@media(max-width:768px){.story-grid{grid-template-columns:1fr}}
+.facts{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:24px}
+.facts li{margin:0 0 12px 20px;font-family:Arial,Helvetica,sans-serif}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:560px){.gal{grid-template-columns:1fr}}
+.gal img{width:100%;border-radius:12px;display:block;object-fit:cover;aspect-ratio:4/3}
+.tile{background:var(--color-primary);color:var(--color-secondary);border-radius:12px;padding:32px;display:flex;flex-direction:column;justify-content:center}
+.tile h3{font-size:22px;margin-bottom:8px}
+.tile p{font-family:Arial,Helvetica,sans-serif}
+.note{border-left:5px solid var(--color-accent);background:#fff;padding:20px 24px;border-radius:0 12px 12px 0;font-family:Arial,Helvetica,sans-serif;margin-top:24px}
+.hours{width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;background:#fff;border-radius:12px;overflow:hidden}
+.hours td{padding:14px 18px;border-bottom:1px solid #e2ddd2}
+.hours td:first-child{font-weight:700;color:var(--color-primary)}
+.cta{text-align:center}
+footer{background:var(--color-primary);color:var(--color-secondary);padding:48px 0 24px;font-family:Arial,Helvetica,sans-serif}
+footer p{margin-bottom:10px;font-size:15px}
+.small{font-size:13px;opacity:.85}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="wrap nav"><div class="brand">Northeast Laundry</div>
+<nav class="navlinks"><a href="#services">Services</a><a href="#story">About</a><a href="#visit">Visit Us</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<section><div class="wrap hero-grid"><div>
+<h1>Northeast Laundry</h1><p class="sub">A clean, well-kept laundromat in El Paso, open around the clock.</p>
+<p>Northeast Laundry is a clean, well-maintained laundromat in El Paso. It offers a wide selection of efficient washers and dryers for loads of different sizes, with snacks and beverages available for purchase and staff typically on-site.</p>
+<div class="btnrow"><a class="btn btn-solid" href="tel:9154791132">Call (915) 479-1132</a><a class="btn btn-outline" href="mailto:northeastlaundry@gmail.com">Email Us</a></div>
+</div><div><img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock photo of a washing machine drum with laundry — not a photo of this business."><p class="cap">Illustrative stock photo of a washing machine drum with laundry — not a photo of this business.</p></div></div></section>
+<section id="services"><div class="wrap"><h2>Services</h2><div class="grid"><div class="card"><h3>Self-service washers and dryers</h3><p>A wide selection of efficient washers and dryers.</p></div><div class="card"><h3>Machines for small to larger loads</h3><p>Machine sizes to suit small loads and larger ones.</p></div><div class="card"><h3>Snacks and beverages</h3><p>Snacks and beverages available for purchase while you wait.</p></div><div class="card"><h3>Change machines</h3><p>Change machines on-site for coin laundry.</p></div><div class="card"><h3>Staff typically on-site</h3><p>Staff are typically on-site during visits.</p></div></div></div></section>
+<section id="story" class="dark"><div class="wrap story-grid"><div><h2>About Northeast Laundry</h2><p>Northeast Laundry is a clean, well-maintained laundromat in El Paso. It offers a wide selection of efficient washers and dryers for loads of different sizes, with snacks and beverages available for purchase and staff typically on-site.</p></div>
+<div class="facts"><h3 style="margin-bottom:12px">Why visit</h3><ul><li>Open 24 hours</li><li>Clean, well-maintained facility</li><li>A wide selection of machines</li><li>Staff typically on-site</li></ul></div></div></section>
+<section><div class="wrap"><h2>Take a look</h2><div class="gal"><div><img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock photo of a row of laundromat machines — not a photo of this business."><p class="cap">Illustrative stock photo of a row of laundromat machines — not a photo of this business.</p></div><div class="tile"><h3>Open around the clock</h3><p>Northeast Laundry is open 24 hours, every day.</p></div></div></div></section>
+<section id="visit"><div class="wrap"><h2>Visit Us</h2><p style="margin-bottom:24px;font-family:Arial,Helvetica,sans-serif">7801 Alabama Street, El Paso, TX 79904</p>
+<table class="hours"><tr><td>Open</td><td>24 Hours</td></tr></table><div class="note">Two phone numbers are listed for this business; both are shown above.</div>
+<p style="margin-top:24px;font-family:Arial,Helvetica,sans-serif"><a href="https://www.google.com/maps/search/?api=1&query=Northeast+Laundry%2C+7801+Alabama+Street%2C+El+Paso%2C+TX+79904">Find us on Google Maps</a></p></div></section>
+<section id="contact" class="cta"><div class="wrap"><h2>Get in touch</h2>
+<p style="margin-bottom:24px">Call or email — we would be glad to hear from you.</p>
+<div class="btnrow" style="justify-content:center"><a class="btn btn-solid" href="tel:9154791132">Call (915) 479-1132</a><a class="btn btn-solid" href="tel:9154942269">Call (915) 494-2269</a><a class="btn btn-outline" href="mailto:northeastlaundry@gmail.com">Email Us</a></div></div></section>
+</main>
+<footer><div class="wrap"><p><strong>Northeast Laundry</strong> — 7801 Alabama Street, El Paso, TX 79904</p><p>Phone: <a style="color:var(--color-secondary)" href="tel:9154791132">(915) 479-1132</a></p><p>Phone: <a style="color:var(--color-secondary)" href="tel:9154942269">(915) 494-2269</a></p><p>Email: <a style="color:var(--color-secondary)" href="mailto:northeastlaundry@gmail.com">northeastlaundry@gmail.com</a></p>
+<p class="small">Website concept demo — not the official website. Photos on this page are illustrative stock photos and are not photos of this business. This demo does not take bookings; please call or email to get in touch.</p></div></footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+</script>
+</body>
+</html>
