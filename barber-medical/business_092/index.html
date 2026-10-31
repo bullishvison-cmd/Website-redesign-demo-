@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Latin Touch Barber Studio | Raleigh, NC</title>
+<style>
+:root{--primary:#191919;--light:#E9D8B9;--accent:#C56A35;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;color:#222;background:var(--light);line-height:1.6}
+a{color:var(--primary)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(min-width:1400px){.container{max-width:1320px}}
+@media(max-width:768px){.container{padding:0 28px}}
+@media(max-width:480px){.container{padding:0 20px}}
+.disclaimer{background:var(--primary);color:var(--light);text-align:center;padding:12px 16px;font-size:14px}
+header{background:var(--light);border-bottom:3px solid var(--accent);padding:20px 0}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{font-size:24px;font-weight:700;color:var(--primary)}
+.nav a{margin-right:24px;text-decoration:none;font-family:Arial,sans-serif}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;font-family:Arial,sans-serif;font-weight:700}
+.btn.dark{background:var(--primary);color:var(--light)}
+section{padding:96px 0}
+@media(max-width:768px){section{padding:72px 0}}
+@media(max-width:480px){section{padding:56px 0}}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero img,.gallery-main img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3}
+.hero h1{font-size:clamp(32px,4vw,52px);line-height:1.1;color:var(--primary);margin-bottom:16px}
+.hero p{font-size:18px;margin-bottom:24px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+h2{font-size:clamp(26px,3vw,36px);color:var(--primary);margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card h3{padding:20px 24px 4px;color:var(--primary)}
+.card p{padding:0 24px 12px}
+.card .cap{font-size:12px;color:#666;padding-bottom:20px}
+.card-text h3{padding-top:24px}
+.story{background:var(--primary);color:var(--light)}
+.story h2{color:var(--light)}
+.gallery-main{margin-bottom:16px}
+.thumbs{display:flex;gap:16px}
+.thumb{border:3px solid transparent;border-radius:8px;padding:0;cursor:pointer;background:none}
+.thumb.active{border-color:var(--accent)}
+.thumb img{width:120px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.why li{margin:0 0 12px 20px}
+table{border-collapse:collapse;width:100%;max-width:480px}
+td{padding:10px 12px;border-bottom:1px solid #ddd}
+.note{background:#fff;border-left:4px solid var(--accent);padding:16px 20px;margin-top:20px;border-radius:0 8px 8px 0}
+.cta{background:var(--primary);color:var(--light);text-align:center}
+.cta h2{color:var(--light)}
+footer{background:var(--primary);color:var(--light);padding:32px 0;text-align:center;font-size:14px}
+footer a{color:var(--light)}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="container nav"><div class="brand">The Latin Touch Barber Studio</div>
+<nav><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></nav>
+<a class="btn" href="tel:+19199640598">Call (919) 964-0598</a></div></header>
+<main>
+<section><div class="container hero"><div>
+<h1>The Latin Touch Barber Studio</h1>
+<p>Traditional technique meets modern style in Raleigh.</p>
+<div class="cta-row"><a class="btn" href="tel:+19199640598">Call (919) 964-0598</a>
+<a class="btn dark" href="mailto:modestoescarfuller@gmail.com">Email us</a></div>
+</div><img src='" + b["hero"] + "' alt='" + esc(b["name"]) + "'><p class="cap" style="font-size:12px;color:#666">Illustrative stock photo</p></div></section>
+<section id="services"><div class="container"><h2>Services</h2><div class="grid"><article class="card"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80" alt="Haircuts"><h3>Haircuts</h3><p>Stylish haircuts combining traditional techniques with modern styles.</p><p class="cap">Illustrative stock photo</p></article><article class="card"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80" alt="Shaves"><h3>Shaves</h3><p>Classic shaving as part of the grooming menu.</p><p class="cap">Illustrative stock photo</p></article><article class="card"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80" alt="Grooming for men of all ages"><h3>Grooming for men of all ages</h3><p>Grooming services for men of all ages.</p><p class="cap">Illustrative stock photo</p></article></div></div></section>
+<section id="about" class="story"><div class="container"><h2>About</h2><p style="font-size:18px;max-width:720px">The Latin Touch Barber Studio is described in its directory listing as a vibrant barber shop with skilled barbers, combining traditional techniques with modern styles for haircuts, shaves and grooming for men of all ages.</p></div></section>
+<section id="gallery"><div class="container"><h2>Gallery</h2>
+<div class="gallery-main"><img id="galMain" src='" + gal_main + "' alt="Gallery image"></div>
+<p class="cap" style="font-size:12px;color:#666;margin-bottom:16px">Illustrative stock photos, not photos of this business.</p>
+<div class="thumbs"><button class="thumb" data-src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80" alt="Barbershop interior"></button><button class="thumb" data-src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80" alt="Beard grooming"></button><button class="thumb" data-src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80" alt="Shave service"></button></div></div></section>
+<section><div class="container"><h2>Why choose us</h2><ul class="why"><li>Skilled barbers and stylish haircuts, per the shop&#x27;s directory listing</li><li>Traditional techniques combined with modern styles</li><li>Two suites at one Louisburg Road address in Raleigh</li></ul></div></section>
+<section id="visit"><div class="container"><h2>Visit or contact</h2>
+<p><strong>Address:</strong> 4229 Louisburg Rd STE 105 and 109, Raleigh, NC 27604</p>
+<p><strong>Phone:</strong> <a href="tel:+19199640598">(919) 964-0598</a></p>
+<p><strong>Email:</strong> <a href="mailto:modestoescarfuller@gmail.com">modestoescarfuller@gmail.com</a></p>
+<p><a href="https://www.google.com/maps/search/?api=1&query=The+Latin+Touch+Barber+Studio+4229+Louisburg+Rd+STE+105+and+109%2C+Raleigh%2C+NC+27604" target="_blank" rel="noopener">Find us on Google Maps</a></p>
+<h3 style="margin:24px 0 12px;color:var(--primary)">Hours</h3><p>No hours are listed on this concept page.</p>
+<div class="note">Opening hours differ between directory listings, so no hours are shown here. Please call (919) 964-0598 to confirm opening times before visiting. Listings disagree: one shows 8:00 AM – 8:00 PM daily, another shows Monday – Friday 9:00 AM – 6:00 PM, and others show different evening hours.</div></div></section>
+<section class="cta"><div class="container"><h2>Get in touch</h2>
+<p style="margin-bottom:24px">Call or email to arrange a visit.</p>
+<div class="cta-row" style="justify-content:center"><a class="btn" href="tel:+19199640598">Call (919) 964-0598</a>
+<a class="btn dark" href="mailto:modestoescarfuller@gmail.com">Email us</a></div></div></section>
+</main>
+<footer><div class="container"><p>Website concept demo — not the official website</p>
+<p>Concept imagery: licensed stock photos, illustrative only, not photos of this business. Contact details as listed in public directories.</p></div></footer>
+<script>
+var main = document.getElementById('galMain');
+var thumbs = document.querySelectorAll('.thumb');
+thumbs.forEach(function(t){
+  t.addEventListener('click', function(){
+    main.src = t.getAttribute('data-src');
+    thumbs.forEach(function(x){ x.classList.remove('active'); });
+    t.classList.add('active');
+  });
+});
+if (thumbs.length) { thumbs[0].classList.add('active'); }
+</script>
+</body>
+</html>
