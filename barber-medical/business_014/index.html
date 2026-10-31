@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plaza Barber Shop — Uvalde | Barber Shop Concept</title>
+<style>
+:root{--primary:#171717;--bg:#F5F0E6;--accent:#C6A56B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--primary);line-height:1.6}
+a{color:inherit}
+.container{max-width:1200px;margin-inline:auto;padding-inline:40px}
+@media(min-width:1400px){.container{max-width:1320px}}
+@media(max-width:1024px){.container{padding-inline:28px}}
+@media(max-width:768px){.container{padding-inline:20px}}
+@media(max-width:480px){.container{padding-inline:16px}}
+.disclaimer{background:var(--primary);color:var(--bg);text-align:center;padding:12px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;letter-spacing:.02em}
+header{background:var(--primary);color:var(--bg);padding:20px 0}
+header .container{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:.01em}
+.nav{display:flex;gap:12px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 22px;border-radius:6px;font-family:Arial,Helvetica,sans-serif;font-weight:700}
+.btn.ghost{background:transparent;border:2px solid var(--accent);color:var(--bg)}
+section{padding:96px 0}
+@media(max-width:1024px){section{padding:72px 0}}
+@media(max-width:768px){section{padding:56px 0}}
+@media(max-width:480px){section{padding:44px 0}}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
+.hero img,.gallery img,.card img{width:100%;height:auto;border-radius:10px;object-fit:cover;display:block}
+.hero img{aspect-ratio:4/3}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:16px 0}
+h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15;margin-bottom:32px}
+h3{font-size:20px;margin:12px 0 8px}
+p.lead{font-size:clamp(17px,2vw,20px);margin-bottom:24px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.cta-row .btn.ghost{color:var(--primary);border-color:var(--primary)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.card .pad{padding:24px}
+.card img{aspect-ratio:4/3}
+.note{font-size:14px;font-family:Arial,Helvetica,sans-serif;opacity:.85;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.gallery{grid-template-columns:1fr}}
+.gallery img{aspect-ratio:4/3}
+.why{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:768px){.why{grid-template-columns:1fr}}
+.why li{background:var(--primary);color:var(--bg);padding:24px;border-radius:10px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:768px){.visit{grid-template-columns:1fr}}
+.visit ul{margin-left:20px}
+.final{background:var(--primary);color:var(--bg);text-align:center}
+.final .btn{margin-top:16px}
+footer{background:var(--primary);color:var(--bg);padding:32px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-align:center}
+.caption{font-size:13px;font-family:Arial,Helvetica,sans-serif;opacity:.8;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="container"><div class="brand">Plaza Barber Shop</div>
+<nav class="nav"><a class="btn" href="tel:+18304075080">Call (830) 407-5080</a><a class="btn" href="mailto:uvaldeplazabarbershop@gmail.com">Email Us</a></nav></div></header>
+<section><div class="container hero"><div>
+<p class="lead">Uvalde, Texas</p>
+<h1>An old-school barbershop in Uvalde with classic and contemporary styles.</h1>
+<p class="lead">Plaza Barber Shop — 114 W North St, Uvalde, TX 78801</p>
+<div class="cta-row"><a class="btn" href="tel:+18304075080">Call (830) 407-5080</a><a class="btn" href="mailto:uvaldeplazabarbershop@gmail.com">Email uvaldeplazabarbershop@gmail.com</a></div>
+</div><div><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=1200&auto=format&fit=crop" alt="Barbershop interior, illustrative stock photo"><p class="caption">Concept imagery: licensed stock photo, illustrative only — not a photo of this shop.</p></div></div></section>
+<section><div class="container"><h2>Services</h2><div class="cards"><div class="card"><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?q=80&w=1200&auto=format&fit=crop" alt="Classic Cuts, illustrative stock photo"><div class="pad"><h3>Classic Cuts</h3><p>Old-school barbershop cuts.</p><p class="caption">Concept imagery, illustrative only.</p></div></div><div class="card"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Contemporary Styles, illustrative stock photo"><div class="pad"><h3>Contemporary Styles</h3><p>Classic and contemporary styles for men.</p><p class="caption">Concept imagery, illustrative only.</p></div></div><div class="card"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop" alt="Men&#x27;s Haircuts, illustrative stock photo"><div class="pad"><h3>Men&#x27;s Haircuts</h3><p>Men&#x27;s haircuts in a traditional shop setting.</p><p class="caption">Concept imagery, illustrative only.</p></div></div></div>
+<p class="note">Services shown reflect the shop's listed trade in public directory listings. Please call the shop to confirm the full service menu.</p></div></section>
+<section><div class="container"><h2>About the Shop</h2><p class="lead">Plaza Barber Shop is an old-school barbershop in Uvalde, Texas, offering classic and contemporary styles and men&#x27;s haircuts.</p></div></section>
+<section><div class="container"><h2>Inside the Shop</h2><div class="gallery"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"><img src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1200&auto=format&fit=crop" alt="Barbershop, illustrative stock photo"></div>
+<p class="caption">Concept imagery: licensed stock photos, illustrative only — not photos of this shop.</p></div></section>
+<section><div class="container"><h2>Why Visit</h2><ul class="why"><li>Old-school barbershop</li><li>Classic and contemporary styles</li><li>Men&#x27;s haircuts</li></ul></div></section>
+<section><div class="container visit"><div><h2>Find Us</h2>
+<p>114 W North St, Uvalde, TX 78801</p>
+<p>Shop phone: <a href="tel:+18304075080">(830) 407-5080</a></p>
+<p>Email: <a href="mailto:uvaldeplazabarbershop@gmail.com">uvaldeplazabarbershop@gmail.com</a></p>
+<p><a href="https://www.google.com/maps/search/?api=1&query=Plaza+Barber+Shop%2C+114+W+North+St%2C+Uvalde%2C+TX+78801" target="_blank" rel="noopener">Get directions on Google Maps</a></p></div>
+<div><h2>Hours</h2><p><strong>Hours — listings differ, please call to confirm:</strong></p><p>Birdeye lists: Mon–Fri 09:00–17:00, Sat/Sun Closed.</p><p>Cylex lists: Mon–Thu 08:00–20:00, Fri–Sat 08:00–22:00, Sun Closed.</p><p>Superpages lists: 9:00 am – 6:00 pm.</p></div></div></section>
+<section class="final"><div class="container"><h2>Ready for a Fresh Cut?</h2>
+<p>Call or email Plaza Barber Shop to book your visit.</p>
+<div class="cta-row" style="justify-content:center"><a class="btn" href="tel:+18304075080">Call (830) 407-5080</a><a class="btn" href="mailto:uvaldeplazabarbershop@gmail.com">Email Us</a></div></div></section>
+<footer><div class="container"><p>Website concept demo — not the official website</p>
+<p>Concept demo built for Plaza Barber Shop, 114 W North St, Uvalde, TX 78801. Photos are licensed stock imagery, illustrative only.</p></div></footer>
+</body>
+</html>
