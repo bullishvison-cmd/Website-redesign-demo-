@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shafter Family Dental Care — General Dentistry in Shafter, CA | Website Concept Demo</title>
+<meta name="description" content="Website concept demo for Shafter Family Dental Care, general dentistry at 615 James St, Shafter, CA 93263.">
+<style>
+:root{--color-primary:#172638;--color-secondary:#F7F5F0;--color-accent:#B89B65;--ink:#1c2733;--muted:#5c6a77;--line:#e3ddd0;--white:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--color-secondary);line-height:1.6}
+a{color:inherit}
+.disclaimer{background:var(--color-primary);color:#f7f5f0;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.04em;padding:10px 20px}
+header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:22px;font-weight:700;color:var(--color-primary);letter-spacing:.01em}
+.brand small{display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent)}
+.navlinks{display:flex;gap:32px;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--color-accent)}
+.btn{display:inline-block;background:var(--color-accent);color:#172638;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;padding:13px 26px;border-radius:6px}
+.btn:hover{filter:brightness(1.07)}
+.btn-outline{background:transparent;border:2px solid var(--color-accent);color:var(--color-primary)}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(min-width:1400px){.container,.nav{max-width:1320px}}
+section{padding:96px 0}
+.hero{background:var(--color-primary);color:#f7f5f0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.08;margin-bottom:16px}
+.hero p.lead{font-size:19px;color:#d8d2c4;margin-bottom:24px}
+.hero .cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.hero img{width:100%;height:420px;object-fit:cover;border-radius:12px;display:block}
+.cap{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9aa5b0;margin-top:10px}
+.kicker{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px}
+h2{font-size:clamp(30px,3.6vw,44px);line-height:1.15;color:var(--color-primary);margin-bottom:16px}
+.sub{font-size:18px;color:var(--muted);margin-bottom:32px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;color:var(--color-primary);margin-bottom:10px}
+.card-body p{color:var(--muted);font-size:16px}
+.story{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-grid img{width:100%;height:380px;object-fit:cover;border-radius:12px}
+.story-grid ul{list-style:none;margin-top:24px}
+.story-grid li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid var(--line);font-size:17px}
+.story-grid li:before{content:"✓";position:absolute;left:0;color:var(--color-accent);font-weight:700}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gallery-grid img{width:100%;height:260px;object-fit:cover;border-radius:12px;display:block}
+.why{background:var(--color-primary);color:#f7f5f0}
+.why h2{color:#f7f5f0}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-item{border:1px solid #33465c;border-radius:12px;padding:24px}
+.why-item h3{color:var(--color-accent);margin-bottom:10px;font-size:20px}
+.why-item p{color:#d8d2c4}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+table{width:100%;border-collapse:collapse;font-size:17px}
+td{padding:12px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:700;color:var(--color-primary)}
+.contact-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:32px}
+.contact-card p{margin-bottom:12px;font-size:17px}
+.contact-card a{color:var(--color-primary);font-weight:700}
+.cta{background:var(--color-primary);color:#f7f5f0;text-align:center}
+.cta h2{color:#f7f5f0}
+.cta p{color:#d8d2c4;margin-bottom:24px;font-size:18px}
+footer{background:#101c28;color:#c9c2b2;padding:48px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px}
+footer .container{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.faq{margin-top:32px}
+.faq button{width:100%;text-align:left;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:18px 22px;font-size:17px;font-family:Georgia,serif;cursor:pointer;margin-bottom:12px}
+.faq .ans{display:none;padding:0 22px 18px;color:var(--muted)}
+@media(max-width:768px){
+  section{padding:56px 0}
+  .nav,.container{padding-left:20px;padding-right:20px}
+  .navlinks{display:none}
+  .hero-grid,.story-grid,.hours-grid{grid-template-columns:1fr}
+  .cards,.gallery-grid,.why-grid{grid-template-columns:1fr}
+  .hero img,.story-grid img{height:280px}
+}
+@media(max-width:480px){section{padding:44px 0}.nav,.container{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header>
+  <div class="nav">
+    <div class="brand">Shafter Family Dental Care<small>General Dentistry · Shafter, CA</small></div>
+    <nav class="navlinks">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit Us</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="tel:+16617464067">Call (661) 746-4067</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">General Dentistry in Shafter, California</div>
+      <h1>Family dental care, close to home in Shafter.</h1>
+      <p class="lead">Shafter Family Dental Care provides general dentistry for the Shafter community — routine cleanings, check-ups, fillings, and preventive care, with new patients welcome.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+16617464067">Call (661) 746-4067</a>
+        <a class="btn btn-outline" style="color:#f7f5f0;border-color:#B89B65" href="mailto:rdp02@ymail.com">Email the Office</a>
+      </div>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="A modern dental operatory with a dental chair">
+      <p class="cap">Illustrative photo — licensed stock, not a photo of this practice.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="kicker">Services</div>
+    <h2>General dental care for everyday smiles</h2>
+    <p class="sub">The care listed here reflects the general-dentistry services noted for this practice in public directory listings.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=1200&q=80" alt="A dentist treating a patient">
+        <div class="card-body"><h3>Routine Cleanings</h3><p>Regular cleanings to help keep teeth and gums healthy between visits.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental X-rays">
+        <div class="card-body"><h3>Check-ups</h3><p>Routine examinations to check the health of your teeth and gums.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient in a dental chair">
+        <div class="card-body"><h3>Fillings</h3><p>Restorative care for teeth affected by decay, as advised at your visit.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80" alt="A bright dental operatory">
+        <div class="card-body"><h3>Preventive Dental Care</h3><p>Everyday preventive care to help protect your smile over time.</p><p class="cap">Illustrative photo — licensed stock.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="about">
+  <div class="container story-grid">
+    <div>
+      <div class="kicker">About the Practice</div>
+      <h2>A local practice for Shafter families</h2>
+      <p>Shafter Family Dental Care is a general dentistry practice on James Street in Shafter, California. The practice is listed with Dr. Ruby Dacio and Dr. Lutgarda Marasigan, both general dentists, and is accepting new patients through Delta Dental Premier and Delta Dental PPO.</p>
+      <ul>
+        <li>General dentistry for the Shafter community</li>
+        <li>Spanish and Tagalog spoken, as listed in the practice directory entry</li>
+        <li>Accessible location with public transit access, as listed</li>
+        <li>Accepting new patients — Delta Dental Premier and PPO</li>
+      </ul>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist talking with a patient in a dental chair">
+      <p class="cap">Illustrative photo — licensed stock, not a photo of this practice.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">Inside the Office</div>
+    <h2>Care in a modern dental setting</h2>
+    <p class="sub">Illustrative photographs of general dental care settings. These are licensed stock photos, not photos of this practice.</p>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="A modern dental operatory">
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80" alt="A dentist and patient during an exam">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="A dentist reviewing dental images">
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="kicker">Why Choose Us</div>
+    <h2>Simple, local, welcoming</h2>
+    <div class="why-grid">
+      <div class="why-item"><h3>Local and convenient</h3><p>One Shafter location on James Street, serving the surrounding Kern County community.</p></div>
+      <div class="why-item"><h3>General care for the family</h3><p>Cleanings, check-ups, fillings, and preventive care in one local practice.</p></div>
+      <div class="why-item"><h3>New patients welcome</h3><p>Listed as accepting new patients through Delta Dental Premier and PPO.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="container hours-grid">
+    <div>
+      <div class="kicker">Location &amp; Hours</div>
+      <h2>Visit us in Shafter</h2>
+      <table>
+        <tr><td>Monday</td><td>8:30 AM – 5:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>8:30 AM – 5:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>8:30 AM – 5:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:30 AM – 5:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:30 AM – 5:00 PM</td></tr>
+        <tr><td>Saturday – Sunday</td><td>Closed</td></tr>
+      </table>
+      <p style="color:var(--muted);margin-top:16px">Hours as listed in public directory sources. Please call to confirm before visiting.</p>
+    </div>
+    <div class="contact-card" id="contact">
+      <h3 style="color:var(--color-primary);font-size:22px;margin-bottom:16px">Contact</h3>
+      <p><strong>Address:</strong><br>615 James St, Shafter, CA 93263</p>
+      <p><strong>Phone:</strong> <a href="tel:+16617464067">(661) 746-4067</a></p>
+      <p><strong>Email:</strong> <a href="mailto:rdp02@ymail.com">rdp02@ymail.com</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Shafter%20Family%20Dental%20Care%20615%20James%20St%2C%20Shafter%2C%20CA%2093263" target="_blank" rel="noopener">Get directions on Google Maps</a></p>
+      <p style="color:var(--muted);font-size:15px">To book an appointment, please call or email the office directly. This concept page does not take bookings.</p>
+    </div>
+  </div>
+  <div class="container faq">
+    <button type="button" onclick="toggleFaq(this)">Are you accepting new patients?</button>
+    <div class="ans"><p>The practice is listed as accepting new patients through Delta Dental Premier and Delta Dental PPO. Call the office to confirm.</p></div>
+    <button type="button" onclick="toggleFaq(this)">What languages are spoken?</button>
+    <div class="ans"><p>Spanish and Tagalog are listed for this practice in its directory entry, in addition to English.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to visit Shafter Family Dental Care?</h2>
+    <p>Call or email the office to ask about appointments and general dental care.</p>
+    <a class="btn" href="tel:+16617464067">Call (661) 746-4067</a>
+  </div>
+</section>
+
+<div class="disclaimer">Website concept demo — not the official website</div>
+<footer>
+  <div class="container">
+    <div><strong>Shafter Family Dental Care</strong><br>615 James St, Shafter, CA 93263<br>(661) 746-4067</div>
+    <div>Concept demo built from public directory listings. Photos are licensed stock and illustrative only.<br>Please call or email the practice to confirm hours, services, and appointments.</div>
+  </div>
+</footer>
+<script>
+function toggleFaq(btn){var ans=btn.nextElementSibling;ans.style.display=(ans.style.display==='block')?'none':'block';}
+</script>
+</body>
+</html>
