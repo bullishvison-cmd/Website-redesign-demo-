@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hue's Tailor &amp; Alterations — Orlando, FL | Custom Tailoring</title>
 <meta name="description" content="Hue's Tailor and Alterations in Orlando, Florida — suits, wedding gowns, custom made clothing, alterations, uniforms and next-day dry cleaning.">
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#171717;--color-secondary:#F5F0E6;--color-accent:#C6A56B;--ink:#232323;--muted:#6d675c}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--ink);line-height:1.6}
@@ -45,6 +45,32 @@ footer{background:var(--color-primary);color:#fff;padding:48px 0;text-align:cent
 footer a{color:#fff}
 @media(max-width:768px){.hero,.split{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:1fr 1fr}section{padding:56px 0}.container,.nav{padding-inline:20px}.nav a{margin-left:12px}}
 @media(max-width:480px){.grid,.gallery{grid-template-columns:1fr}section{padding:44px 0}.container,.nav{padding-inline:16px}}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Fraunces',Georgia,'Times New Roman',serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box}
+section{padding-inline:40px}.hero-text{padding-inline:40px}@media(min-width:1440px){.wrap{max-width:1320px!important}}@media(max-width:1024px){section{padding-inline:28px}.hero-text{padding-inline:28px}.nav{padding-inline:28px}}@media(max-width:640px){section{padding-inline:20px}.hero-text{padding-inline:20px}.nav{padding-inline:20px}}@media(max-width:400px){section{padding-inline:16px}.hero-text{padding-inline:16px}.nav{padding-inline:16px}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -57,7 +83,7 @@ footer a{color:#fff}
 </div><p class="note container" style="padding-top:16px">Photos on this page are licensed stock images shown for illustration only — they are not photos of this business's own work.</p></section>
 
 <section id="services" style="background:#fff"><div class="container"><h2>Services</h2><p class="sub">As listed for Hue's Tailor &amp; Alterations.</p><div class="grid">
-<div class="card"><h3>Suits &amp; Wedding Gowns</h3><p>Tailoring and alterations for suits and wedding gowns.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Wedding gown (illustrative stock photo)" loading="lazy"><h3>Suits &amp; Wedding Gowns</h3><p>Tailoring and alterations for suits and wedding gowns.</p></div>
 <div class="card"><h3>Custom Made Clothing</h3><p>Clothing made to order, cut to your measurements.</p></div>
 <div class="card"><h3>Repairs &amp; Everyday Alterations</h3><p>Repairs and everyday alterations for the clothes you wear most.</p></div>
 <div class="card"><h3>Uniforms</h3><p>Uniform work, as listed.</p></div>
@@ -70,7 +96,7 @@ footer a{color:#fff}
 </div></section>
 
 <section style="background:#fff"><div class="container"><h2>Recent work, in spirit</h2><p class="sub">Illustrative images only — not this business's own work.</p><div class="gallery">
-<figure><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative tailored suit"><figcaption>Suit tailoring — illustrative</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Folded sweater, jeans and knit hat (illustrative stock photo)"><figcaption>Suit tailoring — illustrative</figcaption></figure>
 <figure><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative wedding couple"><figcaption>Wedding — illustrative</figcaption></figure>
 <figure><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative rack of garments"><figcaption>Custom clothing — illustrative</figcaption></figure>
 </div></div></section>
