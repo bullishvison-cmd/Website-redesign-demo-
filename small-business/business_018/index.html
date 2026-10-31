@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Northeast Laundry — Website Concept Demo</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#183D32;--color-secondary:#F0E5D2;--color-accent:#B94735;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:#222;line-height:1.6}
@@ -59,6 +59,32 @@ h2{font-size:clamp(26px,3.5vw,38px);line-height:1.15;margin-bottom:16px;color:va
 footer{background:var(--color-primary);color:var(--color-secondary);padding:48px 0 24px;font-family:Arial,Helvetica,sans-serif}
 footer p{margin-bottom:10px;font-size:15px}
 .small{font-size:13px;opacity:.85}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Sora',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap,.container{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box;padding-inline:40px!important}
+@media(min-width:1440px){.wrap,.container{max-width:1320px!important}}@media(max-width:1024px){.wrap,.container{padding-inline:28px!important}}@media(max-width:640px){.wrap,.container{padding-inline:20px!important}body{font-size:16px}}@media(max-width:400px){.wrap,.container{padding-inline:16px!important}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -74,7 +100,7 @@ footer p{margin-bottom:10px;font-size:15px}
 <section id="services"><div class="wrap"><h2>Services</h2><div class="grid"><div class="card"><h3>Self-service washers and dryers</h3><p>A wide selection of efficient washers and dryers.</p></div><div class="card"><h3>Machines for small to larger loads</h3><p>Machine sizes to suit small loads and larger ones.</p></div><div class="card"><h3>Snacks and beverages</h3><p>Snacks and beverages available for purchase while you wait.</p></div><div class="card"><h3>Change machines</h3><p>Change machines on-site for coin laundry.</p></div><div class="card"><h3>Staff typically on-site</h3><p>Staff are typically on-site during visits.</p></div></div></div></section>
 <section id="story" class="dark"><div class="wrap story-grid"><div><h2>About Northeast Laundry</h2><p>Northeast Laundry is a clean, well-maintained laundromat in El Paso. It offers a wide selection of efficient washers and dryers for loads of different sizes, with snacks and beverages available for purchase and staff typically on-site.</p></div>
 <div class="facts"><h3 style="margin-bottom:12px">Why visit</h3><ul><li>Open 24 hours</li><li>Clean, well-maintained facility</li><li>A wide selection of machines</li><li>Staff typically on-site</li></ul></div></div></section>
-<section><div class="wrap"><h2>Take a look</h2><div class="gal"><div><img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock photo of a row of laundromat machines — not a photo of this business."><p class="cap">Illustrative stock photo of a row of laundromat machines — not a photo of this business.</p></div><div class="tile"><h3>Open around the clock</h3><p>Northeast Laundry is open 24 hours, every day.</p></div></div></div></section>
+<section><div class="wrap"><h2>Take a look</h2><div class="gal"><div><img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1600&auto=format&fit=crop" alt="Illustrative stock photo of a row of laundromat machines — not a photo of this business."><p class="cap">Illustrative stock photo of a row of laundromat machines — not a photo of this business.</p></div><div><img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?q=80&w=1200&auto=format&fit=crop" alt="Laundromat interior with rows of machines (illustrative stock photo)" loading="lazy"><p class="polish-cap">Laundromat interior with rows of machines. Illustrative stock photo.</p></div><div class="tile"><h3>Open around the clock</h3><p>Northeast Laundry is open 24 hours, every day.</p></div></div></div></section>
 <section id="visit"><div class="wrap"><h2>Visit Us</h2><p style="margin-bottom:24px;font-family:Arial,Helvetica,sans-serif">7801 Alabama Street, El Paso, TX 79904</p>
 <table class="hours"><tr><td>Open</td><td>24 Hours</td></tr></table><div class="note">Two phone numbers are listed for this business; both are shown above.</div>
 <p style="margin-top:24px;font-family:Arial,Helvetica,sans-serif"><a href="https://www.google.com/maps/search/?api=1&query=Northeast+Laundry%2C+7801+Alabama+Street%2C+El+Paso%2C+TX+79904">Find us on Google Maps</a></p></div></section>
