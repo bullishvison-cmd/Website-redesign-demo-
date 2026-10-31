@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbara's Dover Barber Shop — Toms River, New Jersey | Barber Shop Concept</title>
+<meta name="description" content="Website concept demo for Barbara's Dover Barber Shop in Toms River, New Jersey.">
+<style>
+:root{--primary:#191919;--bg:#E9D8B9;--accent:#C56A35;--ink:#1c1c1c;--muted:#5c5648}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.disclaimer{background:var(--primary);color:var(--bg);text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:.85rem;letter-spacing:.04em;padding:12px 20px}
+header{background:var(--bg);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:10}
+.nav{max-width:1200px;margin:0 auto;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-size:1.35rem;font-weight:700;letter-spacing:.02em}
+.nav a.btn{font-family:Arial,sans-serif;text-decoration:none;background:var(--primary);color:var(--bg);padding:10px 18px;border-radius:4px;font-size:.95rem}
+.nav a.btn.alt{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:40px}
+@media(min-width:1400px){.wrap,.nav{max-width:1320px}}
+section{padding:96px 0}
+@media(max-width:900px){section{padding:72px 0}.wrap,.nav{padding-inline:28px}}
+@media(max-width:600px){section{padding:56px 0}.wrap,.nav{padding-inline:20px}}
+@media(max-width:400px){section{padding:44px 0}.wrap,.nav{padding-inline:16px}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero img{width:100%;height:480px;object-fit:cover;border-radius:10px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero img{height:320px}}
+.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-size:.8rem;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;margin:16px 0}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.15;margin-bottom:16px}
+.lead{font-size:1.15rem;color:#3a362c;margin-bottom:24px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.cta a{font-family:Arial,sans-serif;text-decoration:none;background:var(--accent);color:#fff;padding:13px 22px;border-radius:4px;font-weight:700}
+.cta a.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+.sub{font-family:Arial,sans-serif;color:var(--muted);margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e3dccb;border-radius:10px;overflow:hidden}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card .tile{height:220px;display:flex;align-items:center;justify-content:center;font-size:5rem;color:var(--bg);background:var(--primary)}
+.card-body{padding:24px}
+.card-body h3{margin-bottom:8px}
+.cap{font-family:Arial,sans-serif;font-size:.78rem;color:var(--muted);margin-top:10px}
+.dark{background:var(--primary);color:var(--bg)}
+.dark .sub,.dark .lead{color:#d8d0bd}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story img{width:100%;height:380px;object-fit:cover;border-radius:10px}
+@media(max-width:800px){.story{grid-template-columns:1fr}.story img{height:280px}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gallery img{width:100%;height:240px;object-fit:cover;border-radius:10px}
+.gallery figcaption{font-family:Arial,sans-serif;font-size:.8rem;color:var(--muted);margin-top:8px}
+@media(max-width:800px){.gallery{grid-template-columns:1fr}}
+.why li{margin:0 0 14px 20px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:800px){.visit{grid-template-columns:1fr}}
+.hours{background:#fff;border:1px solid #e3dccb;border-radius:10px;padding:24px}
+.hours ul{list-style:none;font-family:Arial,sans-serif}
+.hours li{padding:8px 0;border-bottom:1px solid #eee}
+.note{background:#fff8e6;border-left:4px solid var(--accent);padding:18px 22px;margin-top:24px;font-family:Arial,sans-serif}
+.final{text-align:center}
+footer{background:var(--primary);color:var(--bg);padding:40px 0 0}
+footer .wrap{padding-bottom:32px}
+footer a{color:var(--bg)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="nav"><div class="brand">Barbara's Dover Barber Shop</div>
+<div><a class="btn" href="tel:+17322444242">Call (732) 244-4242</a> <a class="btn alt" href="mailto:barbarableich@hotmail.com">Email us</a></div></div></header>
+<main>
+<section><div class="wrap hero reveal">
+<div><p class="eyebrow">Toms River, New Jersey &middot; Barber Shop</p>
+<h1>Barbara's Dover Barber Shop</h1>
+<p class="lead">A long-standing barbershop on Route 37 in Toms River.</p>
+<div class="cta"><a href="tel:+17322444242">Call (732) 244-4242</a><a class="ghost" href="mailto:barbarableich@hotmail.com">Email the shop</a></div>
+<p class="sub" style="margin-top:20px">1521 Route 37 W, Toms River, NJ 08755</p></div>
+<img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=80" alt="Barber styling a client's hair — illustrative stock photo">
+</div></section>
+
+<section class="dark"><div class="wrap reveal">
+<h2>Services</h2><p class="sub">As listed in public directories for this shop.</p>
+<div class="grid"><article class="card"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=80" alt="Haircuts — illustrative stock photo" loading="lazy"><div class="card-body"><h3>Haircuts</h3><p>Haircuts, as listed for this shop.</p><p class="cap">Illustrative stock photo — not a photo of this shop.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80" alt="Barber services — illustrative stock photo" loading="lazy"><div class="card-body"><h3>Barber services</h3><p>General barber services, as listed for this shop.</p><p class="cap">Illustrative stock photo — not a photo of this shop.</p></div></article></div></div></section>
+
+<section><div class="wrap story reveal">
+<div><p class="eyebrow">The shop</p><h2>Barbering on Route 37</h2><p>Barbara's Dover Barber Shop is listed as a barber shop on Route 37 West in Toms River, with a Facebook page as its online presence and no own-domain website found. Public listings show it open weekdays and Saturdays.</p></div>
+<img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80" alt="Barbershop interior — illustrative stock photo">
+</div></section>
+
+<section><div class="wrap reveal">
+<h2>Inside the shop</h2><p class="sub">Concept imagery only — illustrative stock photos, not photos of this shop.</p>
+<div class="gallery"><figure><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=1200&q=80" alt="The classic barber chair — illustrative stock photo" loading="lazy"><figcaption>The classic barber chair — illustrative stock photo</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80" alt="Barbershop interior — illustrative stock photo" loading="lazy"><figcaption>Barbershop interior — illustrative stock photo</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=1200&q=80" alt="Clipper finishing — illustrative stock photo" loading="lazy"><figcaption>Clipper finishing — illustrative stock photo</figcaption></figure></div></div></section>
+
+<section class="dark"><div class="wrap reveal">
+<h2>Why choose Barbara's Dover</h2>
+<ul class="why"><li>A local, independent barbershop — one shop, not a chain.</li>
+<li>Services listed plainly, with hours shown exactly as public listings report them.</li>
+<li>Easy to reach: call or email using the details on this page.</li></ul></div></section>
+
+<section><div class="wrap reveal">
+<h2>Visit us</h2>
+<div class="visit"><div><p><strong>Address</strong><br>1521 Route 37 W, Toms River, NJ 08755</p>
+<p style="margin-top:16px"><strong>Phone</strong><br><a href="tel:+17322444242">(732) 244-4242</a></p>
+<p style="margin-top:16px"><strong>Email</strong><br><a href="mailto:barbarableich@hotmail.com">barbarableich@hotmail.com</a></p>
+<p style="margin-top:16px"><a href="https://www.google.com/maps/search/?api=1&query=1521%20Route%2037%20W%2C%20Toms%20River%2C%20NJ%2008755" target="_blank" rel="noopener">Get directions on Google Maps</a></p></div>
+<div class="hours"><h3 style="margin-bottom:8px">Hours — as listed</h3><ul><li>Monday–Saturday: 8:30 a.m.–4:00 p.m.</li>
+<li>Sunday: Closed</li></ul></div></div>
+<div class="note"><strong>Please note:</strong> Hours as shown in directory search results, 2026-10-31 — please call to confirm.</div><div class="note"><strong>Also listed as:</strong> Some directory listings show a second phone number, (732) 730-4708, for this shop. The number shown on this page, (732) 244-4242, is the one from the AllBiz contact listing.</div></div></section>
+
+<section class="dark"><div class="wrap final reveal">
+<h2>Ready for a fresh cut?</h2>
+<p class="lead" style="margin:16px 0 24px">Call or email Barbara's Dover to check availability.</p>
+<div class="cta" style="justify-content:center"><a href="tel:+17322444242">Call (732) 244-4242</a><a class="ghost" style="color:var(--bg);border-color:var(--bg)" href="mailto:barbarableich@hotmail.com">Email the shop</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><p><strong>Barbara's Dover Barber Shop</strong><br>1521 Route 37 W, Toms River, NJ 08755<br>
+<a href="tel:+17322444242">(732) 244-4242</a> &middot; <a href="mailto:barbarableich@hotmail.com">barbarableich@hotmail.com</a></p>
+<p style="margin-top:16px;font-family:Arial,sans-serif;font-size:.85rem">Concept imagery on this page is licensed stock photography, shown for illustration only and never presented as photos of this business. Hours and services are taken from public listings and may differ between sources — please call to confirm.</p></div>
+<div class="disclaimer">Website concept demo — not the official website</div></footer>
+<script>
+document.querySelectorAll('.reveal').forEach(function(el){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){el.classList.add('on');o.disconnect();}}).observe(el);});
+</script>
+</body>
+</html>
