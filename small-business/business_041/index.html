@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Longevity Strength &amp; Conditioning — Dracut, MA</title>
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#191919;--color-secondary:#E9D8B9;--color-accent:#C56A35;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--color-primary);line-height:1.6}
@@ -64,6 +64,32 @@ footer{background:var(--color-primary);color:var(--color-secondary);padding:56px
 footer .cols{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:32px}
 footer a{text-decoration:none}
 .small{font-size:12px;opacity:.85}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Sora',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap,.container{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box;padding-inline:40px!important}
+@media(min-width:1440px){.wrap,.container{max-width:1320px!important}}@media(max-width:1024px){.wrap,.container{padding-inline:28px!important}}@media(max-width:640px){.wrap,.container{padding-inline:20px!important}body{font-size:16px}}@media(max-width:400px){.wrap,.container{padding-inline:16px!important}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -95,9 +121,9 @@ footer a{text-decoration:none}
 <article class="card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of small-group dumbbell training"><div class="card-body"><h3>Small-Group Training</h3><p>Groups capped at six participants, so every workout gets real coaching attention.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the gym's own photo.</p></article>
 <article class="card"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of one-on-one fitness training"><div class="card-body"><h3>One-on-One Personal Training</h3><p>Individual sessions tailored to your goals, schedule, and starting point.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the gym's own photo.</p></article>
 <article class="card"><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of boxing training"><div class="card-body"><h3>Boxing Training</h3><p>Boxing-based workouts for conditioning, coordination, and confidence.</p></div><p class="caption">Concept imagery — illustrative stock photo, not the gym's own photo.</p></article>
-<article class="card"><div class="card-body"><h3>HIIT &amp; Tabata</h3><p>High-intensity interval sessions that build conditioning in focused, efficient workouts.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Group fitness class (illustrative stock photo)" loading="lazy"><div class="card-body"><h3>HIIT &amp; Tabata</h3><p>High-intensity interval sessions that build conditioning in focused, efficient workouts.</p></div></article>
 <article class="card"><div class="card-body"><h3>Boot Camps</h3><p>Group boot camp workouts combining strength and conditioning.</p></div></article>
-<article class="card"><div class="card-body"><h3>Weights &amp; Nutrition</h3><p>Strength work with weights, plus nutrition and meal planning support.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Gym training floor (illustrative stock photo)" loading="lazy"><div class="card-body"><h3>Weights &amp; Nutrition</h3><p>Strength work with weights, plus nutrition and meal planning support.</p></div></article>
 </div>
 </div></section>
 
@@ -115,8 +141,8 @@ footer a{text-decoration:none}
 <span class="kicker">Inside the Gym</span>
 <h2>Training, up close</h2>
 <div class="gallery">
-<figure><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of dumbbell training"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
-<figure><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of boxing training"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Group yoga class on a beach (illustrative stock photo)"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Dance training (illustrative stock photo)"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
 <figure><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1200&q=80" alt="Illustrative photo of barbell training"><figcaption>Concept imagery — illustrative stock photo.</figcaption></figure>
 </div>
 </div></section>
