@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rideout Appliance Repairs — Whitwell, Tennessee</title>
+<style>
+:root{--color-primary:#38271F;--color-secondary:#F3E8D5;--color-accent:#B77B48;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:var(--color-secondary);color:var(--color-primary);line-height:1.6}
+a{color:inherit}
+.disclaimer{background:var(--color-primary);color:var(--color-secondary);text-align:center;padding:12px 16px;font-family:Arial,sans-serif;font-size:14px}
+header{background:var(--color-secondary);border-bottom:3px solid var(--color-accent);position:sticky;top:0;z-index:10}
+.nav{max-width:1200px;margin:0 auto;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+@media(min-width:1400px){.nav,.wrap{max-width:1320px}}
+.brand{font-size:22px;font-weight:bold;line-height:1.2}
+nav ul{display:flex;gap:32px;list-style:none;font-family:Arial,sans-serif;font-size:15px}
+nav a{text-decoration:none}
+.menubtn{display:none;font-family:Arial,sans-serif;background:var(--color-primary);color:var(--color-secondary);border:0;padding:10px 16px;cursor:pointer}
+@media(max-width:768px){nav ul{display:none;flex-direction:column;gap:12px}nav ul.open{display:flex}.menubtn{display:block}.nav{padding:20px 20px}}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch}
+.hero-text{padding:56px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.hero-text h1{font-size:clamp(32px,4.5vw,54px);line-height:1.1}
+.hero-text p{font-size:18px}
+.hero img,.story img,.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-img{min-height:320px}
+section{padding:96px 40px}
+.wrap{max-width:1200px;margin:0 auto}
+@media(max-width:1024px){section{padding:72px 28px}.hero{grid-template-columns:1fr}}
+@media(max-width:600px){section{padding:56px 20px}}
+@media(max-width:400px){section{padding:44px 16px}}
+h2{font-size:clamp(26px,3.5vw,38px);line-height:1.15;margin-bottom:16px}
+.sub{font-size:18px;margin-bottom:32px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #ddd;border-radius:12px;overflow:hidden}
+.card-body{padding:24px}
+.card-body h3{margin-bottom:8px;font-size:20px}
+.card img{height:220px;object-fit:cover}
+.placeholder{height:180px;display:flex;align-items:center;justify-content:center;background:var(--color-primary);color:var(--color-secondary);font-family:Arial,sans-serif;padding:24px;text-align:center}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+@media(max-width:768px){.story{grid-template-columns:1fr}}
+.story img{border-radius:12px;max-height:420px}
+.dark{background:var(--color-primary);color:var(--color-secondary)}
+.dark .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:var(--color-secondary)}
+ul.ticks{list-style:none;display:grid;gap:12px;font-size:18px}
+ul.ticks li::before{content:"— ";color:var(--color-accent);font-weight:bold}
+.btn{display:inline-block;background:var(--color-accent);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-weight:bold;padding:14px 26px;border-radius:8px;margin-right:12px;margin-top:8px}
+.btn.alt{background:transparent;border:2px solid var(--color-accent);color:inherit}
+.hours{font-family:Arial,sans-serif;font-size:17px;line-height:1.8}
+.note{border-left:4px solid var(--color-accent);padding:12px 16px;margin-top:24px;font-family:Arial,sans-serif;font-size:15px;background:rgba(0,0,0,.05)}
+.dark .note{background:rgba(255,255,255,.08)}
+.caption{font-family:Arial,sans-serif;font-size:13px;color:#666;margin-top:8px}
+.dark .caption{color:#ccc}
+footer{padding:32px 40px;text-align:center;font-family:Arial,sans-serif}
+.gal img{height:240px;border-radius:12px}
+</style>
+</head>
+<body>
+<div class="disclaimer">Website concept demo — not the official website</div>
+<header><div class="nav"><div class="brand">Rideout Appliance Repairs</div>
+<button class="menubtn" id="menubtn">Menu</button>
+<nav><ul id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#story">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#visit">Visit &amp; Hours</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav></div></header>
+
+<section class="hero" style="padding:0">
+<div class="hero-text"><h1>Appliance repair in Whitwell and the Sequatchie Valley</h1><p>Rideout Appliance Repairs is an appliance repair business in Whitwell, Tennessee, serving homeowners, renters, landlords, and property managers throughout the Sequatchie Valley and surrounding communities.</p>
+<p><a class="btn" href="tel:+16152102745">Call (615) 210-2745</a><a class="btn alt" href="mailto:rideout.r@gmail.com">Email us</a></p>
+<p class="caption">Illustrative stock photo — not a photo of this business or its work.</p></div>
+<div class="hero-img"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a technician at work"></div>
+</section>
+
+<section id="services"><div class="wrap"><h2>Services</h2><p class="sub">Services listed on the business directory profile. Exact brands, models, and repair capabilities may vary — customers should describe the appliance and problem when calling or emailing.</p>
+<div class="grid"><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Refrigerator and freezer troubleshooting</h3><p>Troubleshooting for refrigerators and freezers.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Washing machine repair</h3><p>Repair assistance for washing machines.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Clothes dryer repair</h3><p>Repair assistance for clothes dryers.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Oven and range repair</h3><p>Repair assistance for ovens and ranges.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>Dishwasher troubleshooting</h3><p>Troubleshooting for dishwashers.</p></div></div><div class="card"><div class="placeholder">Illustrative photo not available for this service</div><div class="card-body"><h3>General household appliance diagnostics</h3><p>General diagnostics and malfunction assessment for household appliances.</p></div></div></div></div></section>
+
+<section id="story" class="dark"><div class="wrap"><div class="story">
+<div><h2>About Rideout Appliance Repairs</h2><p style="font-size:18px">Rideout Appliance Repairs focuses on helping customers diagnose appliance problems, restore essential household equipment, and avoid replacing an appliance prematurely. The directory listing advises customers to call before visiting or expecting same-day service, since service schedules and travel routes may change.</p></div>
+<div><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a home kitchen with appliances"><p class="caption">Illustrative stock photo — not a photo of this business or its work.</p></div>
+</div></div></section>
+
+<section id="gallery"><div class="wrap"><h2>Gallery</h2><p class="sub">Illustrative photos showing the kind of work and setting described on this page — not photos of this business or its completed jobs.</p>
+<div class="grid gal"><div><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a technician at work"><p class="caption">Illustrative stock photo.</p></div><div><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a home kitchen with appliances"><p class="caption">Illustrative stock photo.</p></div><div><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1600&q=80&auto=format&fit=crop" alt="Illustrative photo: a home exterior"><p class="caption">Illustrative stock photo.</p></div></div></div></section>
+
+<section id="why"><div class="wrap"><h2>Why choose Rideout Appliance Repairs</h2><ul class="ticks"><li>Repair-focused approach: explore whether an appliance can be restored before replacing it</li><li>Serves Whitwell, Jasper, South Pittsburg, Dunlap, Monteagle, McMinnville, Winchester, Chattanooga, Sequatchie County, and Chattanooga Valley</li><li>Contact by telephone, email, or the business Facebook page</li></ul></div></section>
+
+<section id="visit" class="dark"><div class="wrap"><h2>Location &amp; hours</h2>
+<p style="font-size:18px;margin-bottom:16px">1501 Kelly Creek Rd, Whitwell, TN 37397, USA</p>
+<p style="margin-bottom:16px"><a href="https://www.google.com/maps/search/?api=1&query=Rideout+Appliance+Repairs+1501+Kelly+Creek+Rd+Whitwell+TN+37397">Find us on Google Maps</a></p>
+<div class="hours">Monday: Closed<br>Tuesday: 8:00 AM - 7:00 PM<br>Wednesday: 8:00 AM - 7:00 PM<br>Thursday: 8:00 AM - 7:00 PM<br>Friday: Closed<br>Saturday: Closed<br>Sunday: Closed</div><p class="note">The directory listing advises calling before visiting or expecting same-day service, since schedules and travel routes may change.</p></div></section>
+
+<section id="contact"><div class="wrap" style="text-align:center"><h2>Get in touch</h2>
+<p class="sub" style="margin:0 auto 32px">Call or email to describe the job and arrange a visit. This concept page has no booking form — contact goes directly to the business.</p>
+<p><a class="btn" href="tel:+16152102745">Call (615) 210-2745</a><a class="btn alt" href="mailto:rideout.r@gmail.com">rideout.r@gmail.com</a></p></div></section>
+
+<footer><p>Rideout Appliance Repairs — 1501 Kelly Creek Rd, Whitwell, TN 37397, USA</p><p style="margin-top:12px">Website concept demo — not the official website</p></footer>
+<script>
+document.getElementById("menubtn").addEventListener("click", function() {
+  document.getElementById("menu").classList.toggle("open");
+});
+</script>
+</body>
+</html>
