@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Middle Man — Polk City, FL | Portrait &amp; Event Photography</title>
 <meta name="description" content="The Middle Man photography in Polk City, Florida — portraits, headshots, graduation shots, family and corporate events, engagement and couples photography, plus photo editing and videography.">
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--color-primary:#172638;--color-secondary:#F7F5F0;--color-accent:#B89B65;--ink:#222c38;--muted:#5f6a76}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,'Times New Roman',serif;background:var(--color-secondary);color:var(--ink);line-height:1.6}
@@ -45,6 +45,32 @@ footer{background:var(--color-primary);color:#fff;padding:48px 0;text-align:cent
 footer a{color:#fff}
 @media(max-width:768px){.hero,.split{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:1fr 1fr}section{padding:56px 0}.container,.nav{padding-inline:20px}.nav a{margin-left:12px}}
 @media(max-width:480px){.grid,.gallery{grid-template-columns:1fr}section{padding:44px 0}.container,.nav{padding-inline:16px}}
+
+/* POLISH ultra-premium: type scale, §16 spacing, centred balance, smooth motion */
+:root{--font-display:'Fraunces',Georgia,'Times New Roman',serif;--font-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{font-family:var(--font-body)!important;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem)!important;line-height:1.08!important;margin-bottom:16px}
+h2{font-size:clamp(1.85rem,3.2vw,2.55rem)!important;line-height:1.15!important;margin-bottom:32px}
+h2:has(+p),h2:has(+.sub){margin-bottom:16px!important}
+.sub{margin-bottom:24px!important}
+p{line-height:1.65;text-wrap:pretty}main p{max-width:72ch}
+.cap,.caption,.gal-cap,figcaption,small{font-size:13px!important;line-height:1.5!important;opacity:.85}
+.polish-cap{font-size:13px;line-height:1.5;opacity:.75;margin:8px 0 0}
+.btn,.btn-solid,.btn-outline{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.btn:hover,.btn-solid:hover,.btn-outline:hover{transform:translateY(-2px)}
+.card,article.card{transition:transform .3s ease,box-shadow .3s ease}
+.card:hover,article.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+img{max-width:100%}figure{margin:0}div,section,article,figure{min-width:0}
+.wrap{max-width:1200px!important;margin-inline:auto!important;box-sizing:border-box}
+section{padding-inline:40px}.hero-text{padding-inline:40px}@media(min-width:1440px){.wrap{max-width:1320px!important}}@media(max-width:1024px){section{padding-inline:28px}.hero-text{padding-inline:28px}.nav{padding-inline:28px}}@media(max-width:640px){section{padding-inline:20px}.hero-text{padding-inline:20px}.nav{padding-inline:20px}}@media(max-width:400px){section{padding-inline:16px}.hero-text{padding-inline:16px}.nav{padding-inline:16px}}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body.polish-js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+body.polish-js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}body.polish-js .reveal{opacity:1;transform:none}}
+a:focus-visible,.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -57,8 +83,8 @@ footer a{color:#fff}
 </div><p class="note container" style="padding-top:16px">Photos on this page are licensed stock images shown for illustration only — they are not photos of this business's own work.</p></section>
 
 <section id="services" style="background:#fff"><div class="container"><h2>Services</h2><p class="sub">As listed for The Middle Man. No session fees are shown here — contact the studio for details.</p><div class="grid">
-<div class="card"><h3>Portrait Photography</h3><p>Portraits and model photography.</p></div>
-<div class="card"><h3>Headshots</h3><p>Professional headshots.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Outdoor portrait photograph (illustrative stock photo)" loading="lazy"><h3>Portrait Photography</h3><p>Portraits and model photography.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Studio portrait photograph (illustrative stock photo)" loading="lazy"><h3>Headshots</h3><p>Professional headshots.</p></div>
 <div class="card"><h3>Graduation Shots</h3><p>Graduation photography.</p></div>
 <div class="card"><h3>Family &amp; Corporate Events</h3><p>Coverage for family and corporate events.</p></div>
 <div class="card"><h3>Couples &amp; Engagement</h3><p>Couples and engagement photography.</p></div>
@@ -73,7 +99,7 @@ footer a{color:#fff}
 </div></section>
 
 <section style="background:#fff"><div class="container"><h2>Recent work, in spirit</h2><p class="sub">Illustrative images only — not this business's own work.</p><div class="gallery">
-<figure><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative portrait"><figcaption>Portraits — illustrative</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Photography studio with lights and backdrop (illustrative stock photo)"><figcaption>Portraits — illustrative</figcaption></figure>
 <figure><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative headshot-style portrait"><figcaption>Headshots — illustrative</figcaption></figure>
 <figure><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative family photograph"><figcaption>Family — illustrative</figcaption></figure>
 <figure><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Illustrative wedding couple"><figcaption>Couples and engagement — illustrative</figcaption></figure>
